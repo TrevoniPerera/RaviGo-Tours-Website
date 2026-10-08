@@ -1,0 +1,315 @@
+@import "tailwindcss";
+
+/* ============================================================
+   RaviGo Tours — Global Design System
+   Sri Lanka palette: tropical greens · ocean blues · warm gold
+   ============================================================ */
+
+/* ---- Custom Fonts ---- */
+@theme inline {
+  --font-inter: "Inter", sans-serif;
+  --font-noto-jp: "Noto Sans JP", sans-serif;
+
+  /* ---- Sri Lanka Colour Palette ---- */
+
+  /* Primary greens — tropical jungle & tea hills */
+  --color-green-50: oklch(97% 0.02 155);
+  --color-green-100: oklch(93% 0.05 155);
+  --color-green-200: oklch(86% 0.10 155);
+  --color-green-300: oklch(77% 0.15 155);
+  --color-green-400: oklch(67% 0.18 155);
+  --color-green-500: oklch(56% 0.19 155);
+  --color-green-600: oklch(46% 0.17 155);   /* primary brand green */
+  --color-green-700: oklch(38% 0.14 155);
+  --color-green-800: oklch(30% 0.10 155);
+  --color-green-900: oklch(22% 0.07 155);
+  --color-green-950: oklch(15% 0.04 155);
+
+  /* Ocean blues — Indian Ocean & sky */
+  --color-ocean-50: oklch(97% 0.02 220);
+  --color-ocean-100: oklch(93% 0.05 220);
+  --color-ocean-500: oklch(58% 0.18 220);
+  --color-ocean-600: oklch(48% 0.17 220);
+  --color-ocean-700: oklch(40% 0.15 220);
+
+  /* Warm gold — temple gold & sunsets */
+  --color-gold-300: oklch(88% 0.14 80);
+  --color-gold-400: oklch(81% 0.17 80);    /* primary CTA colour */
+  --color-gold-500: oklch(73% 0.17 80);
+  --color-gold-600: oklch(64% 0.16 80);
+
+  /* Warm neutrals — sand & stone */
+  --color-sand-50: oklch(98% 0.01 80);
+  --color-sand-100: oklch(95% 0.03 80);
+  --color-sand-200: oklch(90% 0.04 80);
+  --color-sand-900: oklch(18% 0.02 80);
+
+  /* ---- Semantic Tokens ---- */
+  --color-background: var(--color-sand-50);
+  --color-surface: #ffffff;
+  --color-primary: var(--color-green-600);
+  --color-primary-hover: var(--color-green-700);
+  --color-accent: var(--color-gold-400);
+  --color-accent-hover: var(--color-gold-300);
+  --color-text: oklch(18% 0.02 80);
+  --color-text-muted: oklch(50% 0.02 80);
+  --color-border: oklch(90% 0.02 80);
+
+  /* ---- Typography Scale (fluid) ---- */
+  --font-size-xs: clamp(0.75rem, 0.72rem + 0.13vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 0.84rem + 0.18vw, 1rem);
+  --font-size-base: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --font-size-lg: clamp(1.125rem, 1.07rem + 0.27vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.18rem + 0.36vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 1.38rem + 0.6vw, 1.875rem);
+  --font-size-3xl: clamp(1.875rem, 1.65rem + 1.12vw, 2.5rem);
+  --font-size-4xl: clamp(2.25rem, 1.9rem + 1.75vw, 3.5rem);
+  --font-size-5xl: clamp(2.75rem, 2.2rem + 2.75vw, 4.5rem);
+
+  /* ---- Spacing ---- */
+  --spacing-section: clamp(4rem, 8vw, 8rem);
+
+  /* ---- Shadows ---- */
+  --shadow-card: 0 4px 24px -4px oklch(0% 0% 0% / 0.12);
+  --shadow-card-hover: 0 16px 48px -8px oklch(0% 0% 0% / 0.2);
+  --shadow-glass: 0 8px 32px oklch(0% 0% 0% / 0.08);
+
+  /* ---- Border Radius ---- */
+  --radius-card: 1rem;
+  --radius-pill: 9999px;
+  --radius-fab: 9999px;
+
+  /* ---- Transitions ---- */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ---- Base Reset & Defaults ---- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-inter);
+  font-size: var(--font-size-base);
+  line-height: 1.65;
+  min-height: 100dvh;
+  /* Prevent horizontal overflow — critical for long German words */
+  overflow-x: hidden;
+}
+
+/* Japanese locale: apply Noto Sans JP */
+.font-noto-jp body,
+.font-noto-jp {
+  font-family: var(--font-noto-jp);
+}
+
+/* ---- Long-word wrapping (German compound words) ---- */
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+span,
+label,
+button {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* ---- Minimum body text size on phones ---- */
+@media (max-width: 640px) {
+  body {
+    font-size: max(16px, var(--font-size-base));
+  }
+}
+
+/* ---- Focus Styles (WCAG 2.1 AA) ---- */
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ---- Skip Link ---- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 1rem;
+  z-index: 9999;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  text-decoration: none;
+}
+
+.skip-link:focus {
+  left: 1rem;
+}
+
+/* ---- Section spacing utility ---- */
+.section-padding {
+  padding-top: var(--spacing-section);
+  padding-bottom: var(--spacing-section);
+}
+
+/* ---- Glassmorphism Header ---- */
+.glass-header {
+  background: oklch(100% 0% 0% / 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--color-border);
+  box-shadow: var(--shadow-glass);
+}
+
+/* ---- Card base ---- */
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+  transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+/* ---- WhatsApp FAB ---- */
+.whatsapp-fab {
+  position: fixed;
+  bottom: max(1.5rem, env(safe-area-inset-bottom, 1.5rem) + 0.5rem);
+  right: 1.5rem;
+  z-index: 50;
+  width: 56px;
+  height: 56px;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: var(--radius-fab);
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 8px 24px oklch(0% 0% 0% / 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.whatsapp-fab:hover {
+  transform: scale(1.08);
+  box-shadow: 0 12px 32px oklch(0% 0% 0% / 0.35);
+}
+
+/* Hide FAB on large screens — contact already in header */
+@media (min-width: 1024px) {
+  .whatsapp-fab {
+    display: none;
+  }
+}
+
+/* ---- Hero gradient overlay ---- */
+.hero-overlay {
+  background: linear-gradient(
+    to bottom,
+    oklch(15% 0.07 155 / 0.3) 0%,
+    oklch(15% 0.07 155 / 0.6) 60%,
+    oklch(15% 0.07 155 / 0.85) 100%
+  );
+}
+
+/* ---- Touch targets ---- */
+a,
+button,
+[role="button"],
+input,
+select,
+textarea {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Inline text links are exempt */
+p a,
+li a,
+.inline-link {
+  min-height: unset;
+  min-width: unset;
+}
+
+/* ---- Prose (privacy page) ---- */
+.prose {
+  max-width: 65ch;
+  line-height: 1.75;
+}
+
+.prose p {
+  margin-bottom: 1.25em;
+}
+
+.prose h2 {
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+  font-size: var(--font-size-2xl);
+  font-weight: 700;
+}
+
+/* ---- Image aspect ratios ---- */
+.aspect-destination {
+  aspect-ratio: 4 / 3;
+}
+
+.aspect-hero {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-gallery {
+  aspect-ratio: 3 / 4;
+}
+
+.aspect-package {
+  aspect-ratio: 3 / 2;
+}
+
+/* ---- Lightbox ---- */
+.lightbox-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: oklch(0% 0% 0% / 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}

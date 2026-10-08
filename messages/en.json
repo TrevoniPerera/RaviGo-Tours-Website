@@ -1,0 +1,479 @@
+{
+  "nav": {
+    "home": "Home",
+    "destinations": "Destinations",
+    "packages": "Packages",
+    "gallery": "Gallery",
+    "about": "About",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "switchLanguage": "Switch language"
+  },
+
+  "hero": {
+    "headline": "Discover Sri Lanka Like Never Before",
+    "subheadline": "Authentic experiences curated by a local guide with over 20 years of passion for this island.",
+    "ctaPrimary": "View Packages",
+    "ctaSecondary": "WhatsApp Us",
+    "imageAlt": "Breathtaking view of Sri Lanka's Sigiriya Rock Fortress at sunrise"
+  },
+
+  "experience": {
+    "years": "20+",
+    "label": "Years of Experience",
+    "subLabel": "Guiding international travellers across Sri Lanka",
+    "altBadge": "Over 20 years of experience badge"
+  },
+
+  "showcase": {
+    "heading": "Island of Wonders",
+    "subheading": "From misty tea hills to golden beaches, from ancient temples to wild leopards — every corner of Sri Lanka tells a story.",
+    "images": {
+      "beaches": {
+        "alt": "Pristine palm-lined beach on Sri Lanka's south coast at sunset",
+        "caption": "South Coast Beaches"
+      },
+      "teaHills": {
+        "alt": "Lush green tea plantations rolling across the Hill Country of Sri Lanka",
+        "caption": "Tea Country Hills"
+      },
+      "wildlife": {
+        "alt": "A leopard resting in Yala National Park, Sri Lanka",
+        "caption": "Yala Wildlife Safari"
+      },
+      "temples": {
+        "alt": "The ornate Temple of the Tooth illuminated at dusk in Kandy, Sri Lanka",
+        "caption": "Sacred Temples"
+      },
+      "trains": {
+        "alt": "The iconic blue train crossing Nine Arches Bridge near Ella, Sri Lanka",
+        "caption": "Scenic Train Journeys"
+      },
+      "food": {
+        "alt": "A colourful spread of traditional Sri Lankan rice and curry dishes",
+        "caption": "Sri Lankan Cuisine"
+      }
+    }
+  },
+
+  "destinations": {
+    "heading": "Top Destinations",
+    "subheading": "Ten iconic places, handpicked from 20+ years of guiding.",
+    "viewAll": "View All Destinations",
+    "viewDetail": "Explore {name}",
+    "relatedPackages": "Related Packages",
+    "bestSeason": "Best Season",
+    "suggestedTime": "Suggested Visit",
+    "hours": "{n} hours",
+    "region": "Region",
+    "photoSetAlt": "Photo gallery of {name}",
+
+    "sigiriya": {
+      "name": "Sigiriya",
+      "region": "Cultural Triangle",
+      "shortDescription": "Climb the legendary Lion Rock fortress rising 200 m above the jungle — a UNESCO World Heritage Site and Sri Lanka's most iconic landmark.",
+      "longDescription": "Sigiriya, known as the 'Eighth Wonder of the World', is a spectacular ancient rock fortress and palace ruin built in the 5th century AD. The site rises dramatically from the surrounding flat plains and features ancient frescoes, the famous Mirror Wall, and elaborate water gardens at the base. Climbing to the summit rewards visitors with panoramic views across the jungle canopy and reveals the story of King Kashyapa who ruled here for 18 years.",
+      "bestSeasonLabel": "January – March, July – September"
+    },
+    "temple-of-the-tooth": {
+      "name": "Temple of the Tooth",
+      "region": "Cultural Triangle",
+      "shortDescription": "Sri Lanka's most revered Buddhist shrine, home to the sacred tooth relic of the Buddha, set beside the serene Kandy Lake.",
+      "longDescription": "The Sri Dalada Maligawa (Temple of the Sacred Tooth Relic) in Kandy is one of the most sacred places in the Buddhist world. The temple houses the relic of the tooth of the Buddha, which has been an object of veneration since the 4th century AD. The golden-roofed complex is the cultural heart of Kandy and hosts the spectacular Esala Perahera festival each August. The surrounding Kandy city with its botanical gardens and lake adds to the magical atmosphere.",
+      "bestSeasonLabel": "January – March, July – September"
+    },
+    "galle-fort": {
+      "name": "Galle Fort",
+      "region": "South Coast",
+      "shortDescription": "A perfectly preserved Dutch colonial fortified city on the southern tip of Sri Lanka — narrow streets, boutique cafes, and ocean views from the ramparts.",
+      "longDescription": "Galle Fort is a UNESCO World Heritage Site built by the Portuguese in the 16th century and extensively fortified by the Dutch during the 17th century. The fort is a remarkable example of an urban ensemble illustrating the interaction of European architecture and South Asian traditions. Walking the ancient ramparts at sunset, exploring the lighthouse, colourful churches, mosques, and boutique shops within the fort walls is a uniquely atmospheric experience.",
+      "bestSeasonLabel": "November – April"
+    },
+    "ella-nine-arches": {
+      "name": "Ella & Nine Arches Bridge",
+      "region": "Hill Country",
+      "shortDescription": "A charming highland village perched at 1,000 m with the iconic Nine Arches Bridge, Little Adam's Peak hike, and the world's most scenic train ride.",
+      "longDescription": "Ella is a small town in the Badulla District, nestled among rolling tea estates and misty mountains. The famous Nine Arches Bridge is a colonial-era marvel of stone and brick with no metal used in its construction. Visitors come to watch the blue train glide over the bridge at sunset — one of Sri Lanka's most photographed moments. The surrounding area offers hikes to Little Adam's Peak, Ella Rock, and Ravana Falls.",
+      "bestSeasonLabel": "January – March, July – September"
+    },
+    "yala-national-park": {
+      "name": "Yala National Park",
+      "region": "Wildlife",
+      "shortDescription": "The highest density of leopards in the world, alongside elephants, sloth bears, and hundreds of bird species in a dramatic landscape of jungle and lagoon.",
+      "longDescription": "Yala National Park is Sri Lanka's most visited and second largest national park, covering 979 square kilometres of forest, grassland, and lagoon. It is famous for having one of the world's highest densities of leopards, making leopard sightings relatively common. The park is also home to elephants, water buffalo, sloth bears, mugger crocodiles, and an extraordinary diversity of bird life. Dawn and dusk jeep safaris are the best way to explore this extraordinary wilderness.",
+      "bestSeasonLabel": "February – July (dry season)"
+    },
+    "nuwara-eliya": {
+      "name": "Nuwara Eliya",
+      "region": "Hill Country",
+      "shortDescription": "Sri Lanka's 'Little England' at 1,868 m — rolling tea estates, colonial Tudor architecture, cool mountain air, and the famous Victoria Park.",
+      "longDescription": "Nuwara Eliya, meaning 'City of Light', sits at the highest elevation in Sri Lanka and feels remarkably different from the tropical coast. British colonists built a hill station here in the 19th century, complete with red postboxes, Tudor-style hotels, a golf course, and manicured gardens. Today it is the heart of Sri Lanka's finest tea country. Gregory Lake, Hakgala Botanical Gardens, and the surrounding tea factory tours make it a fascinating stop on the Hill Country circuit.",
+      "bestSeasonLabel": "January – March, July – September"
+    },
+    "mirissa": {
+      "name": "Mirissa",
+      "region": "South Coast",
+      "shortDescription": "A crescent bay of golden sand, coconut palms, and turquoise water — plus the best blue whale and dolphin watching in all of Asia.",
+      "longDescription": "Mirissa is a small fishing town on Sri Lanka's southern tip, known for its perfect crescent-shaped beach and world-class whale watching. Blue whales — the largest animals on Earth — pass close to shore from November to April, and Mirissa is considered one of the best places in the world to see them. The beach itself is ideal for swimming and snorkelling, and the sunset view from Parrot Rock is one of the most beautiful on the island.",
+      "bestSeasonLabel": "November – April"
+    },
+    "dambulla-cave-temple": {
+      "name": "Dambulla Cave Temple",
+      "region": "Cultural Triangle",
+      "shortDescription": "Sri Lanka's largest and best-preserved cave temple complex with 153 Buddha statues and ancient murals covering 2,100 sq m of ceiling.",
+      "longDescription": "The Dambulla Cave Temple is a UNESCO World Heritage Site and the largest and best-preserved cave temple complex in Sri Lanka. The five caves contain 153 Buddha statues, three statues of Sri Lankan kings, and four statues of gods and goddesses. The murals covering the ceilings and walls span 2,100 square metres and depict scenes from the life of the Buddha and legends from Sri Lankan history. The site has been a sacred place of pilgrimage for over 22 centuries.",
+      "bestSeasonLabel": "January – September"
+    },
+    "anuradhapura": {
+      "name": "Anuradhapura",
+      "region": "Ancient Cities",
+      "shortDescription": "Sri Lanka's first capital and one of the longest continuously inhabited cities in the world, home to towering ancient stupas and the sacred Bodhi tree.",
+      "longDescription": "Anuradhapura was the first capital of Sri Lanka and remained the political and religious capital for over 1,300 years. It is one of the eight UNESCO World Heritage Sites in Sri Lanka and contains some of the most impressive ancient monuments in Asia. The city is centred around the Sri Maha Bodhi — a sacred fig tree grown from a cutting of the original Bodhi tree under which the Buddha attained enlightenment, making it the oldest documented tree in human history. Towering dagobas (stupas) rise above the jungle canopy.",
+      "bestSeasonLabel": "January – September"
+    },
+    "polonnaruwa": {
+      "name": "Polonnaruwa",
+      "region": "Ancient Cities",
+      "shortDescription": "Sri Lanka's medieval capital, boasting one of Asia's finest collections of 12th-century ruins — statues, moonstone steps, and royal palaces.",
+      "longDescription": "Polonnaruwa was the second capital of Sri Lanka, reaching its zenith under King Parakramabahu I in the 12th century. The well-preserved ancient city contains a fascinating collection of ruins including the Royal Palace, Audience Hall, Gal Vihara (with its magnificent rock-cut Buddha sculptures), Rankot Vihara stupa, and the famous Parakrama Samudraya reservoir. The compact, bikeable ruins make Polonnaruwa one of the most enjoyable UNESCO sites in Sri Lanka to explore.",
+      "bestSeasonLabel": "January – September"
+    }
+  },
+
+  "packages": {
+    "heading": "Tour Packages",
+    "subheading": "From ancient ruins to wild safaris — tailor-made journeys for every traveller.",
+    "viewAll": "View All Packages",
+    "enquire": "Enquire About This Package",
+    "whatsappEnquire": "WhatsApp About This Package",
+    "duration": "{n} Days",
+    "fromPrice": "From USD {amount}",
+    "priceOnRequest": "Price on Request",
+    "included": "What's Included",
+    "excluded": "What's Not Included",
+    "itinerary": "Day-by-Day Itinerary",
+    "day": "Day {n}",
+    "overnight": "Overnight: {place}",
+    "customTourCta": "Design Your Own Tour",
+    "customTourNote": "Every trip is unique — let's build yours together.",
+
+    "cultural-triangle": {
+      "title": "Cultural Triangle",
+      "tagline": "Ancient kingdoms, rock fortresses, and sacred temples across 7 days.",
+      "highlights": [
+        "Climb Sigiriya Rock Fortress at sunrise",
+        "Dambulla Cave Temple murals",
+        "Sacred Tooth Relic Temple in Kandy",
+        "Anuradhapura & Polonnaruwa ancient cities",
+        "Sunset at Pidurangala Rock"
+      ],
+      "included": [
+        "Private air-conditioned vehicle",
+        "Expert English-speaking guide",
+        "All entrance fees",
+        "Daily breakfast",
+        "Airport transfers"
+      ],
+      "excluded": [
+        "International flights",
+        "Lunches and dinners",
+        "Travel insurance",
+        "Personal expenses"
+      ],
+      "itinerary": {
+        "day1": { "title": "Arrival in Colombo", "description": "Welcome arrival at Bandaranaike International Airport. Transfer to your hotel in Colombo. Evening orientation walk through the city." },
+        "day2": { "title": "Anuradhapura — Sacred Ancient City", "description": "Drive north to Anuradhapura. Explore the ancient city's towering dagobas and the sacred Sri Maha Bodhi tree. Overnight Anuradhapura." },
+        "day3": { "title": "Polonnaruwa — Medieval Masterpiece", "description": "Cycle through the well-preserved medieval capital, visiting Gal Vihara rock carvings and the Royal Palace ruins. Overnight Polonnaruwa." },
+        "day4": { "title": "Sigiriya — The Lion Rock", "description": "Climb the iconic Lion Rock fortress. Afternoon visit to Pidurangala for panoramic views. Overnight Sigiriya." },
+        "day5": { "title": "Dambulla Cave Temples", "description": "Morning at the Golden Temple of Dambulla, the largest cave temple complex in Asia. Afternoon spice garden visit. Overnight Dambulla." },
+        "day6": { "title": "Kandy — Sacred City", "description": "Arrive in Kandy. Visit the Temple of the Sacred Tooth Relic, Kandy Lake, and the Royal Botanical Gardens of Peradeniya. Cultural Kandyan dance show in the evening. Overnight Kandy." },
+        "day7": { "title": "Departure", "description": "Morning at leisure in Kandy. Transfer to Colombo Airport for your international departure. Safe travels!" }
+      }
+    },
+
+    "hill-country-train": {
+      "title": "Hill Country & Train Journey",
+      "tagline": "Mist, tea, and the world's most scenic railway — 6 days in the highlands.",
+      "highlights": [
+        "Scenic train ride Kandy to Ella",
+        "Nine Arches Bridge at sunset",
+        "Nuwara Eliya tea factory tour",
+        "Little Adam's Peak hike",
+        "Sri Lankan cooking class"
+      ],
+      "included": [
+        "Private vehicle (except train leg)",
+        "First-class train tickets Kandy–Ella",
+        "Expert guide",
+        "All entrance fees",
+        "Daily breakfast"
+      ],
+      "excluded": [
+        "International flights",
+        "Lunches and dinners",
+        "Travel insurance"
+      ],
+      "itinerary": {
+        "day1": { "title": "Arrival & Transfer to Kandy", "description": "Arrive at Colombo Airport. Scenic drive to Kandy through rubber and spice plantations. Evening at Kandy Lake." },
+        "day2": { "title": "Kandy — Cultural Capital", "description": "Temple of the Tooth Relic, Royal Botanical Gardens, Peradeniya. Evening Kandyan dance performance." },
+        "day3": { "title": "Kandy to Nuwara Eliya", "description": "Drive through winding mountain roads to Nuwara Eliya — Sri Lanka's 'Little England'. Visit a working tea factory and Gregory Lake." },
+        "day4": { "title": "Scenic Train to Ella", "description": "Board the iconic blue train from Nanu Oya to Ella through dramatic highland scenery. Arrive in Ella for sunset views at Nine Arches Bridge." },
+        "day5": { "title": "Ella — Hikes & Waterfalls", "description": "Morning hike to Little Adam's Peak. Afternoon visit to Ravana Falls. Optional Ella Rock hike for the fit adventurer." },
+        "day6": { "title": "Return to Colombo", "description": "Drive back via Haputale scenic viewpoint. Arrive Colombo for onward journey." }
+      }
+    },
+
+    "wildlife-safari": {
+      "title": "Wildlife Safari",
+      "tagline": "Encounter leopards, elephants, and sloth bears in Sri Lanka's wildest corners.",
+      "highlights": [
+        "Yala National Park jeep safari",
+        "Leopard tracking at dawn",
+        "Elephant Gathering at Minneriya (seasonal)",
+        "Bird watching — 400+ species",
+        "Arugam Bay beach extension option"
+      ],
+      "included": [
+        "Private jeep safari with tracker",
+        "National park entrance fees",
+        "Expert naturalist guide",
+        "Airport transfers",
+        "Daily breakfast"
+      ],
+      "excluded": [
+        "International flights",
+        "Lunches and dinners",
+        "Travel insurance"
+      ],
+      "itinerary": {
+        "day1": { "title": "Arrival & Drive to the South", "description": "Arrive Colombo. Drive south through coastal highway to Tissamaharama. Briefing on safari etiquette and what to expect." },
+        "day2": { "title": "Yala — Dawn Safari", "description": "Pre-dawn departure into Yala National Park. Prime leopard territory in Block 1. Afternoon rest, evening bird watching at Tissa Lake." },
+        "day3": { "title": "Yala — Full Day", "description": "Full-day safari covering multiple zones of Yala. Elephant herds, crocodiles, deer, and if lucky — a leopard with cubs." },
+        "day4": { "title": "Bundala Wetlands & Return", "description": "Morning visit to Bundala National Park — a Ramsar wetland famous for flamingos. Drive back north through Hambantota." },
+        "day5": { "title": "Departure", "description": "Transfer to Colombo Airport or extend to Mirissa for whale watching." }
+      }
+    },
+
+    "south-coast-galle": {
+      "title": "South Coast & Galle",
+      "tagline": "Colonial forts, whale watching, surf beaches, and sea turtles over 6 days.",
+      "highlights": [
+        "Galle Fort UNESCO World Heritage walk",
+        "Mirissa blue whale watching",
+        "Sea turtle hatchery visit",
+        "Stilt fishermen of Weligama",
+        "Unawatuna beach and snorkelling"
+      ],
+      "included": [
+        "Private vehicle",
+        "Expert guide",
+        "Whale watching boat trip",
+        "Turtle hatchery entrance",
+        "Daily breakfast"
+      ],
+      "excluded": [
+        "International flights",
+        "Lunches and dinners",
+        "Travel insurance"
+      ],
+      "itinerary": {
+        "day1": { "title": "Colombo to Galle", "description": "Depart Colombo along the coastal expressway. Stop at Mt Lavinia beach. Arrive Galle Fort — evening stroll on the ramparts." },
+        "day2": { "title": "Galle Fort Deep Dive", "description": "Full day exploring Galle Fort — the lighthouse, Dutch Reformed Church, museums, local craft studios, and the best sunrise in Sri Lanka from the fort walls." },
+        "day3": { "title": "Unawatuna & Stilt Fishermen", "description": "Morning at Unawatuna beach. Afternoon photographing the iconic stilt fishermen of Weligama. Drive to Mirissa." },
+        "day4": { "title": "Blue Whale Watching", "description": "Pre-dawn departure for Mirissa's famous whale watching. Blue whales, sperm whales, and spinner dolphins. Afternoon at Mirissa beach." },
+        "day5": { "title": "Turtle Hatchery & Leisure", "description": "Visit the sea turtle conservation hatchery. Afternoon free to relax on Mirissa beach or explore local fish market." },
+        "day6": { "title": "Return to Colombo", "description": "Drive back to Colombo along the coastal highway. City tour if time permits. Airport transfer." }
+      }
+    },
+
+    "food-village-experience": {
+      "title": "Food & Village Experience",
+      "tagline": "Cook with village families, eat where the locals eat, and discover authentic Sri Lanka.",
+      "highlights": [
+        "Sri Lankan cooking class with a village family",
+        "Local market tour",
+        "Rice paddy walk and farmer's lunch",
+        "Coconut tapping demonstration",
+        "Ayurvedic herb garden visit"
+      ],
+      "included": [
+        "Private vehicle",
+        "Expert cultural guide",
+        "All cooking classes and meals featured",
+        "Village homestay (2 nights)",
+        "Market entrance and guides"
+      ],
+      "excluded": [
+        "International flights",
+        "Travel insurance",
+        "Personal expenses"
+      ],
+      "itinerary": {
+        "day1": { "title": "Colombo — Spice Market & Street Food", "description": "Arrive Colombo. Morning spice market tour. Afternoon street food walk through Pettah market with your guide. Overnight Colombo." },
+        "day2": { "title": "Village Homestay Arrival", "description": "Drive to a traditional village. Meet your host family. Afternoon coconut tapping, rice paddy walk, and evening cooking class — prepare a full Sri Lankan rice and curry dinner from scratch." },
+        "day3": { "title": "Village Life & Ayurveda", "description": "Morning herb garden and ayurvedic introduction. Village market visit. Afternoon banana leaf lunch cooked together. Optional toddy tasting." },
+        "day4": { "title": "Kandy — Temple & Spice Gardens", "description": "Drive to Kandy. Visit a spice and herbal garden. Temple of the Tooth for evening puja ceremony. Overnight Kandy." },
+        "day5": { "title": "Return to Colombo", "description": "Morning at Kandy market. Drive back to Colombo. Farewell meal at a local favourite restaurant before airport transfer." }
+      }
+    },
+
+    "custom-island-tour": {
+      "title": "Custom Island Tour",
+      "tagline": "Your Sri Lanka, your pace — we design the perfect journey around you.",
+      "highlights": [
+        "Fully personalised itinerary",
+        "Choose your destinations",
+        "Private vehicle and dedicated guide",
+        "Flexible duration — 3 to 21 days",
+        "All interests catered for"
+      ],
+      "included": [
+        "Private air-conditioned vehicle",
+        "Dedicated English-speaking guide",
+        "All entrance fees for chosen sites",
+        "Flexible meal inclusions",
+        "Airport transfers"
+      ],
+      "excluded": [
+        "International flights",
+        "Travel insurance",
+        "Accommodation (or we can arrange)"
+      ],
+      "customNote": "Tell us your interests, travel dates, group size, and budget — we'll craft the perfect itinerary just for you."
+    }
+  },
+
+  "gallery": {
+    "heading": "Moments from Our Travellers",
+    "subheading": "Real experiences. Real smiles. Real Sri Lanka.",
+    "openLightbox": "View photo: {caption}",
+    "close": "Close",
+    "previous": "Previous photo",
+    "next": "Next photo",
+    "consentNote": "All photos published with written consent of the subjects."
+  },
+
+  "about": {
+    "heading": "Your Guide, Your Island",
+    "subheading": "Meet Ravi — and the story behind RaviGo Tours.",
+    "story": "[PLACEHOLDER: Guide biography and story — early passion for tourism, first guests, what makes this different from other operators. 2–3 paragraphs of personal, authentic storytelling.]",
+    "guidePhotoAlt": "[PLACEHOLDER: Photo of Ravi, your Sri Lanka tour guide]",
+    "languagesSpoken": "Languages Spoken",
+    "languages": ["English", "Sinhala", "Tamil", "[PLACEHOLDER: add more if applicable]"],
+    "teamHeading": "Our Team",
+    "credibilityHeading": "Why Choose RaviGo?",
+    "credibility": {
+      "yearsLabel": "Years Guiding",
+      "satisfaction": "Guest Satisfaction",
+      "satisfactionNote": "[PLACEHOLDER: verified statistic only]"
+    }
+  },
+
+  "contact": {
+    "heading": "Get in Touch",
+    "subheading": "Ready to start planning? We'll get back to you within 24 hours.",
+    "phone": "Call Us",
+    "email": "Email Us",
+    "whatsapp": "WhatsApp Us",
+    "whatsappMessage": "Hello! I'm interested in a Sri Lanka tour with RaviGo. Can you help?",
+    "address": "Our Location",
+    "timezone": "Sri Lanka Standard Time",
+    "timezoneNote": "UTC+5:30 — We typically reply within 24 hours.",
+    "hours": "Opening Hours",
+    "hoursValue": "[PLACEHOLDER: e.g. Monday – Saturday, 8:00 AM – 7:00 PM SLST]",
+    "formHeading": "Send an Enquiry",
+    "form": {
+      "name": "Your Name",
+      "namePlaceholder": "Jane Smith",
+      "email": "Your Email",
+      "emailPlaceholder": "jane@example.com",
+      "package": "Preferred Package",
+      "packagePlaceholder": "Select a package (optional)",
+      "dates": "Preferred Travel Dates",
+      "datesPlaceholder": "e.g. March 10 – March 20, 2025",
+      "groupSize": "Group Size",
+      "groupSizePlaceholder": "2",
+      "message": "Your Message",
+      "messagePlaceholder": "Tell us about your dream trip — interests, budget, special requests...",
+      "submit": "Send Enquiry",
+      "submitting": "Sending...",
+      "successHeading": "Message Received!",
+      "successMessage": "Thank you for reaching out. We'll be in touch within 24 hours.",
+      "errorHeading": "Something Went Wrong",
+      "errorMessage": "Please try again or contact us directly on WhatsApp.",
+      "validation": {
+        "nameRequired": "Please enter your name.",
+        "emailInvalid": "Please enter a valid email address.",
+        "messageRequired": "Please describe what you're looking for.",
+        "messageMinLength": "Message must be at least 20 characters."
+      }
+    }
+  },
+
+  "footer": {
+    "tagline": "Sri Lanka Designed Around You",
+    "linksHeading": "Explore",
+    "contactHeading": "Contact",
+    "followHeading": "Follow Us",
+    "copyright": "© {year} RaviGo Tours. All rights reserved.",
+    "privacy": "Privacy Notice",
+    "madeWith": "Crafted with ❤️ in Sri Lanka"
+  },
+
+  "privacy": {
+    "heading": "Privacy Notice",
+    "lastUpdated": "Last updated: {date}",
+    "content": "[PLACEHOLDER: Full privacy notice — data collected, how used, retention, contact for queries. Consult a legal professional for your jurisdiction.]"
+  },
+
+  "notFound": {
+    "heading": "Page Not Found",
+    "message": "The page you're looking for doesn't exist or may have moved.",
+    "cta": "Back to Home"
+  },
+
+  "common": {
+    "loading": "Loading...",
+    "learnMore": "Learn More",
+    "backToList": "Back",
+    "enquireNow": "Enquire Now",
+    "contactUs": "Contact Us",
+    "whatsappUs": "WhatsApp Us",
+    "viewPackages": "View Packages",
+    "bookNow": "Enquire Now",
+    "perPerson": "per person",
+    "skipToContent": "Skip to main content"
+  },
+
+  "meta": {
+    "home": {
+      "title": "RaviGo Tours | Sri Lanka Tour Guide — 20+ Years of Experience",
+      "description": "Explore Sri Lanka with RaviGo Tours — authentic, private tours led by an experienced local guide. Cultural Triangle, safari, hill country, beaches and more."
+    },
+    "destinations": {
+      "title": "Top Destinations in Sri Lanka | RaviGo Tours",
+      "description": "Discover Sri Lanka's 10 most iconic destinations — from Sigiriya to Yala, Galle Fort to Ella — with expert local guidance."
+    },
+    "packages": {
+      "title": "Sri Lanka Tour Packages | RaviGo Tours",
+      "description": "Choose from cultural, safari, hill country, coastal and custom tour packages. Private tours tailored to your schedule and interests."
+    },
+    "gallery": {
+      "title": "Tourist Gallery | RaviGo Tours Sri Lanka",
+      "description": "Browse photos from real travellers who have explored Sri Lanka with RaviGo Tours."
+    },
+    "about": {
+      "title": "About RaviGo Tours | Your Sri Lanka Tour Guide",
+      "description": "Meet your guide — over 20 years of experience leading international tourists through Sri Lanka's history, nature, and culture."
+    },
+    "contact": {
+      "title": "Contact RaviGo Tours | Plan Your Sri Lanka Trip",
+      "description": "Get in touch to start planning your Sri Lanka adventure. Call, WhatsApp, or email — we respond within 24 hours."
+    },
+    "privacy": {
+      "title": "Privacy Notice | RaviGo Tours",
+      "description": "How RaviGo Tours collects, uses, and protects your personal information."
+    }
+  }
+}
