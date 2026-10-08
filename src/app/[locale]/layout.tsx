@@ -1,4 +1,4 @@
-import { Inter, Noto_Sans_JP } from "next/font/google";
+import { Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -10,13 +10,6 @@ import "../globals.css";
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
   variable: "--font-inter",
-  display: "swap",
-});
-
-const notoJP = Noto_Sans_JP({
-  subsets: ["japanese"],
-  weight: ["400", "500", "700"],
-  variable: "--font-noto-jp",
   display: "swap",
 });
 
@@ -41,7 +34,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   // Apply correct font class per locale
   const fontClass = locale === "ja"
-    ? `${notoJP.variable} font-noto-jp`
+    ? `${inter.variable} font-noto-jp`
     : `${inter.variable} font-inter`;
 
   const schema = buildOrganizationSchema(locale as "en" | "de" | "fr" | "ja" | "it");
