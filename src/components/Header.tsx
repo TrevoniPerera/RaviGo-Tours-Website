@@ -8,6 +8,9 @@ import config from "@/data/config";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { Menu, X, Phone, MessageCircle, Mail, ArrowUpRight } from "lucide-react";
 
+// Logo path constant — easily swappable
+const LOGO_SRC = "/images/logo/logo.png";
+
 interface HeaderProps {
   currentLocale: string;
 }
@@ -84,11 +87,10 @@ export default function Header({ currentLocale }: HeaderProps) {
   return (
     <>
       <header
-        className={`sticky top-0 z-40 w-full transition-all duration-300 ${
-          isScrolled
+        className={`sticky top-0 z-40 w-full transition-all duration-300 ${isScrolled
             ? "glass-header bg-white/95 py-2.5 shadow-md border-b border-stone-200/80"
             : "bg-white/90 py-3.5 backdrop-blur-md border-b border-stone-100"
-        }`}
+          }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           {/* Logo & Brand */}
@@ -98,13 +100,13 @@ export default function Header({ currentLocale }: HeaderProps) {
             className="group flex items-center gap-3 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-600"
             aria-label={`${config.businessName} - Home`}
           >
-            <div className="relative h-11 w-11 overflow-hidden rounded-full border-2 border-emerald-600/40 shadow-sm transition-transform duration-300 group-hover:scale-105">
+            <div className="relative h-11 w-16 sm:h-12 sm:w-20 lg:h-14 lg:w-24 shrink-0 transition-transform duration-300 group-hover:scale-105">
               <Image
-                src="/images/logo/logo.jpeg"
-                alt="RaviGo Tours Logo"
+                src={LOGO_SRC}
+                alt={t("logoAlt")}
                 fill
-                sizes="44px"
-                className="object-cover"
+                sizes="(max-width: 640px) 64px, (max-width: 1024px) 80px, 96px"
+                className="object-contain object-left"
                 priority
               />
             </div>
@@ -112,7 +114,7 @@ export default function Header({ currentLocale }: HeaderProps) {
               <span className="text-lg font-bold tracking-tight text-emerald-950 sm:text-xl">
                 {config.businessName}
               </span>
-              <span className="text-[11px] font-medium tracking-wide uppercase text-amber-700">
+              <span className="text-[11px] font-medium tracking-wide uppercase text-[var(--color-brand-tagline)]">
                 Sri Lanka Local Guide
               </span>
             </div>
@@ -132,11 +134,10 @@ export default function Header({ currentLocale }: HeaderProps) {
                       handleNavClick(item.id);
                     }
                   }}
-                  className={`relative rounded-full px-4 py-2 text-sm font-semibold transition-colors duration-200 ${
-                    isActive
+                  className={`relative rounded-full px-4 py-2 text-sm font-semibold transition-colors duration-200 ${isActive
                       ? "text-emerald-800 font-bold bg-emerald-50/80"
                       : "text-stone-700 hover:text-emerald-800 hover:bg-stone-50"
-                  }`}
+                    }`}
                   aria-current={isActive ? "page" : undefined}
                 >
                   {item.label}
@@ -223,13 +224,13 @@ export default function Header({ currentLocale }: HeaderProps) {
             {/* Drawer Header */}
             <div className="flex items-center justify-between border-b border-stone-200 pb-4">
               <div className="flex items-center gap-3">
-                <div className="relative h-9 w-9 overflow-hidden rounded-full border border-emerald-600">
+                <div className="relative h-10 w-16 shrink-0">
                   <Image
-                    src="/images/logo/logo.jpeg"
-                    alt="RaviGo Tours Logo"
+                    src={LOGO_SRC}
+                    alt={t("logoAlt")}
                     fill
-                    sizes="36px"
-                    className="object-cover"
+                    sizes="64px"
+                    className="object-contain object-left"
                   />
                 </div>
                 <span className="font-bold text-stone-900">{config.businessName}</span>
@@ -260,11 +261,10 @@ export default function Header({ currentLocale }: HeaderProps) {
                         setMobileMenuOpen(false);
                       }
                     }}
-                    className={`flex items-center justify-between rounded-xl px-4 py-3 text-base font-semibold transition ${
-                      isActive
+                    className={`flex items-center justify-between rounded-xl px-4 py-3 text-base font-semibold transition ${isActive
                         ? "bg-emerald-50 text-emerald-900 font-bold"
                         : "text-stone-700 hover:bg-stone-50 hover:text-stone-900"
-                    }`}
+                      }`}
                   >
                     <span>{item.label}</span>
                     {isActive && (

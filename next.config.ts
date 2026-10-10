@@ -4,8 +4,6 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 
 const nextConfig: NextConfig = {
-  cacheComponents: true,
-  partialPrefetching: true,
   turbopack: {
     rules: {
       "*.css": {
@@ -17,8 +15,9 @@ const nextConfig: NextConfig = {
   images: {
     // Allow next/image to optimise local images and future external sources
     formats: ["image/avif", "image/webp"],
-    deviceSizes: [320, 420, 640, 768, 1024, 1280, 1920],
+    deviceSizes: [320, 420, 640, 768, 1024, 1280, 1920, 2560, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    qualities: [75, 80, 85],
   },
   // Security headers
   async headers() {

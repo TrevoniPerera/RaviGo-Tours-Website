@@ -6,6 +6,9 @@ import { Link } from "@/i18n/navigation";
 import config from "@/data/config";
 import { Phone, MessageCircle, Mail, MapPin, ExternalLink, Heart } from "lucide-react";
 
+// Logo path constant — easily swappable
+const LOGO_SRC = "/images/logo/logo.png";
+
 export default function Footer() {
   const t = useTranslations();
   const currentYear = new Date().getFullYear();
@@ -18,13 +21,13 @@ export default function Footer() {
           {/* Col 1: Brand & Bio */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="relative h-12 w-12 overflow-hidden rounded-full border-2 border-emerald-500/50 shadow-md">
+              <div className="relative h-12 w-20 shrink-0">
                 <Image
-                  src="/images/logo/logo.jpeg"
-                  alt="RaviGo Tours Logo"
+                  src={LOGO_SRC}
+                  alt={t("nav.logoAlt")}
                   fill
-                  sizes="48px"
-                  className="object-cover"
+                  sizes="80px"
+                  className="object-contain object-left"
                 />
               </div>
               <div>

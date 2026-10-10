@@ -88,8 +88,10 @@ export default function HeroSlideshow() {
               alt={img.alt}
               fill
               priority={idx === 0}
+              loading={idx === 0 ? "eager" : "lazy"}
               sizes="100vw"
-              className="object-cover object-center scale-105 transform animate-none"
+              quality={85}
+              className="object-cover object-center"
             />
           </div>
         ))}
@@ -140,38 +142,54 @@ export default function HeroSlideshow() {
         </div>
 
         {/* Slideshow controls & indicators */}
-        <div className="mt-14 flex items-center justify-center gap-4">
+        <div className="mt-8 flex items-center justify-center gap-1 sm:mt-12 sm:gap-2">
+          {/* Previous Slide Arrow */}
           <button
             type="button"
             onClick={prevSlide}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-stone-900/60 text-white backdrop-blur-md transition hover:bg-stone-800 hover:border-white/40"
-            aria-label="Previous hero image"
+            className="group flex h-11 w-11 items-center justify-center rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400 focus-visible:outline-offset-2"
+            aria-label={t("hero.prevSlide")}
           >
-            <ChevronLeft className="h-5 w-5" />
+            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-stone-900/40 text-white/80 backdrop-blur-sm transition-all duration-200 group-hover:scale-105 group-hover:border-white/40 group-hover:bg-stone-900/70 group-hover:text-white">
+              <ChevronLeft className="h-4 w-4" />
+            </span>
           </button>
 
-          <div className="flex items-center gap-2">
-            {HERO_IMAGES.map((_, i) => (
-              <button
-                key={i}
-                type="button"
-                onClick={() => setCurrentIndex(i)}
-                className={`h-2.5 rounded-full transition-all duration-300 ${
-                  i === currentIndex ? "w-8 bg-amber-400" : "w-2.5 bg-white/40 hover:bg-white/70"
-                }`}
-                aria-label={`Go to slide ${i + 1}`}
-                aria-current={i === currentIndex}
-              />
-            ))}
+          {/* Pagination Dots */}
+          <div className="flex items-center" role="tablist" aria-label="Hero slides">
+            {HERO_IMAGES.map((_, i) => {
+              const isActive = i === currentIndex;
+              return (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setCurrentIndex(i)}
+                  className="group flex h-11 w-11 items-center justify-center rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400 focus-visible:outline-offset-2"
+                  aria-label={t("hero.goToSlide", { number: i + 1 })}
+                  aria-current={isActive ? "true" : undefined}
+                >
+                  <span
+                    className={`h-2 rounded-full transition-all duration-300 ${
+                      isActive
+                        ? "w-6 bg-amber-400 shadow-sm shadow-amber-400/40"
+                        : "w-2 bg-white/50 group-hover:bg-white/80"
+                    } ${isReducedMotion ? "!transition-none" : ""}`}
+                  />
+                </button>
+              );
+            })}
           </div>
 
+          {/* Next Slide Arrow */}
           <button
             type="button"
             onClick={nextSlide}
-            className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 bg-stone-900/60 text-white backdrop-blur-md transition hover:bg-stone-800 hover:border-white/40"
-            aria-label="Next hero image"
+            className="group flex h-11 w-11 items-center justify-center rounded-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400 focus-visible:outline-offset-2"
+            aria-label={t("hero.nextSlide")}
           >
-            <ChevronRight className="h-5 w-5" />
+            <span className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-stone-900/40 text-white/80 backdrop-blur-sm transition-all duration-200 group-hover:scale-105 group-hover:border-white/40 group-hover:bg-stone-900/70 group-hover:text-white">
+              <ChevronRight className="h-4 w-4" />
+            </span>
           </button>
         </div>
       </div>

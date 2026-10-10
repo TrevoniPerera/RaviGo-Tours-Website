@@ -8,14 +8,18 @@
     "contact": "Contact",
     "openMenu": "Ouvrir le menu",
     "closeMenu": "Fermer le menu",
-    "switchLanguage": "Changer de langue"
+    "switchLanguage": "Changer de langue",
+    "logoAlt": "Logo RaviGo Tours"
   },
   "hero": {
     "headline": "Découvrez le Sri Lanka Comme Jamais",
     "subheadline": "Des expériences authentiques conçues par un guide local avec plus de 20 ans de passion pour cette île.",
     "ctaPrimary": "Voir les circuits",
     "ctaSecondary": "Contactez-nous sur WhatsApp",
-    "imageAlt": "Vue imprenable sur la forteresse de Sigiriya au lever du soleil"
+    "imageAlt": "Vue imprenable sur la forteresse de Sigiriya au lever du soleil",
+    "prevSlide": "Diapositive précédente",
+    "nextSlide": "Diapositive suivante",
+    "goToSlide": "Aller à la diapositive {number}"
   },
   "experience": {
     "years": "20+",

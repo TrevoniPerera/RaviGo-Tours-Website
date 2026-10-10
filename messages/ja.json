@@ -8,14 +8,18 @@
     "contact": "お問い合わせ",
     "openMenu": "メニューを開く",
     "closeMenu": "メニューを閉じる",
-    "switchLanguage": "言語を切り替える"
+    "switchLanguage": "言語を切り替える",
+    "logoAlt": "RaviGo Tours ロゴ"
   },
   "hero": {
     "headline": "スリランカの魅力、心に残る旅へ",
     "subheadline": "20年以上の経験を持つ現地専属ガイドが、あなただけの特別なスリランカ旅行をご案内します。",
     "ctaPrimary": "ツアープランを見る",
     "ctaSecondary": "WhatsAppでお問い合わせ",
-    "imageAlt": "朝日に輝くシギリヤロックの絶景"
+    "imageAlt": "朝日に輝くシギリヤロックの絶景",
+    "prevSlide": "前のスライド",
+    "nextSlide": "次のスライド",
+    "goToSlide": "スライド {number} を表示"
   },
   "experience": {
     "years": "20+",

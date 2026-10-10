@@ -8,7 +8,7 @@
 /* ---- Custom Fonts ---- */
 @theme inline {
   --font-inter: "Inter", sans-serif;
-  --font-noto-jp: "Noto Sans JP", sans-serif;
+  --font-noto-jp: "Noto Sans JP", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
 
   /* ---- Sri Lanka Colour Palette ---- */
 
@@ -54,6 +54,7 @@
   --color-text: oklch(18% 0.02 80);
   --color-text-muted: oklch(50% 0.02 80);
   --color-border: oklch(90% 0.02 80);
+  --color-brand-tagline: #047857; /* Matches Contact button emerald-700 (WCAG AA 5.48:1 contrast on white) */
 
   /* ---- Typography Scale (fluid) ---- */
   --font-size-xs: clamp(0.75rem, 0.72rem + 0.13vw, 0.875rem);

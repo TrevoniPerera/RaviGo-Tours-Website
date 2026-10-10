@@ -8,14 +8,18 @@
     "contact": "Contatti",
     "openMenu": "Apri menu",
     "closeMenu": "Chiudi menu",
-    "switchLanguage": "Cambia lingua"
+    "switchLanguage": "Cambia lingua",
+    "logoAlt": "Logo RaviGo Tours"
   },
   "hero": {
     "headline": "Scopri lo Sri Lanka Come Mai Prima d'Ora",
     "subheadline": "Esperienze autentiche create da una guida locale con oltre 20 anni di passione per quest'isola straordinaria.",
     "ctaPrimary": "Scopri i tour",
     "ctaSecondary": "Scrivici su WhatsApp",
-    "imageAlt": "Spettacolare fortezza rocciosa di Sigiriya all'alba"
+    "imageAlt": "Spettacolare fortezza rocciosa di Sigiriya all'alba",
+    "prevSlide": "Diapositiva precedente",
+    "nextSlide": "Diapositiva successiva",
+    "goToSlide": "Vai alla diapositiva {number}"
   },
   "experience": {
     "years": "20+",

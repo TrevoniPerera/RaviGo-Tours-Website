@@ -1,4 +1,4 @@
-import { Inter, Noto_Sans_JP } from "next/font/google";
+import { Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { notFound } from "next/navigation";
@@ -12,12 +12,6 @@ import "../globals.css";
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
   variable: "--font-inter",
-  display: "swap",
-});
-
-const notoSansJP = Noto_Sans_JP({
-  subsets: ["latin"],
-  variable: "--font-noto-jp",
   display: "swap",
 });
 
@@ -43,8 +37,8 @@ export default async function LocaleLayout({ children, params }: Props) {
   // Apply correct font class per locale
   const fontClass =
     locale === "ja"
-      ? `${inter.variable} ${notoSansJP.variable} font-noto-jp`
-      : `${inter.variable} ${notoSansJP.variable} font-inter`;
+      ? `${inter.variable} font-noto-jp`
+      : `${inter.variable} font-inter`;
 
   const schema = buildOrganizationSchema(locale as "en" | "de" | "fr" | "ja" | "it");
 
@@ -53,6 +47,17 @@ export default async function LocaleLayout({ children, params }: Props) {
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        {locale === "ja" && (
+          <>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+            {/* eslint-disable-next-line @next/next/no-page-custom-font */}
+            <link
+              rel="stylesheet"
+              href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap"
+            />
+          </>
+        )}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}

@@ -8,14 +8,18 @@
     "contact": "Kontakt",
     "openMenu": "Menü öffnen",
     "closeMenu": "Menü schließen",
-    "switchLanguage": "Sprache wechseln"
+    "switchLanguage": "Sprache wechseln",
+    "logoAlt": "RaviGo Tours Logo"
   },
   "hero": {
     "headline": "Entdecken Sie Sri Lanka Wie Nie Zuvor",
     "subheadline": "Authentische Erlebnisse, persönlich geführt von einem lokalen Guide mit über 20 Jahren Leidenschaft für diese Insel.",
     "ctaPrimary": "Touren ansehen",
     "ctaSecondary": "WhatsApp Kontakt",
-    "imageAlt": "Atemberaubender Blick auf die Felsenfestung Sigiriya bei Sonnenaufgang"
+    "imageAlt": "Atemberaubender Blick auf die Felsenfestung Sigiriya bei Sonnenaufgang",
+    "prevSlide": "Vorheriges Bild",
+    "nextSlide": "Nächstes Bild",
+    "goToSlide": "Zu Folie {number} wechseln"
   },
   "experience": {
     "years": "20+",

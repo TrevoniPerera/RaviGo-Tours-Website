@@ -8,7 +8,8 @@
     "contact": "Contact",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "switchLanguage": "Switch language"
+    "switchLanguage": "Switch language",
+    "logoAlt": "RaviGo Tours Logo"
   },
 
   "hero": {
@@ -16,7 +17,10 @@
     "subheadline": "Authentic experiences curated by a local guide with over 20 years of passion for this island.",
     "ctaPrimary": "View Packages",
     "ctaSecondary": "WhatsApp Us",
-    "imageAlt": "Breathtaking view of Sri Lanka's Sigiriya Rock Fortress at sunrise"
+    "imageAlt": "Breathtaking view of Sri Lanka's Sigiriya Rock Fortress at sunrise",
+    "prevSlide": "Previous slide",
+    "nextSlide": "Next slide",
+    "goToSlide": "Go to slide {number}"
   },
 
   "experience": {
