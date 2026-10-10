@@ -1,8 +1,13 @@
-import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import type { Metadata } from "next";
 import { buildHreflangAlternates } from "@/lib/utils";
 import config from "@/data/config";
+import HeroSlideshow from "@/components/HeroSlideshow";
+import DestinationsSection from "@/components/DestinationsSection";
+import PackagesSection from "@/components/PackagesSection";
+import GallerySection from "@/components/GallerySection";
+import AboutSection from "@/components/AboutSection";
+import ContactCtaStrip from "@/components/ContactCtaStrip";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -25,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `${config.siteUrl}/${locale}`,
       images: [
         {
-          url: `${config.siteUrl}/images/og/home-og.jpg`,
+          url: `${config.siteUrl}/images/og/placeholder-og.webp`,
           width: 1200,
           height: 630,
           alt: t("title"),
@@ -36,51 +41,31 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: t("title"),
       description: t("description"),
-      images: [`${config.siteUrl}/images/og/home-og.jpg`],
+      images: [`${config.siteUrl}/images/og/placeholder-og.webp`],
     },
   };
 }
 
 export default function HomePage() {
-  const t = useTranslations();
-
   return (
-    <main id="main-content">
-      {/* Skip link target */}
-      <h1 className="sr-only">{t("hero.headline")}</h1>
+    <main id="main-content" className="w-full">
+      {/* 1. Hero Slideshow with LCP priority, experience badge, and CTAs */}
+      <HeroSlideshow />
 
-      {/* TODO M3-09: HeroSlideshow */}
-      <section className="relative flex h-[90dvh] min-h-[560px] items-center justify-center bg-gradient-to-br from-emerald-900 via-teal-800 to-cyan-900 text-white">
-        <div className="mx-auto max-w-4xl px-6 text-center">
-          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-emerald-300">
-            {/* TODO: ExperienceBadge component */}
-            20+ Years of Experience
-          </p>
-          <h2 className="mb-6 text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl xl:text-7xl">
-            {t("hero.headline")}
-          </h2>
-          <p className="mb-10 text-lg text-stone-200 sm:text-xl lg:text-2xl">
-            {t("hero.subheadline")}
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a
-              href="#packages"
-              className="rounded-full bg-amber-400 px-8 py-4 text-base font-bold text-stone-900 transition hover:bg-amber-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-400"
-            >
-              {t("hero.ctaPrimary")}
-            </a>
-            <a
-              href="#"
-              className="rounded-full border-2 border-white/50 px-8 py-4 text-base font-bold text-white backdrop-blur-sm transition hover:border-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
-            >
-              {t("hero.ctaSecondary")}
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* 2. Destinations: Top 10 floating cards with modal dialog & related packages link */}
+      <DestinationsSection />
 
-      {/* TODO M3-11: DestinationShowcase */}
-      {/* TODO M3-17: Full home page assembly */}
+      {/* 3. Packages: 6 packages, swipeable on mobile, highlights, collapsible details, WhatsApp link */}
+      <PackagesSection />
+
+      {/* 4. Gallery: 9 tourist moments with consent filtering & lightbox modal */}
+      <GallerySection />
+
+      {/* 5. About: Guide narrative, placeholder photo, languages spoken, credibility markers */}
+      <AboutSection />
+
+      {/* 6. Contact CTA Strip: Direct Phone, WhatsApp, Email, and link to Contact page */}
+      <ContactCtaStrip />
     </main>
   );
 }

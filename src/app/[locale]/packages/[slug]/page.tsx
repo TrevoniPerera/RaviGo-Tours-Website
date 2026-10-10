@@ -7,10 +7,14 @@ import { buildTouristTripSchema } from "@/lib/schema";
 import config from "@/data/config";
 import type { Locale } from "@/i18n/routing";
 
+import { routing } from "@/i18n/routing";
+
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
 export async function generateStaticParams() {
-  return packages.map((p) => ({ slug: p.id }));
+  return routing.locales.flatMap((locale) =>
+    packages.map((p) => ({ locale, slug: p.id }))
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -21,10 +25,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: `packages.${slug}` });
   const tPkg = await getTranslations({ locale, namespace: "packages" });
 
-  const priceStr =
-    pkg.price.type === "from"
-      ? tPkg("fromPrice", { amount: formatUSD(pkg.price.amountUSD, locale) })
-      : tPkg("priceOnRequest");
 
   return {
     title: `${t("title")} — ${tPkg("duration", { n: pkg.durationDays })} | RaviGo Tours`,

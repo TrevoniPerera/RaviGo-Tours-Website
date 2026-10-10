@@ -1,9 +1,9 @@
 import type { TourPackage } from "@/types";
 
 /**
- * Tour packages for RaviGo Tours.
- * Human-readable content (title, tagline, highlights, included, excluded,
- * itinerary descriptions) lives in messages/*.json  →  packages.<id>.*
+ * Tour packages for RaviGo Tours Sri Lanka.
+ * Uses real destination images representing the tours, falling back to /images/packages/placeholder-package.webp.
+ * Human-readable text is retrieved from messages/{locale}.json under "packages.{id}.*"
  */
 const packages: TourPackage[] = [
   {
@@ -16,8 +16,8 @@ const packages: TourPackage[] = [
       "polonnaruwa",
       "temple-of-the-tooth",
     ],
-    heroImage: "/images/packages/cultural-triangle-hero.jpg",
-    price: { type: "on_request" }, // [PLACEHOLDER: set amountUSD when price confirmed]
+    heroImage: "/images/destinations/Sigiriya.jpeg",
+    price: { type: "on_request" }, // [TODO: Update when client sets fixed USD amount, e.g. { type: "from", amountUSD: 850 }]
     itinerary: [
       { day: 1, overnight: "Colombo" },
       { day: 2, overnight: "Anuradhapura" },
@@ -31,8 +31,8 @@ const packages: TourPackage[] = [
   {
     id: "hill-country-train",
     durationDays: 6,
-    destinationSlugs: ["kandy", "nuwara-eliya", "ella-nine-arches"],
-    heroImage: "/images/packages/hill-country-hero.jpg",
+    destinationSlugs: ["temple-of-the-tooth", "nuwara-eliya", "ella-nine-arches"],
+    heroImage: "/images/destinations/Ella & Nine Arches.jpeg",
     price: { type: "on_request" },
     itinerary: [
       { day: 1, overnight: "Colombo" },
@@ -47,7 +47,7 @@ const packages: TourPackage[] = [
     id: "wildlife-safari",
     durationDays: 5,
     destinationSlugs: ["yala-national-park"],
-    heroImage: "/images/packages/wildlife-safari-hero.jpg",
+    heroImage: "/images/destinations/Yala National Park.jpeg",
     price: { type: "on_request" },
     itinerary: [
       { day: 1, overnight: "Colombo" },
@@ -61,7 +61,7 @@ const packages: TourPackage[] = [
     id: "south-coast-galle",
     durationDays: 6,
     destinationSlugs: ["galle-fort", "mirissa"],
-    heroImage: "/images/packages/south-coast-hero.jpg",
+    heroImage: "/images/destinations/Galle Fort.jpeg",
     price: { type: "on_request" },
     itinerary: [
       { day: 1, overnight: "Colombo" },
@@ -75,8 +75,8 @@ const packages: TourPackage[] = [
   {
     id: "food-village-experience",
     durationDays: 5,
-    destinationSlugs: [], // village stays — no fixed destination slug
-    heroImage: "/images/packages/food-village-hero.jpg",
+    destinationSlugs: ["dambulla-cave-temple"],
+    heroImage: "/images/destinations/Dambulla Cave Temple.jpeg",
     price: { type: "on_request" },
     itinerary: [
       { day: 1, overnight: "Colombo" },
@@ -88,21 +88,21 @@ const packages: TourPackage[] = [
   },
   {
     id: "custom-island-tour",
-    durationDays: 14, // typical — fully customisable
-    destinationSlugs: [], // chosen by traveller
-    heroImage: "/images/packages/custom-tour-hero.jpg",
+    durationDays: 14,
+    destinationSlugs: ["sigiriya", "ella-nine-arches", "yala-national-park", "galle-fort"],
+    heroImage: "/images/destinations/Mirissa.jpeg",
     price: { type: "on_request" },
-    itinerary: [], // itinerary is built together with the client
+    itinerary: [],
     isCustom: true,
   },
 ];
 
 export default packages;
 
-/** Helper: get a package by slug */
+/** Helper: get package by slug */
 export function getPackageById(id: string): TourPackage | undefined {
   return packages.find((p) => p.id === id);
 }
 
-/** Helper: get all non-custom packages (for the standard listing page) */
+/** Helper: get non-custom packages */
 export const standardPackages = packages.filter((p) => !p.isCustom);

@@ -351,7 +351,18 @@
     "close": "Close",
     "previous": "Previous photo",
     "next": "Next photo",
-    "consentNote": "All photos published with written consent of the subjects."
+    "consentNote": "All photos published with written consent of the subjects.",
+    "items": {
+      "img-001": "Elena & Marco, Italy – Cultural Triangle Tour",
+      "img-002": "Thomas & Sarah, Germany – Hill Country & Scenic Train",
+      "img-003": "Kenji & Yuka, Japan – Sigiriya Sunrise Climb",
+      "img-004": "Camille & Lucas, France – Galle Fort Sunset Stroll",
+      "img-005": "David & Emma, UK – Yala Wildlife Safari",
+      "img-006": "Sophie, Germany – Ella Nine Arches Bridge",
+      "img-007": "Takeshi, Japan – Tea Plantation Discovery",
+      "img-008": "Matteo & Giulia, Italy – Mirissa Coastline & Whale Watching",
+      "img-009": "Antoine & Chloe, France – Traditional Village Cooking Experience"
+    }
   },
 
   "about": {
@@ -409,6 +420,15 @@
         "messageMinLength": "Message must be at least 20 characters."
       }
     }
+  },
+
+  "contactCta": {
+    "heading": "Ready to Plan Your Sri Lanka Journey?",
+    "subheading": "Whether you want a complete island itinerary or a flexible day excursion, let's craft the perfect route around your schedule.",
+    "call": "Call Directly",
+    "whatsapp": "Chat on WhatsApp",
+    "email": "Email Us",
+    "detailedForm": "Full Contact Page"
   },
 
   "footer": {

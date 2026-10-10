@@ -92,6 +92,7 @@ export interface GalleryItem {
    * Written consent from the tourist is legally required.
    */
   consentObtained: boolean;
+  consent?: boolean;
   consentDate?: string; // ISO 8601, e.g. "2024-06-15"
   photographer?: string; // optional photo credit
   // Caption text lives in messages/*.json under "gallery.<id>"

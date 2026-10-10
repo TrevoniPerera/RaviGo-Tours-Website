@@ -7,10 +7,14 @@ import { buildTouristAttractionSchema } from "@/lib/schema";
 import config from "@/data/config";
 import type { Locale } from "@/i18n/routing";
 
+import { routing } from "@/i18n/routing";
+
 type Props = { params: Promise<{ locale: string; slug: string }> };
 
 export async function generateStaticParams() {
-  return destinations.map((d) => ({ slug: d.id }));
+  return routing.locales.flatMap((locale) =>
+    destinations.map((d) => ({ locale, slug: d.id }))
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

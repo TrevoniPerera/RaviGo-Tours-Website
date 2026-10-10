@@ -1,22 +1,46 @@
 import type { SiteConfig } from "@/types";
 
+/**
+ * RaviGo Tours - Core Site Configuration
+ * All contact details, start year, and social links are consolidated here.
+ * Replace items marked with "TODO" as real data becomes available.
+ */
 const config: SiteConfig = {
   businessName: "RaviGo Tours",
   tagline: "Sri Lanka Designed Around You",
-  startYear: 2005, // ✅ CONFIRMED — auto-computes years of experience
+
+  // TODO: Start year for guide experience (2005 = 20+ years of experience)
+  startYear: 2005,
+
+  // TODO: Primary phone number for direct calls
   phone: "+94777624662",
-  whatsapp: "94777624662", // no "+" — used in wa.me URL; formatted +94777624662 for display
+
+  // TODO: WhatsApp number in international format without leading '+' (for wa.me links)
+  whatsapp: "94777624662",
+
+  // TODO: Primary customer contact email
   email: "ravindraweerasekara75@gmail.com",
+
+  // TODO: Physical location / base of operations
   address: "Hikkaduwa, Sri Lanka",
-  timezone: "Asia/Colombo", // UTC+5:30 — Sri Lanka Standard Time
-  googleMapsEmbedUrl: undefined, // Explicitly omitted per client instruction
+
+  // Local timezone
+  timezone: "Asia/Colombo", // UTC+5:30 - Sri Lanka Standard Time
+
+  // TODO: Google Maps Embed URL (leave undefined or provide embed URL if desired)
+  googleMapsEmbedUrl: undefined,
+
+  // Canonical production URL
   siteUrl: "https://ravigo.lk",
+
+  // TODO: Social media links (replace undefined with official profiles when created)
   socials: {
-    facebook: undefined,
-    instagram: undefined,
-    youtube: undefined,
-    tripadvisor: undefined,
+    facebook: undefined, // TODO: e.g. "https://facebook.com/ravigotours"
+    instagram: undefined, // TODO: e.g. "https://instagram.com/ravigotours"
+    youtube: undefined, // TODO: e.g. "https://youtube.com/@ravigotours"
+    tripadvisor: undefined, // TODO: e.g. "https://tripadvisor.com/..."
   },
+
   locales: ["en", "de", "fr", "ja", "it"],
   defaultLocale: "en",
 };
@@ -24,11 +48,11 @@ const config: SiteConfig = {
 export default config;
 
 /**
- * Computes years of experience from the start year to the current year.
+ * Computes years of experience from startYear to the current year.
  * Returns "20+" style string when value exceeds a decade.
- * Called in ExperienceBadge component so it updates automatically each year.
  */
 export function computeYearsOfExperience(startYear: number): string {
-  const years = new Date().getFullYear() - startYear;
-  return years >= 20 ? `${Math.floor(years / 5) * 5}+` : `${years}`;
+  const currentYear = new Date().getFullYear();
+  const years = currentYear - startYear;
+  return years >= 20 ? `${Math.floor(years / 5) * 5}+` : `${Math.max(1, years)}+`;
 }
