@@ -19,7 +19,7 @@ const places: Place[] = [
     ],
     bestSeasons: ["Jan–Mar", "Jul–Sep"],
     suggestedVisitHours: 4,
-    relatedPackageSlugs: ["cultural-triangle", "custom-island-tour"],
+    relatedPackageSlugs: ["cultural-triangle"],
   },
   {
     id: "temple-of-the-tooth",
@@ -47,7 +47,7 @@ const places: Place[] = [
     ],
     bestSeasons: ["Jan–Mar"],
     suggestedVisitHours: 3,
-    relatedPackageSlugs: ["south-coast-galle", "custom-island-tour"],
+    relatedPackageSlugs: ["cultural-triangle"],
   },
   {
     id: "ella-nine-arches",
@@ -75,7 +75,7 @@ const places: Place[] = [
     ],
     bestSeasons: ["Apr–Jun", "Jul–Sep"],
     suggestedVisitHours: 6,
-    relatedPackageSlugs: ["wildlife-safari", "custom-island-tour"],
+    relatedPackageSlugs: ["wildlife-safari"],
   },
   {
     id: "nuwara-eliya",
@@ -103,7 +103,7 @@ const places: Place[] = [
     ],
     bestSeasons: ["Jan–Mar"],
     suggestedVisitHours: 5,
-    relatedPackageSlugs: ["south-coast-galle"],
+    relatedPackageSlugs: ["wildlife-safari"],
   },
   {
     id: "dambulla-cave-temple",

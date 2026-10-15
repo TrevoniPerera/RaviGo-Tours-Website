@@ -12,7 +12,6 @@ export default function AboutSection() {
   const languagesList = [
     { name: "English", level: "Fluent / Professional" },
     { name: "Sinhala", level: "Native" },
-    { name: "Tamil", level: "Conversational" },
     { name: "German & French", level: "Basic greeting & hospitality" },
   ];
 
@@ -77,10 +76,10 @@ export default function AboutSection() {
             {/* Story Paragraphs */}
             <div className="space-y-4 text-base leading-relaxed text-stone-600 sm:text-lg">
               <p>
-                Hello and ayubowan! I am Ravi, founder and primary tour director of RaviGo Tours. Since 2005, I have been privileged to welcome guests from Europe, Asia, Australia, and the Americas to discover the heart and soul of Sri Lanka.
+                Hello and ayubowan! I am Ravidra, founder of RaviGo Tours.I have been privileged to welcome guests around the world to discover the heart and soul of Sri Lanka.
               </p>
               <p>
-                Unlike large tour agencies with impersonal itineraries, RaviGo Tours is built on genuine personal hospitality. Whether tracking wild leopards in Yala at dawn, hiking misty tea hills in Ella, or exploring ancient kingdoms like Sigiriya and Polonnaruwa, every journey is custom-crafted to your comfort, pace, and interests.
+                RaviGo Tours is built on genuine personal hospitality. Whether tracking wild leopards in Yala at dawn, hiking misty tea hills in Ella, or exploring ancient kingdoms like Sigiriya and Polonnaruwa, every journey is custom-crafted to your comfort, pace, and interests.
               </p>
             </div>
 

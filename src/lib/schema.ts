@@ -83,7 +83,7 @@ export function buildTouristTripSchema({
   name: string;
   description: string;
   imageUrl: string;
-  durationDays: number;
+  durationDays?: number;
   locale: LocaleCode;
 }) {
   return {
@@ -98,7 +98,7 @@ export function buildTouristTripSchema({
       name: config.businessName,
       url: config.siteUrl,
     },
-    duration: `P${durationDays}D`, // ISO 8601 duration
+    ...(durationDays ? { duration: `P${durationDays}D` } : {}),
     inLanguage: locale,
   };
 }

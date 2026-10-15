@@ -43,6 +43,16 @@ const config: SiteConfig = {
 
   locales: ["en", "de", "fr", "ja", "it"],
   defaultLocale: "en",
+
+  // Airport transfer service claims (only confirmed items are displayed on live site)
+  airportTransfer: {
+    privateAcVehicle: true, // Confirmed
+    airportPickupDrop: true, // Confirmed
+    // TODO: Client to confirm before displaying flight tracking & meet and greet on live site:
+    flightTracking: false,
+    meetAndGreet: false,
+    transferPricingPlaceholder: "[TODO: Transfer pricing placeholder - custom quote per route]",
+  },
 };
 
 export default config;

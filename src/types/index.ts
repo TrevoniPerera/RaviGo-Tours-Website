@@ -24,6 +24,13 @@ export interface SiteConfig {
   };
   locales: readonly ["en", "de", "fr", "ja", "it"];
   defaultLocale: "en";
+  airportTransfer: {
+    privateAcVehicle: boolean;
+    airportPickupDrop: boolean;
+    flightTracking: boolean;
+    meetAndGreet: boolean;
+    transferPricingPlaceholder: string;
+  };
 }
 
 // ----------------------------------------------------------
@@ -54,7 +61,17 @@ export interface Place {
 }
 
 // ----------------------------------------------------------
-// Tour Package
+// Trip Idea / Sample Journey (Tailor-Made starting point)
+// ----------------------------------------------------------
+export interface TripIdea {
+  id: string; // URL slug e.g. "cultural-triangle"
+  destinationSlugs: string[];
+  heroImage: string;
+  isCustom?: boolean;
+}
+
+// ----------------------------------------------------------
+// Tour Package (Legacy / Archived)
 // ----------------------------------------------------------
 export type PriceModel =
   | { type: "from"; amountUSD: number }

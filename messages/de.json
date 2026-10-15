@@ -2,7 +2,7 @@
   "nav": {
     "home": "Startseite",
     "destinations": "Reiseziele",
-    "packages": "Touren & Pakete",
+    "packages": "Maßgeschneiderte Reisen",
     "gallery": "Galerie",
     "about": "Über Uns",
     "contact": "Kontakt",
@@ -14,8 +14,9 @@
   "hero": {
     "headline": "Entdecken Sie Sri Lanka Wie Nie Zuvor",
     "subheadline": "Authentische Erlebnisse, persönlich geführt von einem lokalen Guide mit über 20 Jahren Leidenschaft für diese Insel.",
-    "ctaPrimary": "Touren ansehen",
+    "ctaPrimary": "Reise planen",
     "ctaSecondary": "WhatsApp Kontakt",
+    "airportChip": "Flughafentransfer bei jeder Reise inklusive",
     "imageAlt": "Atemberaubender Blick auf die Felsenfestung Sigiriya bei Sonnenaufgang",
     "prevSlide": "Vorheriges Bild",
     "nextSlide": "Nächstes Bild",
@@ -62,12 +63,16 @@
     "subheading": "Zehn ikonische Orte, handverlesen aus über 20 Jahren Reiseleitung.",
     "viewAll": "Alle Reiseziele",
     "viewDetail": "{name} entdecken",
-    "relatedPackages": "Passende Touren",
+    "relatedPackages": "Reise mit diesem Ziel planen",
     "bestSeason": "Beste Reisezeit",
     "suggestedTime": "Empfohlene Dauer",
     "hours": "{n} Stunden",
     "region": "Region",
     "photoSetAlt": "Fotogalerie von {name}",
+    "prevSlide": "Vorheriges Reiseziel",
+    "nextSlide": "Nächstes Reiseziel",
+    "slideIndicator": "{current} von {total}",
+    "featured": "Besonders empfohlen",
     "sigiriya": {
       "name": "Sigiriya",
       "region": "Cultural Triangle",
@@ -140,286 +145,103 @@
     }
   },
   "packages": {
-    "heading": "Reisepakete",
-    "subheading": "Von antiken Tempeln bis zu wilden Safaris – maßgeschneiderte Reisen für jeden Reisenden.",
-    "viewAll": "Alle Pakete",
-    "enquire": "Dieses Paket anfragen",
-    "whatsappEnquire": "Per WhatsApp anfragen",
-    "duration": "{n} Tage",
-    "fromPrice": "Ab USD {amount}",
-    "priceOnRequest": "Preis auf Anfrage",
-    "included": "Inbegriffen",
-    "excluded": "Nicht inbegriffen",
-    "itinerary": "Tagesablauf & Route",
-    "day": "Tag {n}",
-    "overnight": "Übernachtung: {place}",
-    "customTourCta": "Eigene Tour planen",
-    "customTourNote": "Jede Reise ist einzigartig – gestalten wir Ihre gemeinsam.",
+    "needsNativeReview": true,
+    "heading": "Maßgeschneiderte Reiseideen",
+    "subheading": "Jede Reise wird individuell gestaltet. Nennen Sie uns Ihre Reisetage und Wünsche – wir passen die Route genau an Ihren Zeitplan an.",
+    "flexibleDates": "Flexible Reisedaten",
+    "flexibleDuration": "Flexible Reisedauer",
+    "flexibleRoute": "Flexible Route",
+    "flexibilityNote": "Dauer und Route an Ihren Zeitplan anpassbar",
+    "airportBadge": "Flughafentransfer inklusive",
+    "freeQuote": "Kostenloses, unverbindliches Angebot",
+    "sampleHighlights": "Reise-Highlights",
+    "quoteWhatsApp": "Individuelles Angebot via WhatsApp",
+    "callUs": "Anrufen: {phone}",
+    "callUsMobile": "Jetzt anrufen",
+    "airportBlock": {
+      "heading": "Flughafentransfer bei jeder Reise inklusive",
+      "description": "Privates, klimatisiertes Fahrzeug, Empfang am internationalen Flughafen Colombo (CMB) und entspannte Fahrt zu Ihrer ersten Unterkunft sowie pünktlich zurück zum Abflug.",
+      "point1": "Privates, klimatisiertes Fahrzeug",
+      "point2": "Flughafen-Abholung und Rücktransfer inklusive",
+      "point3": "Persönlicher lokaler Reiseleiter & Fahrer"
+    },
+    "sectionCtaHeading": "Haben Sie eine eigene Wunschroute im Kopf?",
+    "sectionCtaSubheading": "Teilen Sie uns mit, wie viele Tage Sie Zeit haben und was Sie erleben möchten. Wir erstellen eine 100% maßgeschneiderte Route inklusive Flughafentransfer.",
+    "sectionCtaWhatsApp": "Angebot via WhatsApp anfragen",
+    "sectionCtaCall": "Direkt anrufen",
+    "waCardMsg": "Hallo Ravi! Ich interessiere mich für die Reiseidee „{title}“. Können wir eine maßgeschneiderte Route mit Flughafentransfer planen?",
+    "waSectionMsg": "Hallo Ravi! Ich möchte eine maßgeschneiderte Sri-Lanka-Reise mit Flughafentransfer planen. Können Sie mir ein unverbindliches Angebot machen?",
+
     "cultural-triangle": {
-      "title": "Cultural Triangle",
-      "tagline": "Ancient kingdoms, rock fortresses, and sacred temples across 7 days.",
+      "title": "Kulturdreieck Impressionen",
+      "tagline": "Antike Königreiche, Felsenfestungen und heilige Tempel ganz in Ihrem eigenen Tempo.",
       "highlights": [
-        "Climb Sigiriya Rock Fortress at sunrise",
-        "Dambulla Cave Temple murals",
-        "Sacred Tooth Relic Temple in Kandy",
-        "Anuradhapura & Polonnaruwa ancient cities",
-        "Sunset at Pidurangala Rock"
-      ],
-      "included": [
-        "Private air-conditioned vehicle",
-        "Expert English-speaking guide",
-        "All entrance fees",
-        "Daily breakfast",
-        "Airport transfers"
-      ],
-      "excluded": [
-        "International flights",
-        "Lunches and dinners",
-        "Travel insurance",
-        "Personal expenses"
-      ],
-      "itinerary": {
-        "day1": {
-          "title": "Arrival in Colombo",
-          "description": "Welcome arrival at Bandaranaike International Airport. Transfer to your hotel in Colombo. Evening orientation walk through the city."
-        },
-        "day2": {
-          "title": "Anuradhapura — Sacred Ancient City",
-          "description": "Drive north to Anuradhapura. Explore the ancient city's towering dagobas and the sacred Sri Maha Bodhi tree. Overnight Anuradhapura."
-        },
-        "day3": {
-          "title": "Polonnaruwa — Medieval Masterpiece",
-          "description": "Cycle through the well-preserved medieval capital, visiting Gal Vihara rock carvings and the Royal Palace ruins. Overnight Polonnaruwa."
-        },
-        "day4": {
-          "title": "Sigiriya — The Lion Rock",
-          "description": "Climb the iconic Lion Rock fortress. Afternoon visit to Pidurangala for panoramic views. Overnight Sigiriya."
-        },
-        "day5": {
-          "title": "Dambulla Cave Temples",
-          "description": "Morning at the Golden Temple of Dambulla, the largest cave temple complex in Asia. Afternoon spice garden visit. Overnight Dambulla."
-        },
-        "day6": {
-          "title": "Kandy — Sacred City",
-          "description": "Arrive in Kandy. Visit the Temple of the Sacred Tooth Relic, Kandy Lake, and the Royal Botanical Gardens of Peradeniya. Cultural Kandyan dance show in the evening. Overnight Kandy."
-        },
-        "day7": {
-          "title": "Departure",
-          "description": "Morning at leisure in Kandy. Transfer to Colombo Airport for your international departure. Safe travels!"
-        }
-      }
+        "Aufstieg zur Sigiriya-Felsenfestung bei Sonnenaufgang",
+        "Wandmalereien im Höhlentempel von Dambulla",
+        "Zahntempel des Buddha in Kandy",
+        "Historische Königsstädte Anuradhapura & Polonnaruwa",
+        "Sonnenuntergang auf dem Pidurangala-Felsen"
+      ]
     },
+
     "hill-country-train": {
-      "title": "Hill Country & Train Journey",
-      "tagline": "Mist, tea, and the world's most scenic railway — 6 days in the highlands.",
+      "title": "Bergland & Panoramazug",
+      "tagline": "Nebelverhangene Teeplantagen, Bergketten und eine der schönsten Zugstrecken der Welt.",
       "highlights": [
-        "Scenic train ride Kandy to Ella",
-        "Nine Arches Bridge at sunset",
-        "Nuwara Eliya tea factory tour",
-        "Little Adam's Peak hike",
-        "Sri Lankan cooking class"
-      ],
-      "included": [
-        "Private vehicle (except train leg)",
-        "First-class train tickets Kandy–Ella",
-        "Expert guide",
-        "All entrance fees",
-        "Daily breakfast"
-      ],
-      "excluded": [
-        "International flights",
-        "Lunches and dinners",
-        "Travel insurance"
-      ],
-      "itinerary": {
-        "day1": {
-          "title": "Arrival & Transfer to Kandy",
-          "description": "Arrive at Colombo Airport. Scenic drive to Kandy through rubber and spice plantations. Evening at Kandy Lake."
-        },
-        "day2": {
-          "title": "Kandy — Cultural Capital",
-          "description": "Temple of the Tooth Relic, Royal Botanical Gardens, Peradeniya. Evening Kandyan dance performance."
-        },
-        "day3": {
-          "title": "Kandy to Nuwara Eliya",
-          "description": "Drive through winding mountain roads to Nuwara Eliya — Sri Lanka's 'Little England'. Visit a working tea factory and Gregory Lake."
-        },
-        "day4": {
-          "title": "Scenic Train to Ella",
-          "description": "Board the iconic blue train from Nanu Oya to Ella through dramatic highland scenery. Arrive in Ella for sunset views at Nine Arches Bridge."
-        },
-        "day5": {
-          "title": "Ella — Hikes & Waterfalls",
-          "description": "Morning hike to Little Adam's Peak. Afternoon visit to Ravana Falls. Optional Ella Rock hike for the fit adventurer."
-        },
-        "day6": {
-          "title": "Return to Colombo",
-          "description": "Drive back via Haputale scenic viewpoint. Arrive Colombo for onward journey."
-        }
-      }
+        "Malerische Zugfahrt von Kandy nach Ella",
+        "Neun-Bogen-Brücke zum Sonnenuntergang",
+        "Besuch einer Teefabrik in Nuwara Eliya",
+        "Wanderung auf den Little Adam's Peak",
+        "Traditioneller srilankischer Kochkurs"
+      ]
     },
+
     "wildlife-safari": {
-      "title": "Wildlife Safari",
-      "tagline": "Encounter leopards, elephants, and sloth bears in Sri Lanka's wildest corners.",
+      "title": "Wildnis- & Safari-Abenteuer",
+      "tagline": "Leoparden, wilde Elefanten und Lippenbären in Sri Lankas faszinierendsten Nationalparks.",
       "highlights": [
-        "Yala National Park jeep safari",
-        "Leopard tracking at dawn",
-        "Elephant Gathering at Minneriya (seasonal)",
-        "Bird watching — 400+ species",
-        "Arugam Bay beach extension option"
-      ],
-      "included": [
-        "Private jeep safari with tracker",
-        "National park entrance fees",
-        "Expert naturalist guide",
-        "Airport transfers",
-        "Daily breakfast"
-      ],
-      "excluded": [
-        "International flights",
-        "Lunches and dinners",
-        "Travel insurance"
-      ],
-      "itinerary": {
-        "day1": {
-          "title": "Arrival & Drive to the South",
-          "description": "Arrive Colombo. Drive south through coastal highway to Tissamaharama. Briefing on safari etiquette and what to expect."
-        },
-        "day2": {
-          "title": "Yala — Dawn Safari",
-          "description": "Pre-dawn departure into Yala National Park. Prime leopard territory in Block 1. Afternoon rest, evening bird watching at Tissa Lake."
-        },
-        "day3": {
-          "title": "Yala — Full Day",
-          "description": "Full-day safari covering multiple zones of Yala. Elephant herds, crocodiles, deer, and if lucky — a leopard with cubs."
-        },
-        "day4": {
-          "title": "Bundala Wetlands & Return",
-          "description": "Morning visit to Bundala National Park — a Ramsar wetland famous for flamingos. Drive back north through Hambantota."
-        },
-        "day5": {
-          "title": "Departure",
-          "description": "Transfer to Colombo Airport or extend to Mirissa for whale watching."
-        }
-      }
+        "Jeep-Safari im Yala-Nationalpark",
+        "Leoparden-Spurensuche in den frühen Morgenstunden",
+        "Elefanten-Versammlung in Minneriya (saisonal)",
+        "Vogelbeobachtung mit über 400 Arten",
+        "Optionale Verlängerung an den Stränden von Arugam Bay"
+      ]
     },
+
     "south-coast-galle": {
-      "title": "South Coast & Galle",
-      "tagline": "Colonial forts, whale watching, surf beaches, and sea turtles over 6 days.",
+      "title": "Südküste & Festung Galle",
+      "tagline": "Historische niederländische Festung, Blauwalbeobachtung und goldene Traumstrände.",
       "highlights": [
-        "Galle Fort UNESCO World Heritage walk",
-        "Mirissa blue whale watching",
-        "Sea turtle hatchery visit",
-        "Stilt fishermen of Weligama",
-        "Unawatuna beach and snorkelling"
-      ],
-      "included": [
-        "Private vehicle",
-        "Expert guide",
-        "Whale watching boat trip",
-        "Turtle hatchery entrance",
-        "Daily breakfast"
-      ],
-      "excluded": [
-        "International flights",
-        "Lunches and dinners",
-        "Travel insurance"
-      ],
-      "itinerary": {
-        "day1": {
-          "title": "Colombo to Galle",
-          "description": "Depart Colombo along the coastal expressway. Stop at Mt Lavinia beach. Arrive Galle Fort — evening stroll on the ramparts."
-        },
-        "day2": {
-          "title": "Galle Fort Deep Dive",
-          "description": "Full day exploring Galle Fort — the lighthouse, Dutch Reformed Church, museums, local craft studios, and the best sunrise in Sri Lanka from the fort walls."
-        },
-        "day3": {
-          "title": "Unawatuna & Stilt Fishermen",
-          "description": "Morning at Unawatuna beach. Afternoon photographing the iconic stilt fishermen of Weligama. Drive to Mirissa."
-        },
-        "day4": {
-          "title": "Blue Whale Watching",
-          "description": "Pre-dawn departure for Mirissa's famous whale watching. Blue whales, sperm whales, and spinner dolphins. Afternoon at Mirissa beach."
-        },
-        "day5": {
-          "title": "Turtle Hatchery & Leisure",
-          "description": "Visit the sea turtle conservation hatchery. Afternoon free to relax on Mirissa beach or explore local fish market."
-        },
-        "day6": {
-          "title": "Return to Colombo",
-          "description": "Drive back to Colombo along the coastal highway. City tour if time permits. Airport transfer."
-        }
-      }
+        "Spaziergang durch das UNESCO-Weltkulturerbe Galle Fort",
+        "Blauwalbeobachtung vor Mirissa",
+        "Besuch einer Meeresschildkröten-Station",
+        "Traditionelle Stelzenfischer von Weligama",
+        "Entspannen und Schnorcheln in Unawatuna"
+      ]
     },
+
     "food-village-experience": {
-      "title": "Food & Village Experience",
-      "tagline": "Cook with village families, eat where the locals eat, and discover authentic Sri Lanka.",
+      "title": "Authentisches Dorf- & Kulinarikerlebnis",
+      "tagline": "Kochen mit einheimischen Familien, traditionelle Currys genießen und das echte Sri Lanka erleben.",
       "highlights": [
-        "Sri Lankan cooking class with a village family",
-        "Local market tour",
-        "Rice paddy walk and farmer's lunch",
-        "Coconut tapping demonstration",
-        "Ayurvedic herb garden visit"
-      ],
-      "included": [
-        "Private vehicle",
-        "Expert cultural guide",
-        "All cooking classes and meals featured",
-        "Village homestay (2 nights)",
-        "Market entrance and guides"
-      ],
-      "excluded": [
-        "International flights",
-        "Travel insurance",
-        "Personal expenses"
-      ],
-      "itinerary": {
-        "day1": {
-          "title": "Colombo — Spice Market & Street Food",
-          "description": "Arrive Colombo. Morning spice market tour. Afternoon street food walk through Pettah market with your guide. Overnight Colombo."
-        },
-        "day2": {
-          "title": "Village Homestay Arrival",
-          "description": "Drive to a traditional village. Meet your host family. Afternoon coconut tapping, rice paddy walk, and evening cooking class — prepare a full Sri Lankan rice and curry dinner from scratch."
-        },
-        "day3": {
-          "title": "Village Life & Ayurveda",
-          "description": "Morning herb garden and ayurvedic introduction. Village market visit. Afternoon banana leaf lunch cooked together. Optional toddy tasting."
-        },
-        "day4": {
-          "title": "Kandy — Temple & Spice Gardens",
-          "description": "Drive to Kandy. Visit a spice and herbal garden. Temple of the Tooth for evening puja ceremony. Overnight Kandy."
-        },
-        "day5": {
-          "title": "Return to Colombo",
-          "description": "Morning at Kandy market. Drive back to Colombo. Farewell meal at a local favourite restaurant before airport transfer."
-        }
-      }
+        "Kochkurs bei einer Dorffamilie",
+        "Führung über lokale Märkte",
+        "Reisfeld-Spaziergang mit typischem Bauern-Mittagessen",
+        "Vorführung traditioneller Kokosnussernte",
+        "Besuch eines ayurvedischen Kräutergartens"
+      ]
     },
+
     "custom-island-tour": {
-      "title": "Custom Island Tour",
-      "tagline": "Your Sri Lanka, your pace — we design the perfect journey around you.",
+      "title": "Individuelle Insel-Rundreise",
+      "tagline": "Ihr Sri Lanka, Ihr Tempo – eine komplett maßgeschneiderte Route nach Ihren persönlichen Wünschen.",
       "highlights": [
-        "Fully personalised itinerary",
-        "Choose your destinations",
-        "Private vehicle and dedicated guide",
-        "Flexible duration — 3 to 21 days",
-        "All interests catered for"
-      ],
-      "included": [
-        "Private air-conditioned vehicle",
-        "Dedicated English-speaking guide",
-        "All entrance fees for chosen sites",
-        "Flexible meal inclusions",
-        "Airport transfers"
-      ],
-      "excluded": [
-        "International flights",
-        "Travel insurance",
-        "Accommodation (or we can arrange)"
-      ],
-      "customNote": "Tell us your interests, travel dates, group size, and budget — we'll craft the perfect itinerary just for you."
+        "100% personalisierter Reiseplan",
+        "Freie Wahl aller Wunschziele",
+        "Privatfahrzeug und eigener Chauffeur-Guide",
+        "Flexible Dauer, perfekt auf Ihren Urlaub abgestimmt",
+        "Alle Interessen flexibel kombinierbar"
+      ]
     }
   },
   "gallery": {

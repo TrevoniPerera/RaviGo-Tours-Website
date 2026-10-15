@@ -1,63 +1,40 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
-import { useTranslations, useLocale } from "next-intl";
-import packages from "@/data/packages";
+import { useTranslations } from "next-intl";
+import { tripIdeas } from "@/data/packages";
 import config from "@/data/config";
-import type { TourPackage } from "@/types";
+import type { TripIdea } from "@/types";
 import {
-  Clock,
-  CheckCircle2,
-  XCircle,
-  MessageCircle,
-  ChevronDown,
-  ChevronUp,
   Calendar,
+  Clock,
+  Compass,
+  Plane,
+  Car,
   Sparkles,
+  MessageCircle,
+  Phone,
+  CheckCircle2,
 } from "lucide-react";
 
 export default function PackagesSection() {
   const t = useTranslations();
-  const currentLocale = useLocale();
-  const [expandedDetails, setExpandedDetails] = useState<Record<string, boolean>>({});
-  const [expandedItinerary, setExpandedItinerary] = useState<Record<string, boolean>>({});
-
-  const toggleDetails = (pkgId: string) => {
-    setExpandedDetails((prev) => ({ ...prev, [pkgId]: !prev[pkgId] }));
-  };
-
-  const toggleItinerary = (pkgId: string) => {
-    setExpandedItinerary((prev) => ({ ...prev, [pkgId]: !prev[pkgId] }));
-  };
-
-  const getWhatsAppMessage = (pkgTitle: string) => {
-    switch (currentLocale) {
-      case "de":
-        return `Hallo Ravi! Ich interessiere mich für das Paket "${pkgTitle}". Können Sie mir bitte weitere Details und die Verfügbarkeit mitteilen?`;
-      case "fr":
-        return `Bonjour Ravi! Je suis intéressé(e) par le circuit "${pkgTitle}". Pourriez-vous me donner plus de détails et vos disponibilités ?`;
-      case "ja":
-        return `ラヴィさん、こんにちは！「${pkgTitle}」プランに興味があります。詳細と空き状況を教えていただけますか？`;
-      case "it":
-        return `Ciao Ravi! Sono interessato al tour "${pkgTitle}". Potresti darmi maggiori dettagli e disponibilità?`;
-      default:
-        return `Hello Ravi! I am interested in the "${pkgTitle}" tour package. Could you please share more details and availability?`;
-    }
-  };
 
   return (
     <section
-      id="packages"
+      id="tailor-made"
       className="scroll-mt-24 bg-white py-20 sm:py-28"
       aria-labelledby="packages-title"
     >
+      {/* Anchor for backward compatibility with existing links */}
+      <div id="packages" className="relative -top-24 invisible" aria-hidden="true" />
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto mb-14 max-w-3xl text-center">
           <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-amber-900">
             <Sparkles className="h-3.5 w-3.5 text-amber-700" />
-            <span>Tailor-Made Itineraries</span>
+            <span>Tailor-Made Starting Points</span>
           </div>
           <h2
             id="packages-title"
@@ -68,17 +45,30 @@ export default function PackagesSection() {
           <p className="mt-4 text-base leading-relaxed text-stone-600 sm:text-lg">
             {t("packages.subheading")}
           </p>
+
+          {/* Flexibility Chips Row */}
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs sm:text-sm font-semibold text-stone-700">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-stone-100 px-3.5 py-1.5 border border-stone-200/80">
+              <Calendar className="h-4 w-4 text-emerald-600 shrink-0" />
+              <span>{t("packages.flexibleDates")}</span>
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-stone-100 px-3.5 py-1.5 border border-stone-200/80">
+              <Clock className="h-4 w-4 text-emerald-600 shrink-0" />
+              <span>{t("packages.flexibleDuration")}</span>
+            </span>
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-stone-100 px-3.5 py-1.5 border border-stone-200/80">
+              <Compass className="h-4 w-4 text-emerald-600 shrink-0" />
+              <span>{t("packages.flexibleRoute")}</span>
+            </span>
+          </div>
         </div>
 
-        {/* Swipeable on mobile, 2 col tablet, 3 col desktop */}
+        {/* Trip Ideas Grid (Swipeable on mobile, 2 col tablet, 3 col desktop) */}
         <div className="flex gap-6 overflow-x-auto pb-6 pt-2 snap-x snap-mandatory sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:overflow-visible sm:pb-0 sm:pt-0 scrollbar-none">
-          {packages.map((pkg: TourPackage) => {
+          {tripIdeas.map((pkg: TripIdea) => {
             const pkgId = pkg.id;
             const title = t(`packages.${pkgId}.title`);
             const tagline = t(`packages.${pkgId}.tagline`);
-            const duration = t("packages.duration", { n: pkg.durationDays });
-            const isDetailsOpen = !!expandedDetails[pkgId];
-            const isItineraryOpen = !!expandedItinerary[pkgId];
 
             // Highlights
             let highlights: string[] = [];
@@ -89,28 +79,17 @@ export default function PackagesSection() {
               highlights = [];
             }
 
-            // Inclusions / Exclusions
-            let included: string[] = [];
-            let excluded: string[] = [];
-            try {
-              const rawInc = t.raw(`packages.${pkgId}.included`);
-              if (Array.isArray(rawInc)) included = rawInc;
-              const rawExc = t.raw(`packages.${pkgId}.excluded`);
-              if (Array.isArray(rawExc)) excluded = rawExc;
-            } catch {
-              included = [];
-              excluded = [];
-            }
-
-            const waMsg = encodeURIComponent(getWhatsAppMessage(title));
+            const waMsg = encodeURIComponent(
+              t("packages.waCardMsg", { title })
+            );
 
             return (
               <div
                 key={pkg.id}
-                className="group relative flex w-[85vw] max-w-[380px] shrink-0 flex-col overflow-hidden rounded-2xl bg-white shadow-md border border-stone-200/90 snap-center transition-all duration-300 hover:shadow-xl hover:border-emerald-500/50 sm:w-auto sm:max-w-none"
+                className="group relative flex w-[85vw] max-w-[380px] shrink-0 flex-col overflow-hidden rounded-2xl bg-white shadow-md border border-stone-200 snap-center transition-all duration-300 hover:shadow-xl hover:border-emerald-500/50 sm:w-auto sm:max-w-none h-full"
               >
                 {/* Hero Image */}
-                <div className="relative h-52 w-full overflow-hidden bg-stone-100 sm:h-56">
+                <div className="relative h-52 w-full overflow-hidden bg-stone-100 sm:h-56 shrink-0">
                   <Image
                     src={pkg.heroImage}
                     alt={title}
@@ -118,20 +97,15 @@ export default function PackagesSection() {
                     sizes="(max-width: 640px) 85vw, (max-width: 1024px) 50vw, 400px"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/30 to-transparent" />
 
-                  {/* Duration Badge */}
-                  <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-stone-900/80 px-3 py-1 text-xs font-bold text-amber-300 backdrop-blur-md">
-                    <Clock className="h-3.5 w-3.5" />
-                    <span>{duration}</span>
+                  {/* Airport pickup badge on card */}
+                  <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-stone-900/85 px-3 py-1 text-xs font-bold text-amber-300 backdrop-blur-md border border-amber-300/20">
+                    <Plane className="h-3.5 w-3.5 text-amber-400 shrink-0" />
+                    <span>{t("packages.airportBadge")}</span>
                   </span>
 
-                  {/* Price Tag */}
-                  <span className="absolute right-4 top-4 inline-flex items-center rounded-full bg-emerald-600 px-3 py-1 text-xs font-bold text-white shadow-sm">
-                    {t("packages.priceOnRequest")}
-                  </span>
-
-                  {/* Package Title on Image */}
+                  {/* Trip Title on Image */}
                   <div className="absolute bottom-3 left-4 right-4">
                     <h3 className="text-xl font-bold text-white sm:text-2xl drop-shadow-sm">
                       {title}
@@ -139,143 +113,66 @@ export default function PackagesSection() {
                   </div>
                 </div>
 
-                {/* Package Body */}
-                <div className="flex flex-1 flex-col justify-between p-5 space-y-4">
-                  {/* Tagline */}
-                  <p className="text-sm font-medium text-stone-600 italic">
+                {/* Card Body (Equal-height flex column) */}
+                <div className="flex flex-1 flex-col p-5">
+                  {/* Short Flexibility Note */}
+                  <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-800 bg-emerald-50/90 rounded-lg px-2.5 py-1.5 border border-emerald-200/60">
+                    <Compass className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
+                    <span className="truncate">{t("packages.flexibilityNote")}</span>
+                  </div>
+
+                  {/* Tagline / Quote (Line clamp 2, fixed min height for alignment) */}
+                  <p className="mt-3 text-sm font-medium text-stone-600 italic line-clamp-2 min-h-[2.5rem]">
                     &ldquo;{tagline}&rdquo;
                   </p>
 
-                  {/* Highlights */}
+                  {/* Highlights (Aligned across cards) */}
                   {highlights.length > 0 && (
-                    <div className="space-y-2">
+                    <div className="mt-4 space-y-2">
                       <p className="text-xs font-bold uppercase tracking-wider text-emerald-800">
-                        Trip Highlights
+                        {t("packages.sampleHighlights")}
                       </p>
                       <ul className="space-y-1.5 text-xs text-stone-700">
                         {highlights.slice(0, 3).map((item, idx) => (
                           <li key={idx} className="flex items-start gap-2">
                             <Sparkles className="h-3.5 w-3.5 text-amber-500 mt-0.5 shrink-0" />
-                            <span>{item}</span>
+                            <span className="line-clamp-1">{item}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
                   )}
 
-                  {/* Collapsible: Included & Excluded */}
-                  {(included.length > 0 || excluded.length > 0) && (
-                    <div className="border-t border-stone-100 pt-3">
-                      <button
-                        type="button"
-                        onClick={() => toggleDetails(pkgId)}
-                        className="flex w-full items-center justify-between py-1 text-xs font-bold uppercase tracking-wider text-stone-700 hover:text-emerald-700"
-                        aria-expanded={isDetailsOpen}
+                  {/* Bottom Area: Pushed to bottom with mt-auto */}
+                  <div className="mt-auto pt-5 border-t border-stone-100">
+                    <p className="mb-2 text-center text-xs font-semibold text-stone-500">
+                      {t("packages.freeQuote")}
+                    </p>
+
+                    <div className="flex flex-col gap-2 md:flex-row">
+                      {/* WhatsApp Custom Quote Button */}
+                      <a
+                        href={`https://wa.me/${config.whatsapp}?text=${waMsg}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`${t("packages.quoteWhatsApp")} - ${title}`}
+                        className="flex min-h-[44px] flex-1 items-center justify-center gap-1.5 rounded-xl bg-[#25D366] px-3 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-[#20ba59] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#25D366]"
                       >
-                        <span>Included &amp; Excluded</span>
-                        {isDetailsOpen ? (
-                          <ChevronUp className="h-4 w-4" />
-                        ) : (
-                          <ChevronDown className="h-4 w-4" />
-                        )}
-                      </button>
+                        <MessageCircle className="h-4 w-4 shrink-0" />
+                        <span className="truncate">{t("packages.quoteWhatsApp")}</span>
+                      </a>
 
-                      {isDetailsOpen && (
-                        <div className="mt-2 space-y-3 rounded-xl bg-stone-50 p-3 text-xs border border-stone-200/60 animate-in fade-in duration-200">
-                          {included.length > 0 && (
-                            <div>
-                              <p className="font-bold text-emerald-800 mb-1">
-                                {t("packages.included")}
-                              </p>
-                              <ul className="space-y-1 text-stone-600">
-                                {included.map((item, i) => (
-                                  <li key={i} className="flex items-start gap-1.5">
-                                    <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600 shrink-0 mt-0.5" />
-                                    <span>{item}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
-
-                          {excluded.length > 0 && (
-                            <div>
-                              <p className="font-bold text-rose-800 mb-1">
-                                {t("packages.excluded")}
-                              </p>
-                              <ul className="space-y-1 text-stone-600">
-                                {excluded.map((item, i) => (
-                                  <li key={i} className="flex items-start gap-1.5">
-                                    <XCircle className="h-3.5 w-3.5 text-rose-500 shrink-0 mt-0.5" />
-                                    <span>{item}</span>
-                                  </li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
-                        </div>
-                      )}
-                    </div>
-                  )}
-
-                  {/* Expandable Itinerary */}
-                  {pkg.itinerary.length > 0 && (
-                    <div className="border-t border-stone-100 pt-3">
-                      <button
-                        type="button"
-                        onClick={() => toggleItinerary(pkgId)}
-                        className="flex w-full items-center justify-between py-1 text-xs font-bold uppercase tracking-wider text-stone-700 hover:text-emerald-700"
-                        aria-expanded={isItineraryOpen}
+                      {/* Call Us Button */}
+                      <a
+                        href={`tel:${config.phone}`}
+                        aria-label={`${t("packages.callUsMobile")} ${config.phone}`}
+                        className="flex min-h-[44px] items-center justify-center gap-1.5 rounded-xl border border-stone-300 bg-stone-50 px-3 py-2 text-xs font-bold text-stone-800 transition hover:bg-stone-100 hover:text-emerald-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-600 md:shrink-0"
                       >
-                        <span className="flex items-center gap-1.5">
-                          <Calendar className="h-3.5 w-3.5 text-amber-600" />
-                          <span>{t("packages.itinerary")}</span>
-                        </span>
-                        {isItineraryOpen ? (
-                          <ChevronUp className="h-4 w-4" />
-                        ) : (
-                          <ChevronDown className="h-4 w-4" />
-                        )}
-                      </button>
-
-                      {isItineraryOpen && (
-                        <div className="mt-2 max-h-56 overflow-y-auto space-y-2 rounded-xl bg-stone-50 p-3 text-xs border border-stone-200/60 animate-in fade-in duration-200">
-                          {pkg.itinerary.map((day) => {
-                            let dayTitle = `Day ${day.day}: ${day.overnight}`;
-                            try {
-                              const trans = t(`packages.${pkgId}.itinerary.day${day.day}.title`);
-                              if (trans && !trans.includes("packages.")) dayTitle = trans;
-                            } catch {
-                              // fallback
-                            }
-
-                            return (
-                              <div key={day.day} className="border-b border-stone-200/50 pb-1.5 last:border-0 last:pb-0">
-                                <p className="font-bold text-stone-800">
-                                  {t("packages.day", { n: day.day })}: {dayTitle}
-                                </p>
-                                <p className="text-[11px] text-stone-500">
-                                  {t("packages.overnight", { place: day.overnight })}
-                                </p>
-                              </div>
-                            );
-                          })}
-                        </div>
-                      )}
+                        <Phone className="h-4 w-4 text-emerald-700 shrink-0" />
+                        <span className="md:hidden">{t("packages.callUsMobile")}</span>
+                        <span className="hidden md:inline">{t("packages.callUs", { phone: config.phone })}</span>
+                      </a>
                     </div>
-                  )}
-
-                  {/* Action Button: WhatsApp Enquire */}
-                  <div className="pt-2">
-                    <a
-                      href={`https://wa.me/${config.whatsapp}?text=${waMsg}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-xl bg-[#25D366] px-4 py-2.5 text-sm font-bold text-white shadow-sm transition-all hover:bg-[#20ba59] hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#25D366]"
-                    >
-                      <MessageCircle className="h-4 w-4" />
-                      <span>{t("packages.whatsappEnquire")}</span>
-                    </a>
                   </div>
                 </div>
               </div>
@@ -283,27 +180,82 @@ export default function PackagesSection() {
           })}
         </div>
 
-        {/* Custom Tour Note Banner */}
-        <div className="mt-12 rounded-2xl bg-gradient-to-r from-emerald-900 to-teal-800 p-6 text-white shadow-lg sm:p-8">
-          <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
-            <div>
-              <h3 className="text-xl font-bold sm:text-2xl">
-                {t("packages.customTourCta")}
-              </h3>
-              <p className="mt-1 text-sm text-emerald-200 sm:text-base">
-                {t("packages.customTourNote")}
-              </p>
+        {/* Prominent Airport Pickup & Drop Block */}
+        <div className="mt-14 overflow-hidden rounded-3xl border border-emerald-800/40 bg-gradient-to-br from-emerald-950 via-stone-900 to-emerald-950 p-6 sm:p-10 text-white shadow-xl">
+          <div className="max-w-3xl">
+            <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-emerald-500/20 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-emerald-300 border border-emerald-400/30">
+              <Plane className="h-3.5 w-3.5 text-amber-400" />
+              <span>{t("packages.airportBadge")}</span>
             </div>
+            <h3 className="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">
+              {t("packages.airportBlock.heading")}
+            </h3>
+            <p className="mt-3 text-sm leading-relaxed text-emerald-100/90 sm:text-base">
+              {t("packages.airportBlock.description")}
+            </p>
+
+            {/* Confirmed Claims Only */}
+            <div className="mt-6 flex flex-wrap gap-3 text-xs sm:text-sm">
+              {config.airportTransfer?.privateAcVehicle && (
+                <div className="flex items-center gap-2 rounded-xl bg-white/10 px-3.5 py-2 backdrop-blur-sm border border-white/10">
+                  <Car className="h-4 w-4 text-amber-400 shrink-0" />
+                  <span className="font-semibold text-white">
+                    {t("packages.airportBlock.point1")}
+                  </span>
+                </div>
+              )}
+              {config.airportTransfer?.airportPickupDrop && (
+                <div className="flex items-center gap-2 rounded-xl bg-white/10 px-3.5 py-2 backdrop-blur-sm border border-white/10">
+                  <Plane className="h-4 w-4 text-amber-400 shrink-0" />
+                  <span className="font-semibold text-white">
+                    {t("packages.airportBlock.point2")}
+                  </span>
+                </div>
+              )}
+              <div className="flex items-center gap-2 rounded-xl bg-white/10 px-3.5 py-2 backdrop-blur-sm border border-white/10">
+                <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0" />
+                <span className="font-semibold text-white">
+                  {t("packages.airportBlock.point3")}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Section Bottom CTA Row */}
+        <div className="mt-12 rounded-2xl bg-stone-100 p-6 sm:p-8 border border-stone-200 text-center">
+          <h4 className="text-xl font-bold text-stone-900 sm:text-2xl">
+            {t("packages.sectionCtaHeading")}
+          </h4>
+          <p className="mx-auto mt-2 max-w-2xl text-sm text-stone-600 sm:text-base">
+            {t("packages.sectionCtaSubheading")}
+          </p>
+          <p className="mt-3 text-xs font-bold uppercase tracking-wider text-emerald-800">
+            {t("packages.freeQuote")}
+          </p>
+          <div className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
               href={`https://wa.me/${config.whatsapp}?text=${encodeURIComponent(
-                "Hello Ravi! I would like to design a custom tour in Sri Lanka."
+                t("packages.waSectionMsg")
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex min-h-[44px] items-center gap-2 rounded-full bg-amber-400 px-6 py-3 text-sm font-bold text-stone-950 transition hover:bg-amber-300 shrink-0"
+              aria-label={t("packages.sectionCtaWhatsApp")}
+              className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-bold text-white shadow-md transition hover:bg-[#20ba59] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#25D366] sm:w-auto"
             >
               <MessageCircle className="h-4 w-4" />
-              <span>{t("common.contactUs")}</span>
+              <span>{t("packages.sectionCtaWhatsApp")}</span>
+            </a>
+            <a
+              href={`tel:${config.phone}`}
+              aria-label={`${t("packages.sectionCtaCall")} ${config.phone}`}
+              className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full border border-stone-300 bg-white px-6 py-3 text-sm font-bold text-stone-800 transition hover:bg-stone-50 hover:text-emerald-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-600 sm:w-auto"
+            >
+              <Phone className="h-4 w-4 text-emerald-700" />
+              <span className="sm:hidden">{t("packages.callUsMobile")}</span>
+              <span className="hidden sm:inline">
+                {t("packages.callUs", { phone: config.phone })}
+              </span>
             </a>
           </div>
         </div>
