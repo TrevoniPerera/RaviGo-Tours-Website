@@ -12,7 +12,7 @@ export default function AboutSection() {
   const languagesList = [
     { name: "English", level: "Fluent / Professional" },
     { name: "Sinhala", level: "Native" },
-    { name: "German & French", level: "Basic greeting & hospitality" },
+    { name: "German", level: "Fluent" },
   ];
 
   return (
