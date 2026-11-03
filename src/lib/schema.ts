@@ -23,12 +23,6 @@ export function buildOrganizationSchema(locale: LocaleCode) {
     },
     inLanguage: locale,
     foundingDate: String(config.startYear),
-    sameAs: [
-      config.socials.facebook,
-      config.socials.instagram,
-      config.socials.youtube,
-      config.socials.tripadvisor,
-    ].filter(Boolean),
     openingHoursSpecification: [], // [PLACEHOLDER: add hours when confirmed]
   };
 }

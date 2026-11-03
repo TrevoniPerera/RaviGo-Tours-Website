@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import config from "@/data/config";
-import { Phone, MessageCircle, Mail, MapPin, ExternalLink, Heart } from "lucide-react";
+import { Phone, MessageCircle, Mail, MapPin, Heart } from "lucide-react";
 
 // Logo path constant — easily swappable
 const LOGO_SRC = "/images/logo/logo.png";
@@ -16,10 +16,10 @@ export default function Footer() {
   return (
     <footer className="border-t border-stone-200 bg-stone-900 text-stone-300">
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-        {/* 1 col mobile, 2 col tablet, 4 col desktop */}
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        {/* 1 col mobile, 2 col tablet, 3 col desktop */}
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
           {/* Col 1: Brand & Bio */}
-          <div className="space-y-4">
+          <div className="space-y-4 sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3">
               <div className="relative h-12 w-20 shrink-0">
                 <Image
@@ -123,31 +123,6 @@ export default function Footer() {
                 <span>{config.address}</span>
               </li>
             </ul>
-          </div>
-
-          {/* Col 4: Social Links (Placeholders) */}
-          <div className="space-y-4">
-            <h4 className="text-sm font-bold uppercase tracking-wider text-white">
-              {t("footer.followHeading")}
-            </h4>
-            <p className="text-xs text-stone-400">
-              Connect with us for travel stories, guest reviews, and scenic Sri Lanka captures.
-            </p>
-            <div className="flex flex-wrap gap-2 pt-1">
-              {["Facebook", "Instagram", "TripAdvisor", "YouTube"].map((platform) => (
-                <span
-                  key={platform}
-                  className="inline-flex items-center gap-1.5 rounded-full border border-stone-700 bg-stone-800/80 px-3 py-1.5 text-xs font-medium text-stone-300 shadow-sm"
-                  title={`${platform} (Coming Soon)`}
-                >
-                  <span>{platform}</span>
-                  <ExternalLink className="h-3 w-3 text-stone-500" />
-                </span>
-              ))}
-            </div>
-            <p className="text-[11px] text-stone-500 italic">
-              Official social channels launching soon. Contact directly on WhatsApp for prompt service.
-            </p>
           </div>
         </div>
 

@@ -68,7 +68,6 @@
     "suggestedTime": "Durée recommandée",
     "hours": "{n} heures",
     "region": "Région",
-    "photoSetAlt": "Galerie photo de {name}",
     "prevSlide": "Destination précédente",
     "nextSlide": "Destination suivante",
     "slideIndicator": "{current} sur {total}",
@@ -171,7 +170,6 @@
     "sectionCtaCall": "Appeler directement",
     "waCardMsg": "Bonjour Ravi ! Je suis intéressé(e) par l'idée de voyage « {title} ». Pourrions-nous concevoir un itinéraire sur mesure avec transferts aéroport ?",
     "waSectionMsg": "Bonjour Ravi ! J'aimerais planifier un voyage sur mesure au Sri Lanka avec transferts aéroport. Pourriez-vous me faire un devis gratuit ?",
-
     "cultural-triangle": {
       "title": "Inspiration Triangle Culturel",
       "tagline": "Royaumes antiques, citadelles rocheuses et sanctuaires sacrés à votre propre rythme.",
@@ -183,7 +181,6 @@
         "Coucher de soleil spectaculaire sur Pidurangala"
       ]
     },
-
     "hill-country-train": {
       "title": "Montagnes de Thé & Train Panoramique",
       "tagline": "Mers de thé brumeuses, sommets verdoyants et l'un des voyages en train les plus féeriques au monde.",
@@ -195,7 +192,6 @@
         "Cours de cuisine sri lankaise traditionnelle"
       ]
     },
-
     "wildlife-safari": {
       "title": "Aventure Safari Sauvage",
       "tagline": "Léopards, éléphants sauvages et ours lippus au cœur des plus beaux parcs nationaux.",
@@ -207,7 +203,6 @@
         "Prolongation balnéaire possible sur les plages d'Arugam Bay"
       ]
     },
-
     "south-coast-galle": {
       "title": "Côte Sud & Cité Historique de Galle",
       "tagline": "Fort colonial hollandais, observation des baleines bleues et plages dorées bordées de palmiers.",
@@ -219,7 +214,6 @@
         "Détente et snorkeling sur la plage d'Unawatuna"
       ]
     },
-
     "food-village-experience": {
       "title": "Immersion Culinaire & Vie de Village",
       "tagline": "Cuisinez auprès de familles locales, savourez des plats authentiques et découvrez la vraie vie de village.",
@@ -231,7 +225,6 @@
         "Découverte d'un jardin de plantes ayurvédiques"
       ]
     },
-
     "custom-island-tour": {
       "title": "Grand Circuit Île Sur Mesure",
       "tagline": "Votre Sri Lanka, vos envies — une boucle personnalisée de A à Z conçue selon vos souhaits.",
@@ -251,17 +244,30 @@
     "close": "Fermer",
     "previous": "Photo précédente",
     "next": "Photo suivante",
+    "pauseAnimation": "Mettre le défilement en pause",
+    "resumeAnimation": "Reprendre le défilement",
     "consentNote": "Toutes les photos sont publiées avec l'accord écrit des voyageurs.",
     "items": {
-      "img-001": "Elena & Marco, Italy – Cultural Triangle Tour",
-      "img-002": "Thomas & Sarah, Germany – Hill Country & Scenic Train",
-      "img-003": "Kenji & Yuka, Japan – Sigiriya Sunrise Climb",
-      "img-004": "Camille & Lucas, France – Galle Fort Sunset Stroll",
-      "img-005": "David & Emma, UK – Yala Wildlife Safari",
-      "img-006": "Sophie, Germany – Ella Nine Arches Bridge",
-      "img-007": "Takeshi, Japan – Tea Plantation Discovery",
-      "img-008": "Matteo & Giulia, Italy – Mirissa Coastline & Whale Watching",
-      "img-009": "Antoine & Chloe, France – Traditional Village Cooking Experience"
+      "img-001": "Voyageurs lors d'un safari au Sri Lanka",
+      "img-002": "Voyageurs devant le pont aux neuf arches à Ella",
+      "img-003": "Voyageurs découvrant la tenue traditionnelle du Sri Lanka",
+      "img-004": "Voyageurs cueillant du thé dans une plantation de Ceylan",
+      "img-005": "Voyageurs explorant la région montagneuse du thé",
+      "img-006": "Voyageuse avec un bébé crocodile dans un refuge naturel",
+      "img-007": "Voyageurs en safari en bateau dans les mangroves",
+      "img-008": "Voyageuse observant la faune locale durant l'excursion",
+      "img-009": "Voyageurs sur un sentier guidé au cœur des plantations de thé"
+    },
+    "alts": {
+      "img-001": "Voyageurs lors d'un safari au Sri Lanka",
+      "img-002": "Voyageurs devant le pont aux neuf arches à Ella",
+      "img-003": "Voyageurs découvrant la tenue traditionnelle du Sri Lanka",
+      "img-004": "Voyageurs cueillant du thé dans une plantation de Ceylan",
+      "img-005": "Voyageurs explorant la région montagneuse du thé",
+      "img-006": "Voyageuse avec un bébé crocodile dans un refuge naturel",
+      "img-007": "Voyageurs en safari en bateau dans les mangroves",
+      "img-008": "Voyageuse observant la faune locale durant l'excursion",
+      "img-009": "Voyageurs sur un sentier guidé au cœur des plantations de thé"
     }
   },
   "about": {
@@ -273,7 +279,6 @@
     "languages": [
       "Anglais",
       "Cinghalais",
-      "Tamoul",
       "Français (notions)"
     ],
     "teamHeading": "Notre Équipe",
@@ -336,7 +341,6 @@
     "tagline": "Le Sri Lanka pensé pour vous",
     "linksHeading": "Explorer",
     "contactHeading": "Contact",
-    "followHeading": "Suivez-nous",
     "copyright": "© {year} RaviGo Tours. Tous droits réservés.",
     "privacy": "Politique de confidentialité",
     "madeWith": "Conçu avec ❤️ au Sri Lanka"

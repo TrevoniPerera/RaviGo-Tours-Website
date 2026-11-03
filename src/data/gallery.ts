@@ -10,7 +10,6 @@ const gallery: GalleryItem[] = [
   {
     id: "img-001",
     src: "/images/gallery/gallery-01.jpeg",
-    captionKey: "gallery.items.img-001",
     consentObtained: true,
     consent: true,
     consentDate: "2024-02-14",
@@ -18,7 +17,6 @@ const gallery: GalleryItem[] = [
   {
     id: "img-002",
     src: "/images/gallery/gallery-02.jpeg",
-    captionKey: "gallery.items.img-002",
     consentObtained: true,
     consent: true,
     consentDate: "2024-03-20",
@@ -26,7 +24,6 @@ const gallery: GalleryItem[] = [
   {
     id: "img-003",
     src: "/images/gallery/gallery-03.jpeg",
-    captionKey: "gallery.items.img-003",
     consentObtained: true,
     consent: true,
     consentDate: "2024-04-12",
@@ -34,7 +31,6 @@ const gallery: GalleryItem[] = [
   {
     id: "img-004",
     src: "/images/gallery/gallery-04.jpeg",
-    captionKey: "gallery.items.img-004",
     consentObtained: true,
     consent: true,
     consentDate: "2024-05-08",
@@ -42,7 +38,6 @@ const gallery: GalleryItem[] = [
   {
     id: "img-005",
     src: "/images/gallery/gallery-05.jpeg",
-    captionKey: "gallery.items.img-005",
     consentObtained: true,
     consent: true,
     consentDate: "2024-07-19",
@@ -50,7 +45,6 @@ const gallery: GalleryItem[] = [
   {
     id: "img-006",
     src: "/images/gallery/gallery-06.jpeg",
-    captionKey: "gallery.items.img-006",
     consentObtained: true,
     consent: true,
     consentDate: "2024-08-02",
@@ -58,7 +52,6 @@ const gallery: GalleryItem[] = [
   {
     id: "img-007",
     src: "/images/gallery/gallery-07.jpeg",
-    captionKey: "gallery.items.img-007",
     consentObtained: true,
     consent: true,
     consentDate: "2024-09-15",
@@ -66,7 +59,6 @@ const gallery: GalleryItem[] = [
   {
     id: "img-008",
     src: "/images/gallery/gallery-08.jpeg",
-    captionKey: "gallery.items.img-008",
     consentObtained: true,
     consent: true,
     consentDate: "2024-10-04",
@@ -74,7 +66,6 @@ const gallery: GalleryItem[] = [
   {
     id: "img-009",
     src: "/images/gallery/gallery-09.jpeg",
-    captionKey: "gallery.items.img-009",
     consentObtained: true,
     consent: true,
     consentDate: "2024-11-22",

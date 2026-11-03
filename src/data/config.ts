@@ -2,7 +2,7 @@ import type { SiteConfig } from "@/types";
 
 /**
  * RaviGo Tours - Core Site Configuration
- * All contact details, start year, and social links are consolidated here.
+ * All contact details and start year are consolidated here.
  * Replace items marked with "TODO" as real data becomes available.
  */
 const config: SiteConfig = {
@@ -32,14 +32,6 @@ const config: SiteConfig = {
 
   // Canonical production URL
   siteUrl: "https://ravigo.lk",
-
-  // TODO: Social media links (replace undefined with official profiles when created)
-  socials: {
-    facebook: undefined, // TODO: e.g. "https://facebook.com/ravigotours"
-    instagram: undefined, // TODO: e.g. "https://instagram.com/ravigotours"
-    youtube: undefined, // TODO: e.g. "https://youtube.com/@ravigotours"
-    tripadvisor: undefined, // TODO: e.g. "https://tripadvisor.com/..."
-  },
 
   locales: ["en", "de", "fr", "ja", "it"],
   defaultLocale: "en",

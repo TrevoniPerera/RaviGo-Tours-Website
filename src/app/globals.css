@@ -314,3 +314,82 @@ li a,
   justify-content: center;
   padding: 1rem;
 }
+
+/* ---- Photo Strip Marquee (WCAG 2.2.2 & Smooth 60fps CSS transform) ---- */
+@keyframes gallery-marquee-scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.gallery-marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+  animation: gallery-marquee-scroll var(--marquee-duration, 55s) linear infinite;
+}
+
+/* Pause on hover on devices that support hover */
+@media (hover: hover) and (pointer: fine) {
+  .group\/marquee:hover .gallery-marquee-track {
+    animation-play-state: paused;
+  }
+}
+
+/* Pause on keyboard focus anywhere within the marquee container */
+.group\/marquee:focus-within .gallery-marquee-track {
+  animation-play-state: paused;
+}
+
+/* Edge soft-fade gradient mask (desktop 64px, mobile 32px) */
+.gallery-marquee-mask {
+  mask-image: linear-gradient(
+    to right,
+    transparent 0px,
+    black 32px,
+    black calc(100% - 32px),
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0px,
+    black 32px,
+    black calc(100% - 32px),
+    transparent 100%
+  );
+}
+
+@media (min-width: 768px) {
+  .gallery-marquee-mask {
+    mask-image: linear-gradient(
+      to right,
+      transparent 0px,
+      black 64px,
+      black calc(100% - 64px),
+      transparent 100%
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent 0px,
+      black 64px,
+      black calc(100% - 64px),
+      transparent 100%
+    );
+  }
+}
+
+/* Respect prefers-reduced-motion: disable auto-scroll and gradient mask */
+@media (prefers-reduced-motion: reduce) {
+  .gallery-marquee-track {
+    animation: none !important;
+    transform: none !important;
+  }
+  .gallery-marquee-mask {
+    mask-image: none !important;
+    -webkit-mask-image: none !important;
+  }
+}
+

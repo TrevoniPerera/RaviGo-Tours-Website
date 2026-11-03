@@ -27,11 +27,12 @@ export default function AboutSection() {
           <div className="relative mx-auto w-full max-w-md lg:col-span-5">
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl bg-emerald-950/10 shadow-2xl border-4 border-white">
               <Image
-                src="/images/about/placeholder-guide.svg"
+                src="/images/about/ravi-guide.jpg"
                 alt="Ravi - Founder & Expert Tour Guide at RaviGo Tours"
                 fill
+                priority
                 sizes="(max-width: 1024px) 100vw, 420px"
-                className="object-cover"
+                className="object-cover object-top"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent" />
 

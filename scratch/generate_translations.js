@@ -53,8 +53,7 @@ const translations = {
       bestSeason: "Beste Reisezeit",
       suggestedTime: "Empfohlene Dauer",
       hours: "{n} Stunden",
-      region: "Region",
-      photoSetAlt: "Fotogalerie von {name}"
+      region: "Region"
     },
     packages: {
       heading: "Reisepakete",
@@ -88,7 +87,7 @@ const translations = {
       story: "Seit 2005 begleite ich Reisende aus aller Welt durch die faszinierende Vielfalt Sri Lankas. Was als Begeisterung für unsere reiche Geschichte begann, wurde zu einer lebenslangen Leidenschaft. RaviGo Tours steht für persönliche Fürsorge, sichere Reisen und unvergessliche Begegnungen abseits der Massen.",
       guidePhotoAlt: "Foto von Ravi, Ihrem Reiseleiter in Sri Lanka",
       languagesSpoken: "Gesprochene Sprachen",
-      languages: ["Englisch", "Singhalesisch", "Tamil", "Deutsch (Grundkenntnisse)"],
+      languages: ["Englisch", "Singhalesisch", "Deutsch (Grundkenntnisse)"],
       teamHeading: "Unser Team",
       credibilityHeading: "Warum RaviGo Tours?",
       credibility: {
@@ -109,7 +108,6 @@ const translations = {
       tagline: "Sri Lanka – Speziell für Sie gestaltet",
       linksHeading: "Entdecken",
       contactHeading: "Kontakt",
-      followHeading: "Folgen Sie uns",
       copyright: "© {year} RaviGo Tours. Alle Rechte vorbehalten.",
       privacy: "Datenschutzhinweis",
       madeWith: "Mit ❤️ in Sri Lanka gestaltet"
@@ -162,8 +160,7 @@ const translations = {
       bestSeason: "Meilleure saison",
       suggestedTime: "Durée recommandée",
       hours: "{n} heures",
-      region: "Région",
-      photoSetAlt: "Galerie photo de {name}"
+      region: "Région"
     },
     packages: {
       heading: "Nos Circuits & Forfaits",
@@ -197,7 +194,7 @@ const translations = {
       story: "Depuis 2005, j'ai le privilège d'accompagner des voyageurs du monde entier sur notre île magnifique. RaviGo Tours offre des voyages privés, flexibles et authentiques, loin des sentiers battus, avec une attention chaleureuse à chaque détail.",
       guidePhotoAlt: "Photo de Ravi, votre guide au Sri Lanka",
       languagesSpoken: "Langues parlées",
-      languages: ["Anglais", "Cinghalais", "Tamoul", "Français (notions)"],
+      languages: ["Anglais", "Cinghalais", "Français (notions)"],
       teamHeading: "Notre Équipe",
       credibilityHeading: "Pourquoi Choisir RaviGo ?",
       credibility: {
@@ -218,7 +215,6 @@ const translations = {
       tagline: "Le Sri Lanka pensé pour vous",
       linksHeading: "Explorer",
       contactHeading: "Contact",
-      followHeading: "Suivez-nous",
       copyright: "© {year} RaviGo Tours. Tous droits réservés.",
       privacy: "Politique de confidentialité",
       madeWith: "Conçu avec ❤️ au Sri Lanka"
@@ -271,8 +267,7 @@ const translations = {
       bestSeason: "ベストシーズン",
       suggestedTime: "推奨所要時間",
       hours: "{n}時間",
-      region: "エリア",
-      photoSetAlt: "{name}のフォトギャラリー"
+      region: "エリア"
     },
     packages: {
       heading: "おすすめツアープラン",
@@ -306,7 +301,7 @@ const translations = {
       story: "2005年より、日本をはじめ世界各国からの旅行者の皆様を安全かつ快適にスリランカ各地へご案内してまいりました。個人旅行ならではの柔軟なスケジュールと、温かいおもてなしをお約束いたします。",
       guidePhotoAlt: "専属ガイド ラヴィの写真",
       languagesSpoken: "対応言語",
-      languages: ["英語", "シンハラ語", "タミル語", "日本語（日常会話・歓迎）"],
+      languages: ["英語", "シンハラ語", "日本語（日常会話・歓迎）"],
       teamHeading: "運営体制",
       credibilityHeading: "RaviGo Toursが選ばれる理由",
       credibility: {
@@ -327,7 +322,6 @@ const translations = {
       tagline: "あなただけの特別なスリランカ旅行をデザイン",
       linksHeading: "メニュー",
       contactHeading: "連絡先",
-      followHeading: "公式SNS",
       copyright: "© {year} RaviGo Tours. All rights reserved.",
       privacy: "プライバシーポリシー",
       madeWith: "スリランカより心を込めて制作"
@@ -380,8 +374,7 @@ const translations = {
       bestSeason: "Miglior periodo",
       suggestedTime: "Tempo consigliato",
       hours: "{n} ore",
-      region: "Regione",
-      photoSetAlt: "Galleria fotografica di {name}"
+      region: "Regione"
     },
     packages: {
       heading: "I Nostri Pacchetti Tour",
@@ -415,7 +408,7 @@ const translations = {
       story: "Dal 2005 accompagno viaggiatori internazionali tra le meraviglie dello Sri Lanka. RaviGo Tours offre tour privati curati nei minimi dettagli, con flessibilità, sicurezza e profonda conoscenza locale.",
       guidePhotoAlt: "Foto di Ravi, guida turistica in Sri Lanka",
       languagesSpoken: "Lingue parlate",
-      languages: ["Inglese", "Singalese", "Tamil", "Italiano (base/accoglienza)"],
+      languages: ["Inglese", "Singalese", "Italiano (base/accoglienza)"],
       teamHeading: "Il Nostro Team",
       credibilityHeading: "Perché Scegliere RaviGo?",
       credibility: {
@@ -436,7 +429,6 @@ const translations = {
       tagline: "Lo Sri Lanka su misura per te",
       linksHeading: "Esplora",
       contactHeading: "Contatti",
-      followHeading: "Seguici",
       copyright: "© {year} RaviGo Tours. Tutti i diritti riservati.",
       privacy: "Informativa sulla privacy",
       madeWith: "Creato con ❤️ in Sri Lanka"

@@ -68,7 +68,6 @@
     "suggestedTime": "Empfohlene Dauer",
     "hours": "{n} Stunden",
     "region": "Region",
-    "photoSetAlt": "Fotogalerie von {name}",
     "prevSlide": "Vorheriges Reiseziel",
     "nextSlide": "Nächstes Reiseziel",
     "slideIndicator": "{current} von {total}",
@@ -171,7 +170,6 @@
     "sectionCtaCall": "Direkt anrufen",
     "waCardMsg": "Hallo Ravi! Ich interessiere mich für die Reiseidee „{title}“. Können wir eine maßgeschneiderte Route mit Flughafentransfer planen?",
     "waSectionMsg": "Hallo Ravi! Ich möchte eine maßgeschneiderte Sri-Lanka-Reise mit Flughafentransfer planen. Können Sie mir ein unverbindliches Angebot machen?",
-
     "cultural-triangle": {
       "title": "Kulturdreieck Impressionen",
       "tagline": "Antike Königreiche, Felsenfestungen und heilige Tempel ganz in Ihrem eigenen Tempo.",
@@ -183,7 +181,6 @@
         "Sonnenuntergang auf dem Pidurangala-Felsen"
       ]
     },
-
     "hill-country-train": {
       "title": "Bergland & Panoramazug",
       "tagline": "Nebelverhangene Teeplantagen, Bergketten und eine der schönsten Zugstrecken der Welt.",
@@ -195,7 +192,6 @@
         "Traditioneller srilankischer Kochkurs"
       ]
     },
-
     "wildlife-safari": {
       "title": "Wildnis- & Safari-Abenteuer",
       "tagline": "Leoparden, wilde Elefanten und Lippenbären in Sri Lankas faszinierendsten Nationalparks.",
@@ -207,7 +203,6 @@
         "Optionale Verlängerung an den Stränden von Arugam Bay"
       ]
     },
-
     "south-coast-galle": {
       "title": "Südküste & Festung Galle",
       "tagline": "Historische niederländische Festung, Blauwalbeobachtung und goldene Traumstrände.",
@@ -219,7 +214,6 @@
         "Entspannen und Schnorcheln in Unawatuna"
       ]
     },
-
     "food-village-experience": {
       "title": "Authentisches Dorf- & Kulinarikerlebnis",
       "tagline": "Kochen mit einheimischen Familien, traditionelle Currys genießen und das echte Sri Lanka erleben.",
@@ -231,7 +225,6 @@
         "Besuch eines ayurvedischen Kräutergartens"
       ]
     },
-
     "custom-island-tour": {
       "title": "Individuelle Insel-Rundreise",
       "tagline": "Ihr Sri Lanka, Ihr Tempo – eine komplett maßgeschneiderte Route nach Ihren persönlichen Wünschen.",
@@ -251,17 +244,30 @@
     "close": "Schließen",
     "previous": "Vorheriges Foto",
     "next": "Nächstes Foto",
+    "pauseAnimation": "Foto-Laufband anhalten",
+    "resumeAnimation": "Foto-Laufband fortsetzen",
     "consentNote": "Alle Fotos mit schriftlicher Genehmigung der Reisenden veröffentlicht.",
     "items": {
-      "img-001": "Elena & Marco, Italy – Cultural Triangle Tour",
-      "img-002": "Thomas & Sarah, Germany – Hill Country & Scenic Train",
-      "img-003": "Kenji & Yuka, Japan – Sigiriya Sunrise Climb",
-      "img-004": "Camille & Lucas, France – Galle Fort Sunset Stroll",
-      "img-005": "David & Emma, UK – Yala Wildlife Safari",
-      "img-006": "Sophie, Germany – Ella Nine Arches Bridge",
-      "img-007": "Takeshi, Japan – Tea Plantation Discovery",
-      "img-008": "Matteo & Giulia, Italy – Mirissa Coastline & Whale Watching",
-      "img-009": "Antoine & Chloe, France – Traditional Village Cooking Experience"
+      "img-001": "Reisende auf einer Safari-Tour in Sri Lanka",
+      "img-002": "Reisende an der Nine Arches Bridge in Ella",
+      "img-003": "Reisende in traditioneller Kleidung Sri Lankas",
+      "img-004": "Reisende beim Teepflücken auf einer Teeplantage in Ceylon",
+      "img-005": "Reisende beim Erkunden des malerischen Tee-Hügellands",
+      "img-006": "Reisende mit einem kleinen Krokodil in einer Auffangstation",
+      "img-007": "Reisende bei einer Bootssafari durch Mangroven",
+      "img-008": "Reisende bei einer Tierbegegnung auf der Tour",
+      "img-009": "Reisende auf einem geführten Wanderweg im Teeland"
+    },
+    "alts": {
+      "img-001": "Reisende auf einer Safari-Tour in Sri Lanka",
+      "img-002": "Reisende an der Nine Arches Bridge in Ella",
+      "img-003": "Reisende in traditioneller Kleidung Sri Lankas",
+      "img-004": "Reisende beim Teepflücken auf einer Teeplantage in Ceylon",
+      "img-005": "Reisende beim Erkunden des malerischen Tee-Hügellands",
+      "img-006": "Reisende mit einem kleinen Krokodil in einer Auffangstation",
+      "img-007": "Reisende bei einer Bootssafari durch Mangroven",
+      "img-008": "Reisende bei einer Tierbegegnung auf der Tour",
+      "img-009": "Reisende auf einem geführten Wanderweg im Teeland"
     }
   },
   "about": {
@@ -273,7 +279,6 @@
     "languages": [
       "Englisch",
       "Singhalesisch",
-      "Tamil",
       "Deutsch (Grundkenntnisse)"
     ],
     "teamHeading": "Unser Team",
@@ -336,7 +341,6 @@
     "tagline": "Sri Lanka – Speziell für Sie gestaltet",
     "linksHeading": "Entdecken",
     "contactHeading": "Kontakt",
-    "followHeading": "Folgen Sie uns",
     "copyright": "© {year} RaviGo Tours. Alle Rechte vorbehalten.",
     "privacy": "Datenschutzhinweis",
     "madeWith": "Mit ❤️ in Sri Lanka gestaltet"

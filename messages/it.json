@@ -68,7 +68,6 @@
     "suggestedTime": "Tempo consigliato",
     "hours": "{n} ore",
     "region": "Regione",
-    "photoSetAlt": "Galleria fotografica di {name}",
     "prevSlide": "Destinazione precedente",
     "nextSlide": "Destinazione successiva",
     "slideIndicator": "{current} di {total}",
@@ -171,7 +170,6 @@
     "sectionCtaCall": "Chiama direttamente",
     "waCardMsg": "Ciao Ravi! Sono interessato all'idea di viaggio «{title}». Possiamo pianificare un itinerario su misura con transfer aeroportuale?",
     "waSectionMsg": "Ciao Ravi! Vorrei pianificare un tour su misura in Sri Lanka con transfer aeroportuale. Potresti farmi un preventivo gratuito?",
-
     "cultural-triangle": {
       "title": "Ispirazione Triangolo Culturale",
       "tagline": "Antichi regni, fortezze rupestri e templi sacri secondo i tuoi ritmi personali.",
@@ -183,7 +181,6 @@
         "Tramonto panoramico sulla roccia di Pidurangala"
       ]
     },
-
     "hill-country-train": {
       "title": "Terre del Tè & Treno Panoramico",
       "tagline": "Colline nebbiose del tè, vette maestose e uno dei viaggi ferroviari più spettacolari al mondo.",
@@ -195,7 +192,6 @@
         "Lezione di cucina tradizionale singalese"
       ]
     },
-
     "wildlife-safari": {
       "title": "Avventura Safari nella Natura",
       "tagline": "Leopardi, elefanti asiatici e orsi labiati nei parchi più selvaggi dello Sri Lanka.",
@@ -207,7 +203,6 @@
         "Estensione mare facoltativa sulle spiagge di Arugam Bay"
       ]
     },
-
     "south-coast-galle": {
       "title": "Costa Sud & Storica Galle",
       "tagline": "Fortezze coloniali olandesi, balene azzurre e dorate spiagge tropicali.",
@@ -219,7 +214,6 @@
         "Relax e snorkeling sulla spiaggia di Unawatuna"
       ]
     },
-
     "food-village-experience": {
       "title": "Esperienza Culinaria & Vita di Villaggio",
       "tagline": "Cucina insieme alle famiglie del villaggio, assapora ricette autentiche e scopri il vero Sri Lanka.",
@@ -231,7 +225,6 @@
         "Visita a un giardino di erbe ayurvediche"
       ]
     },
-
     "custom-island-tour": {
       "title": "Gran Tour dell'Isola Su Misura",
       "tagline": "Il tuo Sri Lanka, i tuoi tempi: un percorso interamente personalizzato sui tuoi desideri.",
@@ -251,17 +244,30 @@
     "close": "Chiudi",
     "previous": "Foto precedente",
     "next": "Foto successiva",
+    "pauseAnimation": "Metti in pausa lo scorrimento",
+    "resumeAnimation": "Riprendi lo scorrimento",
     "consentNote": "Tutte le foto sono pubblicate con il consenso scritto dei viaggiatori.",
     "items": {
-      "img-001": "Elena & Marco, Italy – Cultural Triangle Tour",
-      "img-002": "Thomas & Sarah, Germany – Hill Country & Scenic Train",
-      "img-003": "Kenji & Yuka, Japan – Sigiriya Sunrise Climb",
-      "img-004": "Camille & Lucas, France – Galle Fort Sunset Stroll",
-      "img-005": "David & Emma, UK – Yala Wildlife Safari",
-      "img-006": "Sophie, Germany – Ella Nine Arches Bridge",
-      "img-007": "Takeshi, Japan – Tea Plantation Discovery",
-      "img-008": "Matteo & Giulia, Italy – Mirissa Coastline & Whale Watching",
-      "img-009": "Antoine & Chloe, France – Traditional Village Cooking Experience"
+      "img-001": "Viaggiatori durante un safari in Sri Lanka",
+      "img-002": "Viaggiatori al Nine Arches Bridge a Ella",
+      "img-003": "Viaggiatori che indossano abiti tradizionali dello Sri Lanka",
+      "img-004": "Viaggiatori che raccolgono il tè in una piantagione di Ceylon",
+      "img-005": "Viaggiatori alla scoperta delle colline del tè",
+      "img-006": "Viaggiatrice con un cucciolo di coccodrillo in un rifugio faunistico",
+      "img-007": "Viaggiatori in safari in barca tra le mangrovie",
+      "img-008": "Viaggiatrice a contatto con la fauna locale durante il tour",
+      "img-009": "Viaggiatori lungo un sentiero guidato tra le colline del tè"
+    },
+    "alts": {
+      "img-001": "Viaggiatori durante un safari in Sri Lanka",
+      "img-002": "Viaggiatori al Nine Arches Bridge a Ella",
+      "img-003": "Viaggiatori che indossano abiti tradizionali dello Sri Lanka",
+      "img-004": "Viaggiatori che raccolgono il tè in una piantagione di Ceylon",
+      "img-005": "Viaggiatori alla scoperta delle colline del tè",
+      "img-006": "Viaggiatrice con un cucciolo di coccodrillo in un rifugio faunistico",
+      "img-007": "Viaggiatori in safari in barca tra le mangrovie",
+      "img-008": "Viaggiatrice a contatto con la fauna locale durante il tour",
+      "img-009": "Viaggiatori lungo un sentiero guidato tra le colline del tè"
     }
   },
   "about": {
@@ -273,7 +279,6 @@
     "languages": [
       "Inglese",
       "Singalese",
-      "Tamil",
       "Italiano (base/accoglienza)"
     ],
     "teamHeading": "Il Nostro Team",
@@ -336,7 +341,6 @@
     "tagline": "Lo Sri Lanka su misura per te",
     "linksHeading": "Esplora",
     "contactHeading": "Contatti",
-    "followHeading": "Seguici",
     "copyright": "© {year} RaviGo Tours. Tutti i diritti riservati.",
     "privacy": "Informativa sulla privacy",
     "madeWith": "Creato con ❤️ in Sri Lanka"

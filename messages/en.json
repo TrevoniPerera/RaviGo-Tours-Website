@@ -11,7 +11,6 @@
     "switchLanguage": "Switch language",
     "logoAlt": "RaviGo Tours Logo"
   },
-
   "hero": {
     "headline": "Discover Sri Lanka Like Never Before",
     "subheadline": "Authentic experiences curated by a local guide with over 20 years of passion for this island.",
@@ -23,14 +22,12 @@
     "nextSlide": "Next slide",
     "goToSlide": "Go to slide {number}"
   },
-
   "experience": {
     "years": "20+",
     "label": "Years of Experience",
     "subLabel": "Guiding international travellers across Sri Lanka",
     "altBadge": "Over 20 years of experience badge"
   },
-
   "showcase": {
     "heading": "Island of Wonders",
     "subheading": "From misty tea hills to golden beaches, from ancient temples to wild leopards — every corner of Sri Lanka tells a story.",
@@ -61,7 +58,6 @@
       }
     }
   },
-
   "destinations": {
     "heading": "Top Destinations",
     "subheading": "Ten iconic places, handpicked from 20+ years of guiding.",
@@ -72,12 +68,10 @@
     "suggestedTime": "Suggested Visit",
     "hours": "{n} hours",
     "region": "Region",
-    "photoSetAlt": "Photo gallery of {name}",
     "prevSlide": "Previous destination",
     "nextSlide": "Next destination",
     "slideIndicator": "{current} of {total}",
     "featured": "Featured",
-
     "sigiriya": {
       "name": "Sigiriya",
       "region": "Cultural Triangle",
@@ -149,7 +143,6 @@
       "bestSeasonLabel": "January – September"
     }
   },
-
   "packages": {
     "heading": "Tailor-Made Tour Ideas",
     "subheading": "Every journey is tailor-made. Tell us how many days you have and what you love, and we'll shape the itinerary around your schedule.",
@@ -176,7 +169,6 @@
     "sectionCtaCall": "Call us directly",
     "waCardMsg": "Hello Ravi! I'm interested in the \"{title}\" sample journey. Could we plan a custom itinerary with airport pickup and drop?",
     "waSectionMsg": "Hello Ravi! I would like to design a tailor-made tour in Sri Lanka with airport pickup and drop. Could you give me a free quote?",
-
     "cultural-triangle": {
       "title": "Cultural Triangle Inspiration",
       "tagline": "Ancient kingdoms, rock fortresses, and sacred temples crafted to your pace.",
@@ -188,7 +180,6 @@
         "Sunset at Pidurangala Rock"
       ]
     },
-
     "hill-country-train": {
       "title": "Hill Country & Scenic Train",
       "tagline": "Misty tea estates, mountain peaks, and the world's most scenic railway.",
@@ -200,7 +191,6 @@
         "Sri Lankan cooking class"
       ]
     },
-
     "wildlife-safari": {
       "title": "Wild Safari Journey",
       "tagline": "Leopards, wild elephants, and sloth bears across Sri Lanka's finest national parks.",
@@ -212,7 +202,6 @@
         "Arugam Bay beach extension option"
       ]
     },
-
     "south-coast-galle": {
       "title": "South Coast & Historic Galle",
       "tagline": "Historic Dutch forts, blue whale watching, and golden palm-fringed beaches.",
@@ -224,7 +213,6 @@
         "Unawatuna beach and snorkelling"
       ]
     },
-
     "food-village-experience": {
       "title": "Authentic Village & Food Experience",
       "tagline": "Cook with village families, eat where the locals eat, and discover authentic Sri Lanka.",
@@ -236,7 +224,6 @@
         "Ayurvedic herb garden visit"
       ]
     },
-
     "custom-island-tour": {
       "title": "Complete Bespoke Island Tour",
       "tagline": "Your Sri Lanka, your pace — a completely personalized route shaped around your wishes.",
@@ -249,7 +236,6 @@
       ]
     }
   },
-
   "gallery": {
     "heading": "Moments from Our Travellers",
     "subheading": "Real experiences. Real smiles. Real Sri Lanka.",
@@ -257,27 +243,43 @@
     "close": "Close",
     "previous": "Previous photo",
     "next": "Next photo",
+    "pauseAnimation": "Pause photo marquee",
+    "resumeAnimation": "Resume photo marquee",
     "consentNote": "All photos published with written consent of the subjects.",
     "items": {
-      "img-001": "Elena & Marco, Italy – Cultural Triangle Tour",
-      "img-002": "Thomas & Sarah, Germany – Hill Country & Scenic Train",
-      "img-003": "Kenji & Yuka, Japan – Sigiriya Sunrise Climb",
-      "img-004": "Camille & Lucas, France – Galle Fort Sunset Stroll",
-      "img-005": "David & Emma, UK – Yala Wildlife Safari",
-      "img-006": "Sophie, Germany – Ella Nine Arches Bridge",
-      "img-007": "Takeshi, Japan – Tea Plantation Discovery",
-      "img-008": "Matteo & Giulia, Italy – Mirissa Coastline & Whale Watching",
-      "img-009": "Antoine & Chloe, France – Traditional Village Cooking Experience"
+      "img-001": "Travellers on a safari tour in Sri Lanka",
+      "img-002": "Travellers at Nine Arches Bridge in Ella",
+      "img-003": "Travellers experiencing traditional Sri Lankan attire",
+      "img-004": "Travellers plucking tea in a Ceylon tea plantation",
+      "img-005": "Travellers exploring scenic tea hill country",
+      "img-006": "Traveller with a baby crocodile at a wildlife sanctuary",
+      "img-007": "Travellers on a mangrove river boat safari",
+      "img-008": "Traveller interacting with wildlife on tour",
+      "img-009": "Travellers on a guided trail through tea country"
+    },
+    "alts": {
+      "img-001": "Travellers on a safari tour in Sri Lanka",
+      "img-002": "Travellers at Nine Arches Bridge in Ella",
+      "img-003": "Travellers experiencing traditional Sri Lankan attire",
+      "img-004": "Travellers plucking tea in a Ceylon tea plantation",
+      "img-005": "Travellers exploring scenic tea hill country",
+      "img-006": "Traveller with a baby crocodile at a wildlife sanctuary",
+      "img-007": "Travellers on a mangrove river boat safari",
+      "img-008": "Traveller interacting with wildlife on tour",
+      "img-009": "Travellers on a guided trail through tea country"
     }
   },
-
   "about": {
-    "heading": "Your Guide, Your Island",
+    "heading": "Your Journey, Our Heritage",
     "subheading": "Meet Ravi — and the story behind RaviGo Tours.",
     "story": "[PLACEHOLDER: Guide biography and story — early passion for tourism, first guests, what makes this different from other operators. 2–3 paragraphs of personal, authentic storytelling.]",
     "guidePhotoAlt": "[PLACEHOLDER: Photo of Ravi, your Sri Lanka tour guide]",
     "languagesSpoken": "Languages Spoken",
-    "languages": ["English", "Sinhala", "Tamil", "[PLACEHOLDER: add more if applicable]"],
+    "languages": [
+      "English",
+      "Sinhala",
+      "[PLACEHOLDER: add more if applicable]"
+    ],
     "teamHeading": "Our Team",
     "credibilityHeading": "Why Choose RaviGo?",
     "credibility": {
@@ -286,7 +288,6 @@
       "satisfactionNote": "[PLACEHOLDER: verified statistic only]"
     }
   },
-
   "contact": {
     "heading": "Get in Touch",
     "subheading": "Ready to start planning? We'll get back to you within 24 hours.",
@@ -327,7 +328,6 @@
       }
     }
   },
-
   "contactCta": {
     "heading": "Ready to Plan Your Sri Lanka Journey?",
     "subheading": "Whether you want a complete island itinerary or a flexible day excursion, let's craft the perfect route around your schedule.",
@@ -336,29 +336,24 @@
     "email": "Email Us",
     "detailedForm": "Full Contact Page"
   },
-
   "footer": {
     "tagline": "Sri Lanka Designed Around You",
     "linksHeading": "Explore",
     "contactHeading": "Contact",
-    "followHeading": "Follow Us",
     "copyright": "© {year} RaviGo Tours. All rights reserved.",
     "privacy": "Privacy Notice",
     "madeWith": "Crafted with ❤️ in Sri Lanka"
   },
-
   "privacy": {
     "heading": "Privacy Notice",
     "lastUpdated": "Last updated: {date}",
     "content": "[PLACEHOLDER: Full privacy notice — data collected, how used, retention, contact for queries. Consult a legal professional for your jurisdiction.]"
   },
-
   "notFound": {
     "heading": "Page Not Found",
     "message": "The page you're looking for doesn't exist or may have moved.",
     "cta": "Back to Home"
   },
-
   "common": {
     "loading": "Loading...",
     "learnMore": "Learn More",
@@ -371,7 +366,6 @@
     "perPerson": "per person",
     "skipToContent": "Skip to main content"
   },
-
   "meta": {
     "home": {
       "title": "RaviGo Tours | Sri Lanka Tour Guide — 20+ Years of Experience",

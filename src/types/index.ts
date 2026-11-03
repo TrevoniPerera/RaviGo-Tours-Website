@@ -16,12 +16,6 @@ export interface SiteConfig {
   timezone: string; // "Asia/Colombo"
   googleMapsEmbedUrl?: string; // [PLACEHOLDER]
   siteUrl: string; // production URL e.g. "https://ravigo.lk"
-  socials: {
-    facebook?: string;
-    instagram?: string;
-    youtube?: string;
-    tripadvisor?: string;
-  };
   locales: readonly ["en", "de", "fr", "ja", "it"];
   defaultLocale: "en";
   airportTransfer: {
@@ -52,7 +46,6 @@ export interface Place {
   featured: boolean; // featured cards span 2 columns in grid
   coordinates?: { lat: number; lng: number };
   heroImage: string; // path relative to /public e.g. "/images/destinations/sigiriya-hero.jpg"
-  galleryImages: string[]; // 3–4 additional image paths
   bestSeasons: Season[];
   suggestedVisitHours: number;
   relatedPackageSlugs: string[];
@@ -112,8 +105,6 @@ export interface GalleryItem {
   consent?: boolean;
   consentDate?: string; // ISO 8601, e.g. "2024-06-15"
   photographer?: string; // optional photo credit
-  // Caption text lives in messages/*.json under "gallery.<id>"
-  captionKey: string; // e.g. "gallery.img-001" → "Anna, Germany – Cultural Triangle"
 }
 
 // ----------------------------------------------------------

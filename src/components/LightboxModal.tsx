@@ -45,9 +45,13 @@ export default function LightboxModal({
   if (currentIndex === null || !items[currentIndex]) return null;
 
   const currentItem = items[currentIndex];
-  let caption = "";
+  let caption = currentItem.id;
   try {
-    caption = t(`items.${currentItem.id}`);
+    if (t.has(`items.${currentItem.id}`)) {
+      caption = t(`items.${currentItem.id}`);
+    } else if (t.has(`alts.${currentItem.id}`)) {
+      caption = t(`alts.${currentItem.id}`);
+    }
   } catch {
     caption = currentItem.id;
   }

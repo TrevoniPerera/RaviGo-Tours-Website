@@ -70,7 +70,7 @@ export default function DestinationDialog({
         className="relative z-10 flex max-h-[90vh] w-full max-w-2xl flex-col overflow-hidden rounded-2xl bg-white shadow-2xl animate-in zoom-in-95 duration-200"
       >
         {/* Modal Header Image */}
-        <div className="relative h-64 w-full bg-stone-900 sm:h-80 shrink-0">
+        <div className="relative h-56 w-full bg-stone-900 sm:h-72 shrink-0">
           <Image
             src={place.heroImage}
             alt={name}
@@ -78,7 +78,7 @@ export default function DestinationDialog({
             sizes="(max-width: 768px) 100vw, 680px"
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-transparent to-black/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-stone-950/85 via-stone-950/20 to-black/30" />
 
           {/* Close button */}
           <button
@@ -91,7 +91,7 @@ export default function DestinationDialog({
           </button>
 
           {/* Title on image */}
-          <div className="absolute bottom-4 left-6 right-6">
+          <div className="absolute bottom-4 left-5 right-5 sm:left-6 sm:right-6">
             <span className="inline-flex items-center gap-1 rounded-full bg-emerald-600/90 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white backdrop-blur-md mb-2">
               <MapPin className="h-3 w-3" />
               {region}
@@ -103,10 +103,10 @@ export default function DestinationDialog({
         </div>
 
         {/* Modal Body */}
-        <div className="overflow-y-auto p-6 sm:p-8 space-y-6">
+        <div className="overflow-y-auto p-5 sm:p-7 space-y-5">
           {/* Key Facts */}
-          <div className="grid grid-cols-2 gap-4 rounded-xl bg-stone-50 p-4 border border-stone-200">
-            <div className="flex items-start gap-3">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 rounded-xl bg-stone-50 p-3.5 sm:p-4 border border-stone-200">
+            <div className="flex items-start gap-2.5 sm:gap-3">
               <Calendar className="h-5 w-5 text-amber-600 mt-0.5 shrink-0" />
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">
@@ -116,7 +116,7 @@ export default function DestinationDialog({
               </div>
             </div>
 
-            <div className="flex items-start gap-3">
+            <div className="flex items-start gap-2.5 sm:gap-3">
               <Clock className="h-5 w-5 text-emerald-600 mt-0.5 shrink-0" />
               <div>
                 <p className="text-xs font-semibold uppercase tracking-wider text-stone-500">
@@ -136,28 +136,6 @@ export default function DestinationDialog({
               {longDescription}
             </p>
           </div>
-
-          {/* Extra Photo previews */}
-          {place.galleryImages.length > 1 && (
-            <div>
-              <h3 className="mb-3 text-sm font-bold uppercase tracking-wider text-stone-700">
-                Gallery Views
-              </h3>
-              <div className="grid grid-cols-3 gap-2">
-                {place.galleryImages.slice(0, 3).map((imgSrc, i) => (
-                  <div key={i} className="relative h-20 overflow-hidden rounded-lg bg-stone-100 sm:h-24">
-                    <Image
-                      src={imgSrc}
-                      alt={`${name} perspective ${i + 1}`}
-                      fill
-                      sizes="200px"
-                      className="object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
 
           {/* Related packages link */}
           {place.relatedPackageSlugs.length > 0 && (

@@ -68,7 +68,6 @@
     "suggestedTime": "推奨所要時間",
     "hours": "{n}時間",
     "region": "エリア",
-    "photoSetAlt": "{name}のフォトギャラリー",
     "prevSlide": "前の目的地",
     "nextSlide": "次の目的地",
     "slideIndicator": "{current} / {total}",
@@ -171,7 +170,6 @@
     "sectionCtaCall": "直接電話で相談する",
     "waCardMsg": "ラヴィさん、こんにちは！「{title}」のモデルコースに興味があります。空港送迎付きのオーダーメイド日程を相談できますか？",
     "waSectionMsg": "ラヴィさん、こんにちは！空港送迎付きのスリランカのオーダーメイドツアーを計画したいです。無料で見積もりをお願いできますか？",
-
     "cultural-triangle": {
       "title": "文化三角地帯モデルコース",
       "tagline": "古代都市、岩の要塞、神聖な仏教寺院をご自身のペースで巡る旅。",
@@ -183,7 +181,6 @@
         "ピドゥランガラ・ロックからのパノラマ絶景"
       ]
     },
-
     "hill-country-train": {
       "title": "紅茶の高原地帯＆高原列車",
       "tagline": "霧深い茶畑、連なる山並み、世界で最も美しい鉄道の旅情。",
@@ -195,7 +192,6 @@
         "スリランカ伝統家庭料理のクッキング体験"
       ]
     },
-
     "wildlife-safari": {
       "title": "大自然野生動物サファリ",
       "tagline": "ヒョウ、野生のゾウ、ナマケグマが息づくスリランカ屈指の国立公園へ。",
@@ -207,7 +203,6 @@
         "アルガムベイのサーフビーチへの延長アレンジ可能"
       ]
     },
-
     "food-village-experience": {
       "title": "ローカル村巡り＆本場のスパイス料理体験",
       "tagline": "村の家庭と一緒に料理を作り、素朴で温かいスリランカの日常と触れ合う旅。",
@@ -219,7 +214,6 @@
         "アーユルヴェーダ薬草ハーブ園の見学"
       ]
     },
-
     "south-coast-galle": {
       "title": "南海岸ビーチ＆古都ゴール要塞",
       "tagline": "オランダ植民地時代の歴史的要塞、シロナガスクジラ観察、黄金色の美しい海岸線。",
@@ -231,7 +225,6 @@
         "ウナワトゥナでのビーチ滞在とシュノーケリング"
       ]
     },
-
     "custom-island-tour": {
       "title": "スリランカ周遊フルオーダーメイドツアー",
       "tagline": "お客様のペースで巡る、世界にひとつだけの完全プライベートオーダーメイド旅。",
@@ -251,17 +244,30 @@
     "close": "閉じる",
     "previous": "前の写真",
     "next": "次の写真",
+    "pauseAnimation": "写真のアニメーションを一時停止",
+    "resumeAnimation": "写真のアニメーションを再開",
     "consentNote": "※掲載写真はすべてお客様の事前承諾を得て掲載しております。",
     "items": {
-      "img-001": "Elena & Marco, Italy – Cultural Triangle Tour",
-      "img-002": "Thomas & Sarah, Germany – Hill Country & Scenic Train",
-      "img-003": "Kenji & Yuka, Japan – Sigiriya Sunrise Climb",
-      "img-004": "Camille & Lucas, France – Galle Fort Sunset Stroll",
-      "img-005": "David & Emma, UK – Yala Wildlife Safari",
-      "img-006": "Sophie, Germany – Ella Nine Arches Bridge",
-      "img-007": "Takeshi, Japan – Tea Plantation Discovery",
-      "img-008": "Matteo & Giulia, Italy – Mirissa Coastline & Whale Watching",
-      "img-009": "Antoine & Chloe, France – Traditional Village Cooking Experience"
+      "img-001": "スリランカのサファリツアーを楽しむ旅行者",
+      "img-002": "エッラのナインアーチブリッジでの旅行者",
+      "img-003": "スリランカの伝統衣装を体験する旅行者",
+      "img-004": "セイロン茶畑でお茶摘みを体験する旅行者",
+      "img-005": "風光明媚な紅茶の高原地帯を巡る旅行者",
+      "img-006": "野生動物保護施設で小さなワニと触れ合う旅行者",
+      "img-007": "マングローブのリバーボートサファリを楽しむ旅行者",
+      "img-008": "ツアー中に野生動物と触れ合う旅行者",
+      "img-009": "紅茶畑のガイド付きトレイルを探索する旅行者"
+    },
+    "alts": {
+      "img-001": "スリランカのサファリツアーを楽しむ旅行者",
+      "img-002": "エッラのナインアーチブリッジでの旅行者",
+      "img-003": "スリランカの伝統衣装を体験する旅行者",
+      "img-004": "セイロン茶畑でお茶摘みを体験する旅行者",
+      "img-005": "風光明媚な紅茶の高原地帯を巡る旅行者",
+      "img-006": "野生動物保護施設で小さなワニと触れ合う旅行者",
+      "img-007": "マングローブのリバーボートサファリを楽しむ旅行者",
+      "img-008": "ツアー中に野生動物と触れ合う旅行者",
+      "img-009": "紅茶畑のガイド付きトレイルを探索する旅行者"
     }
   },
   "about": {
@@ -273,7 +279,6 @@
     "languages": [
       "英語",
       "シンハラ語",
-      "タミル語",
       "日本語（日常会話・歓迎）"
     ],
     "teamHeading": "運営体制",
@@ -336,7 +341,6 @@
     "tagline": "あなただけの特別なスリランカ旅行をデザイン",
     "linksHeading": "メニュー",
     "contactHeading": "連絡先",
-    "followHeading": "公式SNS",
     "copyright": "© {year} RaviGo Tours. All rights reserved.",
     "privacy": "プライバシーポリシー",
     "madeWith": "スリランカより心を込めて制作"
