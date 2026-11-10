@@ -7,8 +7,8 @@ import type { SiteConfig } from "@/types";
  */
 const config: SiteConfig = {
   businessName: "RaviGo Tours Sri Lanka",
-  // TODO: Confirm spelling with client ("Ravidra" in About text vs "Ravindra" in email)
-  founderName: "Ravidra",
+  // TODO: Confirm spelling with client ("Ravindra" in About text vs "Ravindra" in email)
+  founderName: "Ravindra",
   tagline: "footer.tagline",
 
   // Start year for guide experience (2005 = 20+ years of experience)

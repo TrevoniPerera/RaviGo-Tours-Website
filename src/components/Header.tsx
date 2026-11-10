@@ -264,8 +264,8 @@ export default function Header({}: HeaderProps) {
             <Image
               src={LOGO_SRC}
               alt={t("logoAlt")}
-              width={140}
-              height={96}
+              width={134}
+              height={100}
               sizes="(max-width: 1279px) 64px, 80px"
               className="h-10 w-auto xl:h-12 shrink-0 object-contain object-left transition-transform duration-300 group-hover:scale-105"
               priority
@@ -394,7 +394,7 @@ export default function Header({}: HeaderProps) {
                   src={LOGO_SRC}
                   alt={t("logoAlt")}
                   width={120}
-                  height={80}
+                  height={90}
                   sizes="64px"
                   className="h-10 w-auto shrink-0 object-contain object-left"
                 />
