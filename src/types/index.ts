@@ -7,6 +7,7 @@
 // ----------------------------------------------------------
 export interface SiteConfig {
   businessName: string;
+  founderName: string;
   tagline: string;
   startYear: number; // ✅ 2005 — auto-computes "20+ years of experience"
   phone: string; // [PLACEHOLDER] e.g. "+94 XX XXX XXXX"
@@ -15,7 +16,9 @@ export interface SiteConfig {
   address: string; // [PLACEHOLDER]
   timezone: string; // "Asia/Colombo"
   googleMapsEmbedUrl?: string; // [PLACEHOLDER]
-  siteUrl: string; // production URL e.g. "https://ravigo.lk"
+  siteUrl: string; // production URL e.g. "https://yourwebsite.com"
+  privacyEffectiveDate: string; // ISO date string or launch date placeholder
+  hostName: string; // hosting provider e.g. "Vercel"
   locales: readonly ["en", "de", "fr", "ja", "it"];
   defaultLocale: "en";
   airportTransfer: {
@@ -31,14 +34,14 @@ export interface SiteConfig {
 // Place / Destination
 // ----------------------------------------------------------
 export type Region =
-  | "Cultural Triangle"
-  | "Hill Country"
-  | "South Coast"
-  | "Wildlife"
-  | "Ancient Cities"
-  | "East Coast";
+  | "cultural-triangle"
+  | "hill-country"
+  | "south-coast"
+  | "wildlife"
+  | "ancient-cities"
+  | "east-coast";
 
-export type Season = "Jan–Mar" | "Apr–Jun" | "Jul–Sep" | "Oct–Dec";
+export type Season = "jan-mar" | "apr-jun" | "jul-sep" | "oct-dec";
 
 export interface Place {
   id: string; // URL slug e.g. "sigiriya"

@@ -34,3 +34,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Translation & Launch Review Reminders
+
+- **Fluent Speaker Review Required:** Draft translations for the Privacy Policy (`privacy` and `meta.privacy` namespaces) and general site copy in `messages/de.json` (German), `messages/fr.json` (French), `messages/ja.json` (Japanese), and `messages/it.json` (Italian) **must be reviewed by a fluent speaker** before publishing to production.
+- **Launch Configuration (`src/data/config.ts`):**
+  - Update `siteUrl` once the production domain is registered.
+  - Update `privacyEffectiveDate` to the official launch date (e.g., `"2026-11-04"` in ISO 8601 format) so `next-intl` formats it automatically for each locale.
+

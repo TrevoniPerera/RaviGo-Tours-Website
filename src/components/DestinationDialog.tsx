@@ -128,11 +128,11 @@ export default function DestinationDialog({
           </div>
 
           {/* Detailed description */}
-          <div>
-            <h3 className="mb-2 text-sm font-bold uppercase tracking-wider text-stone-700">
-              About This Destination
+          <div className="min-w-0">
+            <h3 className="mb-2 min-w-0 break-words text-sm font-bold uppercase tracking-wider text-stone-700">
+              {t("destinations.aboutDestination")}
             </h3>
-            <p className="text-sm leading-relaxed text-stone-600 sm:text-base">
+            <p className="min-w-0 break-words text-sm leading-relaxed text-stone-600 sm:text-base">
               {longDescription}
             </p>
           </div>

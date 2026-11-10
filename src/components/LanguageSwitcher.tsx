@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { routing, type Locale } from "@/i18n/routing";
 import { useRouter, usePathname } from "@/i18n/navigation";
 import { Globe, Check, ChevronDown } from "lucide-react";
@@ -20,6 +20,7 @@ interface LanguageSwitcherProps {
 
 export default function LanguageSwitcher({ isMobile = false }: LanguageSwitcherProps) {
   const currentLocale = useLocale() as Locale;
+  const t = useTranslations("nav");
   const router = useRouter();
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +54,7 @@ export default function LanguageSwitcher({ isMobile = false }: LanguageSwitcherP
     return (
       <div className="w-full">
         <p className="mb-2 text-xs font-semibold uppercase tracking-wider text-stone-500">
-          Language / Sprache / Langue / 言語 / Lingua
+          {t("languageMenuHeading")}
         </p>
         <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
           {routing.locales.map((loc) => {
@@ -64,18 +65,22 @@ export default function LanguageSwitcher({ isMobile = false }: LanguageSwitcherP
                 key={loc}
                 type="button"
                 onClick={() => handleSelectLocale(loc)}
-                className={`flex items-center justify-between rounded-lg px-3 py-2.5 text-sm font-medium transition ${
+                className={`flex items-center justify-between whitespace-nowrap [overflow-wrap:normal] [word-break:normal] rounded-lg px-3 py-2.5 text-sm font-medium transition ${
                   isActive
                     ? "bg-emerald-800 text-white shadow-sm"
                     : "bg-stone-100 text-stone-800 hover:bg-stone-200"
                 }`}
                 aria-pressed={isActive}
               >
-                <span className="flex items-center gap-2">
-                  <span aria-hidden="true">{item.flag}</span>
-                  <span>{item.label}</span>
+                <span className="flex items-center gap-2 whitespace-nowrap [overflow-wrap:normal] [word-break:normal]">
+                  <span aria-hidden="true" className="shrink-0 whitespace-nowrap [overflow-wrap:normal] [word-break:normal]">
+                    {item.flag}
+                  </span>
+                  <span className="whitespace-nowrap [overflow-wrap:normal] [word-break:normal]">
+                    {item.label}
+                  </span>
                 </span>
-                {isActive && <Check className="h-4 w-4 text-emerald-300" />}
+                {isActive && <Check className="h-4 w-4 shrink-0 text-emerald-300" />}
               </button>
             );
           })}
@@ -85,19 +90,21 @@ export default function LanguageSwitcher({ isMobile = false }: LanguageSwitcherP
   }
 
   return (
-    <div className="relative" ref={containerRef}>
+    <div className="relative shrink-0" ref={containerRef}>
       <button
         type="button"
         onClick={() => setIsOpen((prev) => !prev)}
-        className="flex h-10 items-center gap-1.5 rounded-full border border-stone-200/80 bg-white/90 px-3.5 py-1.5 text-sm font-medium text-stone-700 shadow-sm backdrop-blur-md transition hover:border-stone-300 hover:bg-white hover:text-emerald-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-600"
+        className="inline-flex h-11 min-h-[44px] min-w-[72px] shrink-0 flex-nowrap items-center justify-center gap-1.5 whitespace-nowrap [overflow-wrap:normal] [word-break:normal] rounded-full border border-stone-200/80 bg-white/90 px-3 py-2 text-sm font-medium text-stone-700 shadow-sm backdrop-blur-md transition hover:border-stone-300 hover:bg-white hover:text-emerald-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-600"
         aria-expanded={isOpen}
         aria-haspopup="listbox"
-        aria-label="Switch language"
+        aria-label={t("switchLanguage")}
       >
-        <Globe className="h-4 w-4 text-emerald-700" />
-        <span className="font-semibold text-stone-900">{localeLabels[currentLocale]?.code}</span>
+        <Globe className="h-4 w-4 shrink-0 text-emerald-700" />
+        <span className="inline-block whitespace-nowrap [overflow-wrap:normal] [word-break:normal] font-semibold leading-none text-stone-900">
+          {localeLabels[currentLocale]?.code}
+        </span>
         <ChevronDown
-          className={`h-3.5 w-3.5 text-stone-400 transition-transform duration-200 ${
+          className={`h-3.5 w-3.5 shrink-0 text-stone-400 transition-transform duration-200 ${
             isOpen ? "rotate-180" : ""
           }`}
         />
@@ -106,8 +113,8 @@ export default function LanguageSwitcher({ isMobile = false }: LanguageSwitcherP
       {isOpen && (
         <ul
           role="listbox"
-          aria-label="Select language"
-          className="absolute right-0 mt-2 w-44 rounded-xl border border-stone-200 bg-white p-1.5 shadow-xl backdrop-blur-md focus:outline-none z-50 animate-in fade-in zoom-in-95 duration-150"
+          aria-label={t("selectLanguage")}
+          className="absolute right-0 z-50 mt-2 w-44 rounded-xl border border-stone-200 bg-white p-1.5 shadow-xl backdrop-blur-md focus:outline-none animate-in fade-in zoom-in-95 duration-150"
         >
           {routing.locales.map((loc) => {
             const item = localeLabels[loc];
@@ -117,17 +124,21 @@ export default function LanguageSwitcher({ isMobile = false }: LanguageSwitcherP
                 <button
                   type="button"
                   onClick={() => handleSelectLocale(loc)}
-                  className={`flex w-full items-center justify-between rounded-lg px-3 py-2 text-sm transition ${
+                  className={`flex w-full items-center justify-between whitespace-nowrap [overflow-wrap:normal] [word-break:normal] rounded-lg px-3 py-2 text-sm transition ${
                     isActive
                       ? "bg-emerald-50 font-semibold text-emerald-900"
                       : "text-stone-700 hover:bg-stone-50 hover:text-stone-900"
                   }`}
                 >
-                  <span className="flex items-center gap-2.5">
-                    <span aria-hidden="true" className="text-base">{item.flag}</span>
-                    <span>{item.label}</span>
+                  <span className="flex items-center gap-2.5 whitespace-nowrap [overflow-wrap:normal] [word-break:normal]">
+                    <span aria-hidden="true" className="shrink-0 whitespace-nowrap [overflow-wrap:normal] [word-break:normal] text-base">
+                      {item.flag}
+                    </span>
+                    <span className="whitespace-nowrap [overflow-wrap:normal] [word-break:normal]">
+                      {item.label}
+                    </span>
                   </span>
-                  {isActive && <Check className="h-4 w-4 text-emerald-700" />}
+                  {isActive && <Check className="h-4 w-4 shrink-0 text-emerald-700" />}
                 </button>
               </li>
             );

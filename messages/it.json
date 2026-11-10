@@ -2,14 +2,24 @@
   "nav": {
     "home": "Home",
     "destinations": "Destinazioni",
-    "packages": "Tour Su Misura",
+    "packages": "Tour",
     "gallery": "Galleria",
-    "about": "Chi Siamo",
+    "about": "Chi siamo",
     "contact": "Contatti",
     "openMenu": "Apri menu",
     "closeMenu": "Chiudi menu",
     "switchLanguage": "Cambia lingua",
-    "logoAlt": "Logo RaviGo Tours"
+    "logoAlt": "Logo RaviGo Tours",
+    "brandTagline": "La tua guida locale in Sri Lanka",
+    "mainNavAriaLabel": "Navigazione principale",
+    "mobileNavAriaLabel": "Navigazione mobile",
+    "selectLanguage": "Seleziona lingua",
+    "languageMenuHeading": "Lingua",
+    "directContact": "Contatto diretto",
+    "call": "Chiama",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "callPhone": "Chiama {phone}"
   },
   "hero": {
     "headline": "Scopri lo Sri Lanka Come Mai Prima d'Ora",
@@ -20,41 +30,51 @@
     "imageAlt": "Spettacolare fortezza rocciosa di Sigiriya all'alba",
     "prevSlide": "Diapositiva precedente",
     "nextSlide": "Diapositiva successiva",
-    "goToSlide": "Vai alla diapositiva {number}"
+    "goToSlide": "Vai alla diapositiva {number}",
+    "sectionAriaLabel": "Presentazione principale",
+    "slidesAriaLabel": "Diapositive principali",
+    "slides": {
+      "slide1Alt": "Punto panoramico mozzafiato e rigoglioso paesaggio tropicale in Sri Lanka",
+      "slide2Alt": "Meraviglia culturale storica e architettura tradizionale dello Sri Lanka",
+      "slide3Alt": "Serene colline del tè sugli altopiani e vette avvolte nella nebbia",
+      "slide4Alt": "Spettacolare costa oceanica e spiagge dorate dello Sri Lanka",
+      "slide5Alt": "Fauna esotica e santuario naturale in Sri Lanka"
+    }
   },
   "experience": {
     "years": "20+",
     "label": "Anni di Esperienza",
     "subLabel": "Oltre vent'anni al fianco di viaggiatori da tutto il mondo",
-    "altBadge": "Badge oltre 20 anni di esperienza"
+    "altBadge": "Badge oltre 20 anni di esperienza",
+    "badge": "{years}+ anni di esperienza"
   },
   "showcase": {
-    "heading": "Island of Wonders",
-    "subheading": "From misty tea hills to golden beaches, from ancient temples to wild leopards — every corner of Sri Lanka tells a story.",
+    "heading": "L'Isola delle Meraviglie",
+    "subheading": "Dalle colline del tè avvolte nella nebbia alle spiagge dorate, dai templi antichi ai leopardi selvatici: ogni angolo dello Sri Lanka racconta una storia.",
     "images": {
       "beaches": {
-        "alt": "Pristine palm-lined beach on Sri Lanka's south coast at sunset",
-        "caption": "South Coast Beaches"
+        "alt": "Spiaggia incontaminata orlata di palme sulla costa meridionale dello Sri Lanka al tramonto",
+        "caption": "Spiagge della Costa Sud"
       },
       "teaHills": {
-        "alt": "Lush green tea plantations rolling across the Hill Country of Sri Lanka",
-        "caption": "Tea Country Hills"
+        "alt": "Rigogliose piantagioni di tè verdeggianti sugli altopiani dello Sri Lanka",
+        "caption": "Colline del Tè"
       },
       "wildlife": {
-        "alt": "A leopard resting in Yala National Park, Sri Lanka",
-        "caption": "Yala Wildlife Safari"
+        "alt": "Un leopardo a riposo nel Parco Nazionale di Yala, Sri Lanka",
+        "caption": "Safari a Yala"
       },
       "temples": {
-        "alt": "The ornate Temple of the Tooth illuminated at dusk in Kandy, Sri Lanka",
-        "caption": "Sacred Temples"
+        "alt": "Il suggestivo Tempio del Sacro Dente illuminato al crepuscolo a Kandy",
+        "caption": "Templi Sacri"
       },
       "trains": {
-        "alt": "The iconic blue train crossing Nine Arches Bridge near Ella, Sri Lanka",
-        "caption": "Scenic Train Journeys"
+        "alt": "L'iconico treno blu che attraversa il Ponte dei Nove Archi vicino a Ella",
+        "caption": "Viaggi in Treno Panoramico"
       },
       "food": {
-        "alt": "A colourful spread of traditional Sri Lankan rice and curry dishes",
-        "caption": "Sri Lankan Cuisine"
+        "alt": "Una tavola colorata di piatti tradizionali singalesi a base di riso e curry",
+        "caption": "Cucina Singalese"
       }
     }
   },
@@ -66,7 +86,7 @@
     "relatedPackages": "Pianifica un viaggio con questa tappa",
     "bestSeason": "Miglior periodo",
     "suggestedTime": "Tempo consigliato",
-    "hours": "{n} ore",
+    "hours": "{n, plural, one {# ora} other {# ore}}",
     "region": "Regione",
     "prevSlide": "Destinazione precedente",
     "nextSlide": "Destinazione successiva",
@@ -74,77 +94,79 @@
     "featured": "In evidenza",
     "sigiriya": {
       "name": "Sigiriya",
-      "region": "Cultural Triangle",
-      "shortDescription": "Climb the legendary Lion Rock fortress rising 200 m above the jungle — a UNESCO World Heritage Site and Sri Lanka's most iconic landmark.",
-      "longDescription": "Sigiriya, known as the 'Eighth Wonder of the World', is a spectacular ancient rock fortress and palace ruin built in the 5th century AD. The site rises dramatically from the surrounding flat plains and features ancient frescoes, the famous Mirror Wall, and elaborate water gardens at the base. Climbing to the summit rewards visitors with panoramic views across the jungle canopy and reveals the story of King Kashyapa who ruled here for 18 years.",
-      "bestSeasonLabel": "January – March, July – September"
+      "region": "Triangolo Culturale",
+      "shortDescription": "Scala la leggendaria fortezza della Roccia del Leone che svetta a 200 m sopra la giungla — patrimonio UNESCO e simbolo iconico dello Sri Lanka.",
+      "longDescription": "Sigiriya, definita l'«Ottava Meraviglia del Mondo», è una straordinaria fortezza rupestre e antico palazzo reale del V secolo d.C. Il monolito si innalza maestoso sulla pianura e custodisce celebri affreschi antichi, il Muro a Specchio e raffinati giardini d'acqua. La salita in vetta regala una vista panoramica indimenticabile sulla giungla.",
+      "bestSeasonLabel": "Gennaio – Marzo, Luglio – Settembre"
     },
     "temple-of-the-tooth": {
-      "name": "Temple of the Tooth",
-      "region": "Cultural Triangle",
-      "shortDescription": "Sri Lanka's most revered Buddhist shrine, home to the sacred tooth relic of the Buddha, set beside the serene Kandy Lake.",
-      "longDescription": "The Sri Dalada Maligawa (Temple of the Sacred Tooth Relic) in Kandy is one of the most sacred places in the Buddhist world. The temple houses the relic of the tooth of the Buddha, which has been an object of veneration since the 4th century AD. The golden-roofed complex is the cultural heart of Kandy and hosts the spectacular Esala Perahera festival each August. The surrounding Kandy city with its botanical gardens and lake adds to the magical atmosphere.",
-      "bestSeasonLabel": "January – March, July – September"
+      "name": "Tempio del Sacro Dente",
+      "region": "Triangolo Culturale",
+      "shortDescription": "Il santuario buddista più venerato dello Sri Lanka, che custodisce la sacra reliquia del dente del Buddha sulle rive del tranquillo lago di Kandy.",
+      "longDescription": "Lo Sri Dalada Maligawa (Tempio della Sacra Reliquia del Dente) a Kandy è uno dei luoghi più sacri del mondo buddista. Conserva la reliquia del dente del Buddha, venerata sin dal IV secolo d.C. Il complesso dal tetto dorato è il cuore spirituale di Kandy e ospita ogni agosto la spettacolare processione dell'Esala Perahera.",
+      "bestSeasonLabel": "Gennaio – Marzo, Luglio – Settembre"
     },
     "galle-fort": {
-      "name": "Galle Fort",
-      "region": "South Coast",
-      "shortDescription": "A perfectly preserved Dutch colonial fortified city on the southern tip of Sri Lanka — narrow streets, boutique cafes, and ocean views from the ramparts.",
-      "longDescription": "Galle Fort is a UNESCO World Heritage Site built by the Portuguese in the 16th century and extensively fortified by the Dutch during the 17th century. The fort is a remarkable example of an urban ensemble illustrating the interaction of European architecture and South Asian traditions. Walking the ancient ramparts at sunset, exploring the lighthouse, colourful churches, mosques, and boutique shops within the fort walls is a uniquely atmospheric experience.",
-      "bestSeasonLabel": "November – April"
+      "name": "Forte di Galle",
+      "region": "Costa Sud",
+      "shortDescription": "Una città fortificata coloniale olandese perfettamente conservata sulla punta meridionale dell'isola — vicoli storici, caffè boutique e vista sull'oceano.",
+      "longDescription": "Il Forte di Galle è un sito patrimonio dell'umanità UNESCO fondato dai Portoghesi nel XVI secolo e ampliato dagli Olandesi nel XVII secolo. Passeggiare lungo gli antichi bastioni al tramonto, tra il faro bianco, le chiese storiche e le botteghe artigiane, regala un'atmosfera unica e senza tempo.",
+      "bestSeasonLabel": "Novembre – Aprile"
     },
     "ella-nine-arches": {
-      "name": "Ella & Nine Arches Bridge",
-      "region": "Hill Country",
-      "shortDescription": "A charming highland village perched at 1,000 m with the iconic Nine Arches Bridge, Little Adam's Peak hike, and the world's most scenic train ride.",
-      "longDescription": "Ella is a small town in the Badulla District, nestled among rolling tea estates and misty mountains. The famous Nine Arches Bridge is a colonial-era marvel of stone and brick with no metal used in its construction. Visitors come to watch the blue train glide over the bridge at sunset — one of Sri Lanka's most photographed moments. The surrounding area offers hikes to Little Adam's Peak, Ella Rock, and Ravana Falls.",
-      "bestSeasonLabel": "January – March, July – September"
+      "name": "Ella e Ponte dei Nove Archi",
+      "region": "Colline del Tè",
+      "shortDescription": "Un incantevole villaggio di montagna a 1.000 m di altitudine con l'iconico Ponte dei Nove Archi, il trekking al Little Adam's Peak e il celebre treno panoramico.",
+      "longDescription": "Immersa tra verdi piantagioni di tè e montagne avvolte nella bruma, Ella conquista ogni viaggiatore. Il famoso Ponte dei Nove Archi (Nine Arches Bridge) è un capolavoro di ingegneria coloniale in pietra e mattoni realizzato senza acciaio. Ammirare il treno blu che attraversa il ponte è uno dei momenti più fotografati dello Sri Lanka.",
+      "bestSeasonLabel": "Gennaio – Marzo, Luglio – Settembre"
     },
     "yala-national-park": {
-      "name": "Yala National Park",
-      "region": "Wildlife",
-      "shortDescription": "The highest density of leopards in the world, alongside elephants, sloth bears, and hundreds of bird species in a dramatic landscape of jungle and lagoon.",
-      "longDescription": "Yala National Park is Sri Lanka's most visited and second largest national park, covering 979 square kilometres of forest, grassland, and lagoon. It is famous for having one of the world's highest densities of leopards, making leopard sightings relatively common. The park is also home to elephants, water buffalo, sloth bears, mugger crocodiles, and an extraordinary diversity of bird life. Dawn and dusk jeep safaris are the best way to explore this extraordinary wilderness.",
-      "bestSeasonLabel": "February – July (dry season)"
+      "name": "Parco Nazionale di Yala",
+      "region": "Fauna Selvatica",
+      "shortDescription": "Una delle più alte densità di leopardi al mondo, insieme a elefanti, orsi labiati e centinaia di specie di uccelli tra giungla e lagune costiere.",
+      "longDescription": "Il Parco Nazionale di Yala si estende per 979 km² tra foreste, praterie e lagune. Famoso in tutto il mondo per i frequenti avvistamenti di leopardi, ospita anche branchi di elefanti, bufali d'acqua, orsi labiati, coccodrilli e una straordinaria varietà di uccelli. I safari in jeep all'alba e al tramonto offrono emozioni indimenticabili.",
+      "bestSeasonLabel": "Febbraio – Luglio (stagione secca)"
     },
     "nuwara-eliya": {
       "name": "Nuwara Eliya",
-      "region": "Hill Country",
-      "shortDescription": "Sri Lanka's 'Little England' at 1,868 m — rolling tea estates, colonial Tudor architecture, cool mountain air, and the famous Victoria Park.",
-      "longDescription": "Nuwara Eliya, meaning 'City of Light', sits at the highest elevation in Sri Lanka and feels remarkably different from the tropical coast. British colonists built a hill station here in the 19th century, complete with red postboxes, Tudor-style hotels, a golf course, and manicured gardens. Today it is the heart of Sri Lanka's finest tea country. Gregory Lake, Hakgala Botanical Gardens, and the surrounding tea factory tours make it a fascinating stop on the Hill Country circuit.",
-      "bestSeasonLabel": "January – March, July – September"
+      "region": "Colline del Tè",
+      "shortDescription": "La «Piccola Inghilterra» dello Sri Lanka a 1.868 m — distese di piantagioni di tè, architettura in stile Tudor, aria frizzante di montagna e giardini curati.",
+      "longDescription": "Nuwara Eliya, la «Città della Luce», sorge sull'altopiano più elevato dello Sri Lanka. Fondata dai britannici nel XIX secolo come stazione climatica, conserva dimore in stile Tudor, cassette postali rosse e il parco Victoria. Oggi è la capitale del pregiato tè di Ceylon, con visite guidate alle storiche fabbriche di tè.",
+      "bestSeasonLabel": "Gennaio – Marzo, Luglio – Settembre"
     },
     "mirissa": {
       "name": "Mirissa",
-      "region": "South Coast",
-      "shortDescription": "A crescent bay of golden sand, coconut palms, and turquoise water — plus the best blue whale and dolphin watching in all of Asia.",
-      "longDescription": "Mirissa is a small fishing town on Sri Lanka's southern tip, known for its perfect crescent-shaped beach and world-class whale watching. Blue whales — the largest animals on Earth — pass close to shore from November to April, and Mirissa is considered one of the best places in the world to see them. The beach itself is ideal for swimming and snorkelling, and the sunset view from Parrot Rock is one of the most beautiful on the island.",
-      "bestSeasonLabel": "November – April"
+      "region": "Costa Sud",
+      "shortDescription": "Una baia a mezzaluna di sabbia dorata, palme da cocco e acque turchesi — oltre al miglior avvistamento di balene azzurre e delfini di tutta l'Asia.",
+      "longDescription": "Mirissa è un pittoresco borgo costiero sulla punta meridionale dello Sri Lanka, celebre per la sua spiaggia dorata e per le escursioni di whale watching da novembre ad aprile, quando le balene azzurre nuotano vicino alla costa. Perfetta per nuotare, fare snorkeling e ammirare il tramonto da Parrot Rock.",
+      "bestSeasonLabel": "Novembre – Aprile"
     },
     "dambulla-cave-temple": {
-      "name": "Dambulla Cave Temple",
-      "region": "Cultural Triangle",
-      "shortDescription": "Sri Lanka's largest and best-preserved cave temple complex with 153 Buddha statues and ancient murals covering 2,100 sq m of ceiling.",
-      "longDescription": "The Dambulla Cave Temple is a UNESCO World Heritage Site and the largest and best-preserved cave temple complex in Sri Lanka. The five caves contain 153 Buddha statues, three statues of Sri Lankan kings, and four statues of gods and goddesses. The murals covering the ceilings and walls span 2,100 square metres and depict scenes from the life of the Buddha and legends from Sri Lankan history. The site has been a sacred place of pilgrimage for over 22 centuries.",
-      "bestSeasonLabel": "January – September"
+      "name": "Tempio d'Oro di Dambulla",
+      "region": "Triangolo Culturale",
+      "shortDescription": "Il più grande e meglio conservato complesso di templi rupestri dello Sri Lanka, con 153 statue del Buddha e 2.100 m² di antichi affreschi.",
+      "longDescription": "Patrimonio dell'umanità UNESCO, il Tempio nelle Grotte di Dambulla è meta di pellegrinaggio da oltre 22 secoli. Le cinque grotte sacre custodiscono 153 statue del Buddha e magnifiche pitture murali che ricoprono pareti e soffitti raccontando la vita del Buddha e la storia dell'isola.",
+      "bestSeasonLabel": "Gennaio – Settembre"
     },
     "anuradhapura": {
       "name": "Anuradhapura",
-      "region": "Ancient Cities",
-      "shortDescription": "Sri Lanka's first capital and one of the longest continuously inhabited cities in the world, home to towering ancient stupas and the sacred Bodhi tree.",
-      "longDescription": "Anuradhapura was the first capital of Sri Lanka and remained the political and religious capital for over 1,300 years. It is one of the eight UNESCO World Heritage Sites in Sri Lanka and contains some of the most impressive ancient monuments in Asia. The city is centred around the Sri Maha Bodhi — a sacred fig tree grown from a cutting of the original Bodhi tree under which the Buddha attained enlightenment, making it the oldest documented tree in human history. Towering dagobas (stupas) rise above the jungle canopy.",
-      "bestSeasonLabel": "January – September"
+      "region": "Città Antiche",
+      "shortDescription": "La prima capitale dello Sri Lanka, celebre per i maestosi stupa antichi e il sacro albero della Bodhi, il più antico albero storicamente documentato al mondo.",
+      "longDescription": "Anuradhapura è stata la capitale politica e religiosa dello Sri Lanka per oltre 1.300 anni. Questo straordinario sito UNESCO ruota attorno allo Sri Maha Bodhi, cresciuto da un ramo dell'albero originale sotto cui il Buddha raggiunse l'illuminazione, circondato da imponenti dagoba (stupa) e antichi monasteri.",
+      "bestSeasonLabel": "Gennaio – Settembre"
     },
     "polonnaruwa": {
       "name": "Polonnaruwa",
-      "region": "Ancient Cities",
-      "shortDescription": "Sri Lanka's medieval capital, boasting one of Asia's finest collections of 12th-century ruins — statues, moonstone steps, and royal palaces.",
-      "longDescription": "Polonnaruwa was the second capital of Sri Lanka, reaching its zenith under King Parakramabahu I in the 12th century. The well-preserved ancient city contains a fascinating collection of ruins including the Royal Palace, Audience Hall, Gal Vihara (with its magnificent rock-cut Buddha sculptures), Rankot Vihara stupa, and the famous Parakrama Samudraya reservoir. The compact, bikeable ruins make Polonnaruwa one of the most enjoyable UNESCO sites in Sri Lanka to explore.",
-      "bestSeasonLabel": "January – September"
-    }
+      "region": "Città Antiche",
+      "shortDescription": "La capitale medievale dello Sri Lanka, con una delle più affascinanti collezioni di rovine del XII secolo in Asia — statue rupestri, pietre di luna e palazzi reali.",
+      "longDescription": "Seconda capitale storica dello Sri Lanka, Polonnaruwa raggiunse il suo splendore nel XII secolo sotto il re Parakramabahu I. Il parco archeologico, facilmente esplorabile in bicicletta o a piedi, comprende il Palazzo Reale, le magnifiche sculture nella roccia del Gal Vihara e l'immenso bacino artificiale Parakrama Samudraya.",
+      "bestSeasonLabel": "Gennaio – Settembre"
+    },
+    "badge": "Meraviglie dello Sri Lanka",
+    "cardAriaLabel": "Destinazione {current} di {total}: {name}",
+    "aboutDestination": "Informazioni su questa destinazione"
   },
   "packages": {
-    "needsNativeReview": true,
     "heading": "Idee di Viaggio Su Misura",
     "subheading": "Ogni viaggio è creato su misura. Raccontaci quanti giorni hai e cosa desideri vedere: modelleremo l'itinerario attorno ai tuoi ritmi.",
     "flexibleDates": "Date flessibili",
@@ -168,8 +190,6 @@
     "sectionCtaSubheading": "Dicci quanti giorni hai e cosa vorresti vivere. Creeremo un itinerario 100% personalizzato con transfer aeroportuale incluso.",
     "sectionCtaWhatsApp": "Richiedi preventivo su WhatsApp",
     "sectionCtaCall": "Chiama direttamente",
-    "waCardMsg": "Ciao Ravi! Sono interessato all'idea di viaggio «{title}». Possiamo pianificare un itinerario su misura con transfer aeroportuale?",
-    "waSectionMsg": "Ciao Ravi! Vorrei pianificare un tour su misura in Sri Lanka con transfer aeroportuale. Potresti farmi un preventivo gratuito?",
     "cultural-triangle": {
       "title": "Ispirazione Triangolo Culturale",
       "tagline": "Antichi regni, fortezze rupestri e templi sacri secondo i tuoi ritmi personali.",
@@ -235,7 +255,10 @@
         "Durata flessibile calibrata sulle tue vacanze",
         "Tutti i tuoi interessi combinati insieme"
       ]
-    }
+    },
+    "badge": "Idee di partenza su misura",
+    "detailMetaSuffix": "Tour su misura | RaviGo Tours",
+    "detailAirportNote": "Viaggio privato su misura con transfer aeroportuale di andata e ritorno incluso"
   },
   "gallery": {
     "heading": "Momenti dei Nostri Viaggiatori",
@@ -268,19 +291,49 @@
       "img-007": "Viaggiatori in safari in barca tra le mangrovie",
       "img-008": "Viaggiatrice a contatto con la fauna locale durante il tour",
       "img-009": "Viaggiatori lungo un sentiero guidato tra le colline del tè"
-    }
+    },
+    "badge": "Momenti di viaggio",
+    "modalAriaLabel": "Anteprima foto dei viaggiatori",
+    "photoCount": "{current} di {total}"
   },
   "about": {
+    "badge": "Incontra la tua guida",
     "heading": "La Tua Guida, La Tua Isola",
     "subheading": "Incontra Ravi — e la storia di RaviGo Tours.",
-    "story": "Dal 2005 accompagno viaggiatori internazionali tra le meraviglie dello Sri Lanka. RaviGo Tours offre tour privati curati nei minimi dettagli, con flessibilità, sicurezza e profonda conoscenza locale.",
-    "guidePhotoAlt": "Foto di Ravi, guida turistica in Sri Lanka",
+    "story": "Ciao e ayubowan (il tradizionale saluto di benvenuto singalese)! Sono {founderName}, fondatore di RaviGo Tours. Ho il privilegio di accogliere ospiti da tutto il mondo per far scoprire il cuore e l'anima dello Sri Lanka.",
+    "storyParagraph1": "Ciao e ayubowan (il tradizionale saluto singalese che augura una lunga vita)! Sono {founderName}, fondatore di RaviGo Tours. Ho avuto il privilegio di accogliere viaggiatori da tutto il mondo per far scoprire il cuore e l'anima dello Sri Lanka.",
+    "storyParagraph2": "RaviGo Tours nasce da un'autentica ospitalità personale. Che si tratti di avvistare i leopardi selvatici a Yala all'alba, camminare tra le colline del tè avvolte nella nebbia a Ella o esplorare antichi regni come Sigiriya e Polonnaruwa, ogni viaggio è creato su misura per il tuo comfort, i tuoi ritmi e i tuoi interessi.",
+    "guidePhotoAlt": "Ravi, fondatore e guida turistica esperta presso RaviGo Tours Sri Lanka",
+    "experienceYears": "{years}+ anni",
+    "experienceSubLabel": "Esperienza di guida",
     "languagesSpoken": "Lingue parlate",
     "languages": [
       "Inglese",
       "Singalese",
-      "Italiano (base/accoglienza)"
+      "Tedesco"
     ],
+    "spokenLanguages": {
+      "english": {
+        "name": "Inglese",
+        "level": "Fluente / Professionale"
+      },
+      "sinhala": {
+        "name": "Singalese",
+        "level": "Madrelingua"
+      },
+      "german": {
+        "name": "Tedesco",
+        "level": "Fluente"
+      }
+    },
+    "features": {
+      "vehicleTitle": "Veicolo privato climatizzato",
+      "vehicleDesc": "Con licenza ufficiale e assicurazione",
+      "pricingTitle": "Prezzi trasparenti",
+      "pricingDesc": "Nessuna sorpresa nascosta",
+      "routesTitle": "Itinerari flessibili",
+      "routesDesc": "Viaggia secondo i tuoi ritmi"
+    },
     "teamHeading": "Il Nostro Team",
     "credibilityHeading": "Perché Scegliere RaviGo?",
     "credibility": {
@@ -290,42 +343,41 @@
     }
   },
   "contact": {
-    "heading": "Get in Touch",
-    "subheading": "Ready to start planning? We'll get back to you within 24 hours.",
-    "phone": "Call Us",
-    "email": "Email Us",
-    "whatsapp": "WhatsApp Us",
-    "whatsappMessage": "Hello! I'm interested in a Sri Lanka tour with RaviGo. Can you help?",
-    "address": "Our Location",
-    "timezone": "Sri Lanka Standard Time",
-    "timezoneNote": "UTC+5:30 — We typically reply within 24 hours.",
-    "hours": "Opening Hours",
-    "hoursValue": "[PLACEHOLDER: e.g. Monday – Saturday, 8:00 AM – 7:00 PM SLST]",
-    "formHeading": "Send an Enquiry",
+    "heading": "Contattaci",
+    "subheading": "Pronto a iniziare a pianificare? Ti risponderemo entro 24 ore.",
+    "phone": "Chiamaci",
+    "email": "Scrivici un'email",
+    "whatsapp": "Scrivici su WhatsApp",
+    "address": "La nostra sede",
+    "timezone": "Ora standard dello Sri Lanka",
+    "timezoneNote": "UTC+5:30 — Rispondiamo solitamente entro 24 ore.",
+    "hours": "Orari di apertura",
+    "hoursValue": "Lunedì – Sabato, 8:00 – 19:00 SLST",
+    "formHeading": "Invia una richiesta",
     "form": {
-      "name": "Your Name",
-      "namePlaceholder": "Jane Smith",
-      "email": "Your Email",
-      "emailPlaceholder": "jane@example.com",
-      "package": "Preferred Package",
-      "packagePlaceholder": "Select a package (optional)",
-      "dates": "Preferred Travel Dates",
-      "datesPlaceholder": "e.g. March 10 – March 20, 2025",
-      "groupSize": "Group Size",
+      "name": "Il tuo nome",
+      "namePlaceholder": "Marco Rossi",
+      "email": "La tua email",
+      "emailPlaceholder": "marco@esempio.it",
+      "package": "Pacchetto preferito",
+      "packagePlaceholder": "Seleziona un pacchetto (facoltativo)",
+      "dates": "Date di viaggio preferite",
+      "datesPlaceholder": "es. 10 marzo – 20 marzo",
+      "groupSize": "Numero di partecipanti",
       "groupSizePlaceholder": "2",
-      "message": "Your Message",
-      "messagePlaceholder": "Tell us about your dream trip — interests, budget, special requests...",
-      "submit": "Send Enquiry",
-      "submitting": "Sending...",
-      "successHeading": "Message Received!",
-      "successMessage": "Thank you for reaching out. We'll be in touch within 24 hours.",
-      "errorHeading": "Something Went Wrong",
-      "errorMessage": "Please try again or contact us directly on WhatsApp.",
+      "message": "Il tuo messaggio",
+      "messagePlaceholder": "Raccontaci il viaggio dei tuoi sogni: interessi, budget, richieste speciali...",
+      "submit": "Invia richiesta",
+      "submitting": "Invio in corso...",
+      "successHeading": "Messaggio ricevuto!",
+      "successMessage": "Grazie per averci contattato. Ti risponderemo entro 24 ore.",
+      "errorHeading": "Qualcosa è andato storto",
+      "errorMessage": "Riprova oppure contattaci direttamente su WhatsApp.",
       "validation": {
-        "nameRequired": "Please enter your name.",
-        "emailInvalid": "Please enter a valid email address.",
-        "messageRequired": "Please describe what you're looking for.",
-        "messageMinLength": "Message must be at least 20 characters."
+        "nameRequired": "Inserisci il tuo nome.",
+        "emailInvalid": "Inserisci un indirizzo email valido.",
+        "messageRequired": "Descrivi brevemente cosa stai cercando.",
+        "messageMinLength": "Il messaggio deve contenere almeno 20 caratteri."
       }
     }
   },
@@ -335,7 +387,8 @@
     "call": "Chiama direttamente",
     "whatsapp": "Chatta su WhatsApp",
     "email": "Invia una email",
-    "detailedForm": "Modulo di richiesta"
+    "detailedForm": "Modulo di richiesta",
+    "badge": "Pianificazione personalizzata"
   },
   "footer": {
     "tagline": "Lo Sri Lanka su misura per te",
@@ -343,17 +396,61 @@
     "contactHeading": "Contatti",
     "copyright": "© {year} RaviGo Tours. Tutti i diritti riservati.",
     "privacy": "Informativa sulla privacy",
-    "madeWith": "Creato con ❤️ in Sri Lanka"
+    "madeWith": "Creato con ❤️ in Sri Lanka",
+    "bio": "Viaggi privati e autentici attraverso lo Sri Lanka con una guida locale di fiducia. Città antiche, safari naturalistici, colline del tè e spiagge incontaminate disegnate intorno ai tuoi ritmi."
   },
   "privacy": {
-    "heading": "Privacy Notice",
-    "lastUpdated": "Last updated: {date}",
-    "content": "[PLACEHOLDER: Full privacy notice — data collected, how used, retention, contact for queries. Consult a legal professional for your jurisdiction.]"
+    "title": "Informativa sulla Privacy",
+    "effectiveDateLabel": "Data di entrata in vigore:",
+    "websiteLabel": "Sito web:",
+    "intro": "Rispettiamo la tua privacy. Questo sito web è progettato a scopo puramente informativo e non raccogliamo, conserviamo, vendiamo o condividiamo i tuoi dati personali.",
+    "sections": {
+      "informationWeDoNotCollect": {
+        "heading": "1. Informazioni che non raccogliamo",
+        "bullets": [
+          "Non richiediamo la registrazione di un account né l'accesso degli utenti.",
+          "Non raccogliamo nomi, numeri di telefono, indirizzi email o indirizzi fisici, a meno che tu non ci invii volontariamente un'email direttamente.",
+          "Non elaboriamo pagamenti né raccogliamo dati di fatturazione su questo sito.",
+          "Non utilizziamo reti pubblicitarie, pixel di tracciamento o script di profilazione cross-site."
+        ]
+      },
+      "cookiesAndTracking": {
+        "heading": "2. Cookie e tecnologie di tracciamento",
+        "body": "Questo sito web non utilizza cookie di tracciamento, cookie di marketing o cookie analitici di terze parti. Non utilizziamo servizi che profilano il tuo comportamento di navigazione sul web."
+      },
+      "serverLogs": {
+        "heading": "3. Log del server e dati tecnici",
+        "body": "Come quasi tutti i siti web, l'infrastruttura che ospita il nostro sito ({hostName}) può registrare temporaneamente richieste tecniche standard. Questi dati possono includere il tuo indirizzo IP, il tipo di browser, il sistema operativo e l'orario della tua visita.",
+        "bulletsIntro": "Questi log sono generati esclusivamente per:",
+        "bullets": [
+          "Mantenere la stabilità e l'operatività del server.",
+          "Difendersi dal traffico malevolo e dagli attacchi automatizzati di tipo denial-of-service (DDoS)."
+        ],
+        "outro": "Questi dati non vengono combinati con alcun identificatore personale, non vengono utilizzati per il tracciamento comportamentale e vengono regolarmente eliminati secondo i normali cicli di conservazione del server."
+      },
+      "externalLinks": {
+        "heading": "4. Link esterni e servizi di terze parti",
+        "body": "Il nostro sito web può contenere link a siti web o servizi di terze parti. Una volta seguito un link che porta fuori dal nostro sito web, non abbiamo alcun controllo e non ci assumiamo alcuna responsabilità per i contenuti, le politiche sulla privacy o le pratiche di eventuali siti esterni."
+      },
+      "changes": {
+        "heading": "5. Modifiche alla presente informativa",
+        "body": "Potremmo aggiornare occasionalmente la presente Informativa sulla Privacy per riflettere modifiche al nostro hosting o alla configurazione del sito. Eventuali aggiornamenti saranno pubblicati direttamente su questa pagina con una \"Data di entrata in vigore\" aggiornata."
+      },
+      "contact": {
+        "heading": "6. Contattaci",
+        "body": "In caso di domande o feedback riguardanti la presente informativa, puoi contattarci:",
+        "bullets": {
+          "entity": "Nome / Entità: {businessName}",
+          "emailLabel": "Email:"
+        }
+      }
+    },
+    "effectiveDatePending": "Da definire al momento del lancio"
   },
   "notFound": {
-    "heading": "Page Not Found",
-    "message": "The page you're looking for doesn't exist or may have moved.",
-    "cta": "Back to Home"
+    "heading": "Pagina non trovata",
+    "message": "La pagina che stai cercando non esiste o potrebbe essere stata spostata.",
+    "cta": "Torna alla Home"
   },
   "common": {
     "loading": "Caricamento...",
@@ -367,35 +464,39 @@
     "perPerson": "a persona",
     "skipToContent": "Vai al contenuto principale"
   },
+  "whatsapp": {
+    "ariaLabel": "Chatta con RaviGo Tours su WhatsApp",
+    "default": "Ciao Ravi! Vorrei pianificare un viaggio in Sri Lanka con RaviGo Tours.",
+    "package": "Ciao Ravi! Sono interessato/a al pacchetto \"{package}\" con RaviGo Tours."
+  },
   "meta": {
     "home": {
-      "title": "RaviGo Tours | Sri Lanka Tour Guide — 20+ Years of Experience",
-      "description": "Explore Sri Lanka with RaviGo Tours — authentic, private tours led by an experienced local guide. Cultural Triangle, safari, hill country, beaches and more."
+      "title": "RaviGo Tours | Guida Turistica Privata in Sri Lanka — Oltre 20 Anni di Esperienza",
+      "description": "Esplora lo Sri Lanka con RaviGo Tours — tour privati e autentici guidati da un'esperta guida locale. Triangolo Culturale, safari, colline del tè, spiagge e molto altro."
     },
     "destinations": {
-      "title": "Top Destinations in Sri Lanka | RaviGo Tours",
-      "description": "Discover Sri Lanka's 10 most iconic destinations — from Sigiriya to Yala, Galle Fort to Ella — with expert local guidance."
+      "title": "Le Migliori Destinazioni in Sri Lanka | RaviGo Tours",
+      "description": "Scopri le 10 mete più iconiche dello Sri Lanka — da Sigiriya a Yala, dal Forte di Galle a Ella — con una guida locale esperta."
     },
     "packages": {
-      "title": "Sri Lanka Tour Packages | RaviGo Tours",
-      "description": "Choose from cultural, safari, hill country, coastal and custom tour packages. Private tours tailored to your schedule and interests."
+      "title": "Pacchetti e Tour Su Misura in Sri Lanka | RaviGo Tours",
+      "description": "Scegli tra itinerari culturali, safari, colline del tè, costa sud e tour personalizzati. Viaggi privati cuciti sui tuoi tempi e interessi."
     },
     "gallery": {
-      "title": "Tourist Gallery | RaviGo Tours Sri Lanka",
-      "description": "Browse photos from real travellers who have explored Sri Lanka with RaviGo Tours."
+      "title": "Galleria dei Viaggiatori | RaviGo Tours Sri Lanka",
+      "description": "Guarda le foto dei viaggiatori che hanno esplorato lo Sri Lanka insieme a RaviGo Tours."
     },
     "about": {
-      "title": "About RaviGo Tours | Your Sri Lanka Tour Guide",
-      "description": "Meet your guide — over 20 years of experience leading international tourists through Sri Lanka's history, nature, and culture."
+      "title": "Chi Siamo — RaviGo Tours | La Tua Guida in Sri Lanka",
+      "description": "Incontra la tua guida: oltre 20 anni di esperienza accompagnando viaggiatori internazionali tra storia, natura e cultura dello Sri Lanka."
     },
     "contact": {
-      "title": "Contact RaviGo Tours | Plan Your Sri Lanka Trip",
-      "description": "Get in touch to start planning your Sri Lanka adventure. Call, WhatsApp, or email — we respond within 24 hours."
+      "title": "Contatta RaviGo Tours | Pianifica il Tuo Viaggio in Sri Lanka",
+      "description": "Contattaci per organizzare la tua avventura in Sri Lanka. Telefono, WhatsApp o email — rispondiamo entro 24 ore."
     },
     "privacy": {
-      "title": "Privacy Notice | RaviGo Tours",
-      "description": "How RaviGo Tours collects, uses, and protects your personal information."
+      "title": "Informativa sulla Privacy | RaviGo Tours Sri Lanka",
+      "description": "Informativa sulla Privacy di RaviGo Tours Sri Lanka. Il nostro sito ha scopo puramente informativo e non raccoglie, conserva, vende o condivide i tuoi dati personali."
     }
-  },
-  "meta_review": "Bozza in italiano — richiede revisione madrelingua (needs native review)"
+  }
 }

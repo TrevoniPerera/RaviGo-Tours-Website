@@ -1,26 +1,29 @@
 "use client";
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import config from "@/data/config";
-import { Phone, MessageCircle, Mail, MapPin, Heart } from "lucide-react";
+import { getWhatsAppHref } from "@/lib/whatsapp";
+import { Phone, MessageCircle, Mail, MapPin } from "lucide-react";
 
 // Logo path constant — easily swappable
 const LOGO_SRC = "/images/logo/logo.png";
 
 export default function Footer() {
+  const locale = useLocale();
   const t = useTranslations();
   const currentYear = new Date().getFullYear();
+  const whatsappHref = getWhatsAppHref(locale);
 
   return (
     <footer className="border-t border-stone-200 bg-stone-900 text-stone-300">
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl px-4 pt-16 pb-24 sm:px-6 lg:px-8">
         {/* 1 col mobile, 2 col tablet, 3 col desktop */}
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
           {/* Col 1: Brand & Bio */}
-          <div className="space-y-4 sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-3">
+          <div className="min-w-0 space-y-4 sm:col-span-2 lg:col-span-1">
+            <div className="flex min-w-0 items-center gap-3">
               <div className="relative h-12 w-20 shrink-0">
                 <Image
                   src={LOGO_SRC}
@@ -30,17 +33,17 @@ export default function Footer() {
                   className="object-contain object-left"
                 />
               </div>
-              <div>
-                <h3 className="text-xl font-bold tracking-tight text-white">
+              <div className="min-w-0">
+                <h3 className="min-w-0 break-words text-xl font-bold tracking-tight text-white">
                   {config.businessName}
                 </h3>
-                <p className="text-xs font-semibold uppercase tracking-wider text-amber-400">
-                  {config.tagline}
+                <p className="min-w-0 break-words text-xs font-semibold uppercase tracking-wider text-amber-400">
+                  {t("footer.tagline")}
                 </p>
               </div>
             </div>
-            <p className="text-sm leading-relaxed text-stone-400">
-              Private, authentic journeys across Sri Lanka with a trusted local guide. Ancient cities, wildlife safaris, tea hills, and pristine beaches designed around your rhythm.
+            <p className="min-w-0 break-words text-sm leading-relaxed text-stone-400">
+              {t("footer.bio")}
             </p>
           </div>
 
@@ -51,27 +54,27 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <a href="#destinations" className="transition hover:text-amber-400">
+                <Link href="/#destinations" className="transition hover:text-amber-400">
                   {t("nav.destinations")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#packages" className="transition hover:text-amber-400">
+                <Link href="/#packages" className="transition hover:text-amber-400">
                   {t("nav.packages")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#gallery" className="transition hover:text-amber-400">
+                <Link href="/#gallery" className="transition hover:text-amber-400">
                   {t("nav.gallery")}
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#about" className="transition hover:text-amber-400">
+                <Link href="/#about" className="transition hover:text-amber-400">
                   {t("nav.about")}
-                </a>
+                </Link>
               </li>
               <li>
-                <Link href="/contact" className="transition hover:text-amber-400">
+                <Link href="/#contact" className="transition hover:text-amber-400">
                   {t("nav.contact")}
                 </Link>
               </li>
@@ -100,13 +103,14 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href={`https://wa.me/${config.whatsapp}`}
+                  href={whatsappHref}
                   target="_blank"
-                  rel="noopener noreferrer"
+                  rel="noopener noreferrer nofollow"
+                  aria-label={t("whatsapp.ariaLabel")}
                   className="flex items-center gap-2.5 transition hover:text-amber-400"
                 >
                   <MessageCircle className="h-4 w-4 text-emerald-400 shrink-0" />
-                  <span>WhatsApp: +{config.whatsapp}</span>
+                  <span>{t("contact.whatsapp")}</span>
                 </a>
               </li>
               <li>
@@ -127,19 +131,19 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-stone-800 pt-8 text-xs text-stone-400 sm:flex-row">
-          <p>{t("footer.copyright", { year: currentYear })}</p>
-          <div className="flex items-center gap-4">
-            <Link href="/privacy" className="transition hover:text-stone-200">
-              {t("footer.privacy")}
-            </Link>
-            <span>•</span>
-            <span className="flex items-center gap-1">
-              <span>Made with</span>
-              <Heart className="h-3.5 w-3.5 fill-red-500 text-red-500" />
-              <span>in Sri Lanka</span>
-            </span>
-          </div>
+        <div className="mt-12 flex flex-col items-center gap-3 border-t border-stone-800 pt-8 text-xs text-stone-400 md:flex-row md:justify-between">
+          <p className="text-center text-xs text-stone-400 md:text-left">
+            {t("footer.copyright", { year: currentYear })}
+          </p>
+          <Link
+            href="/privacy"
+            className="inline-link inline-flex items-center text-xs text-stone-400 transition hover:text-stone-200"
+          >
+            {t("footer.privacy")}
+          </Link>
+          <p className="inline-flex items-center gap-1 text-xs text-stone-400">
+            <span>{t("footer.madeWith")}</span>
+          </p>
         </div>
       </div>
     </footer>

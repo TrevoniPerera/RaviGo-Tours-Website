@@ -1,6 +1,6 @@
 import { Inter } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import { buildOrganizationSchema } from "@/lib/schema";
@@ -33,6 +33,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   }
 
   const messages = await getMessages();
+  const tCommon = await getTranslations({ locale, namespace: "common" });
 
   // Apply correct font class per locale
   const fontClass =
@@ -43,7 +44,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   const schema = buildOrganizationSchema(locale as "en" | "de" | "fr" | "ja" | "it");
 
   return (
-    <html lang={locale} className={`${fontClass} h-full scroll-smooth antialiased`}>
+    <html lang={locale} className={`${fontClass} h-full motion-safe:scroll-smooth antialiased`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -66,7 +67,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       <body className="flex min-h-full flex-col bg-stone-50 text-stone-900">
         <NextIntlClientProvider messages={messages}>
           <a href="#main-content" className="skip-link">
-            Skip to main content
+            {tCommon("skipToContent")}
           </a>
           <Header currentLocale={locale} />
           <div className="flex-1">{children}</div>

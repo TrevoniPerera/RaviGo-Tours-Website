@@ -2,11 +2,10 @@ import { getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import packages, { getPackageById } from "@/data/packages";
-import { buildHreflangAlternates, formatUSD } from "@/lib/utils";
+import { buildHreflangAlternates } from "@/lib/utils";
 import { buildTouristTripSchema } from "@/lib/schema";
 import config from "@/data/config";
 import type { Locale } from "@/i18n/routing";
-
 import { routing } from "@/i18n/routing";
 
 type Props = { params: Promise<{ locale: string; slug: string }> };
@@ -25,9 +24,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: `packages.${slug}` });
   const tPkg = await getTranslations({ locale, namespace: "packages" });
 
-
   return {
-    title: `${t("title")} — Tailor-Made Tour | RaviGo Tours`,
+    title: `${t("title")} — ${tPkg("detailMetaSuffix")}`,
     description: t("tagline"),
     alternates: {
       canonical: `${config.siteUrl}/${locale}/packages/${slug}`,
@@ -45,6 +43,7 @@ export default async function PackageDetailPage({ params }: Props) {
   if (!pkg) notFound();
 
   const t = await getTranslations({ locale, namespace: `packages.${slug}` });
+  const tPkg = await getTranslations({ locale, namespace: "packages" });
 
   const schema = buildTouristTripSchema({
     name: t("title"),
@@ -64,7 +63,7 @@ export default async function PackageDetailPage({ params }: Props) {
           <h1 className="text-4xl font-bold">{t("title")}</h1>
           <p className="mt-2 text-lg text-stone-600">{t("tagline")}</p>
           <p className="mt-4 font-semibold text-emerald-700">
-            Tailor-made private journey with airport pickup and drop included
+            {tPkg("detailAirportNote")}
           </p>
         </div>
       </main>

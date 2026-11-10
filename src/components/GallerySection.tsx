@@ -124,23 +124,23 @@ export default function GallerySection() {
   return (
     <section
       id="gallery"
-      className="scroll-mt-24 w-full overflow-hidden bg-stone-50 py-20 sm:py-28"
+      className="scroll-mt-20 w-full overflow-hidden bg-stone-50 py-20 sm:py-28"
       aria-labelledby="gallery-title"
     >
       {/* Centered Section Header (stays in 1280px container) */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
-          <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-emerald-100 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-emerald-800">
-            <Camera className="h-3.5 w-3.5 text-emerald-600" />
-            <span>Traveller Moments</span>
+        <div className="mx-auto mb-10 max-w-3xl min-w-0 text-center sm:mb-14">
+          <div className="mb-3 inline-flex max-w-full min-w-0 items-center gap-1.5 rounded-full bg-emerald-100 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-emerald-800">
+            <Camera className="h-3.5 w-3.5 shrink-0 text-emerald-600" />
+            <span className="min-w-0 break-words">{t("badge")}</span>
           </div>
           <h2
             id="gallery-title"
-            className="text-3xl font-extrabold tracking-tight text-stone-900 sm:text-4xl lg:text-5xl"
+            className="min-w-0 break-words text-3xl font-extrabold tracking-tight text-stone-900 sm:text-4xl lg:text-5xl"
           >
             {t("heading")}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-stone-600 sm:text-lg">
+          <p className="mt-4 min-w-0 break-words text-base leading-relaxed text-stone-600 sm:text-lg">
             {t("subheading")}
           </p>
         </div>

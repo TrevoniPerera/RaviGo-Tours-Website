@@ -6,10 +6,10 @@ export default createMiddleware(routing);
 export const config = {
   // Match all pathnames except:
   // - _next (Next.js internals)
-  // - api routes
+  // - api and go routes
   // - static files with extensions (images, fonts, etc.)
   matcher: [
-    "/((?!_next|api|.*\\..*).*)",
+    "/((?!_next|api|go|.*\\..*).*)",
     // Also match root "/" to trigger locale redirect
     "/",
   ],

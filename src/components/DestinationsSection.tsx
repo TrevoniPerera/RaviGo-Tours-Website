@@ -86,7 +86,7 @@ export default function DestinationsSection() {
   return (
     <section
       id="destinations"
-      className="relative scroll-mt-24 overflow-x-clip bg-gradient-to-b from-stone-100 via-[#faf7f2] to-stone-100 py-20 sm:py-28"
+      className="relative scroll-mt-20 overflow-x-clip bg-gradient-to-b from-stone-100 via-[#faf7f2] to-stone-100 py-20 sm:py-28"
       aria-labelledby="destinations-title"
     >
       {/* Background Ambient Radial Light (tropical green, ocean blue, warm gold) */}
@@ -99,18 +99,18 @@ export default function DestinationsSection() {
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mx-auto mb-10 max-w-3xl text-center sm:mb-14">
-          <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-amber-100/80 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-amber-900 border border-amber-200/60 backdrop-blur-xs">
-            <Sparkles className="h-3.5 w-3.5 text-amber-700" />
-            <span>Sri Lanka Wonders</span>
+        <div className="mx-auto mb-10 max-w-3xl min-w-0 text-center sm:mb-14">
+          <div className="mb-3 inline-flex max-w-full min-w-0 items-center gap-1.5 rounded-full bg-amber-100/80 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-amber-900 border border-amber-200/60 backdrop-blur-xs">
+            <Sparkles className="h-3.5 w-3.5 shrink-0 text-amber-700" />
+            <span className="min-w-0 break-words">{t("destinations.badge")}</span>
           </div>
           <h2
             id="destinations-title"
-            className="text-3xl font-extrabold tracking-tight text-stone-900 sm:text-4xl lg:text-5xl"
+            className="min-w-0 break-words text-3xl font-extrabold tracking-tight text-stone-900 sm:text-4xl lg:text-5xl"
           >
             {t("destinations.heading")}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-stone-600 sm:text-lg">
+          <p className="mt-4 min-w-0 break-words text-base leading-relaxed text-stone-600 sm:text-lg">
             {t("destinations.subheading")}
           </p>
         </div>
@@ -231,7 +231,11 @@ export default function DestinationsSection() {
                       }}
                       tabIndex={isActive ? 0 : -1}
                       role="button"
-                      aria-label={`Destination ${idx + 1} of ${places.length}: ${name}`}
+                      aria-label={t("destinations.cardAriaLabel", {
+                        current: idx + 1,
+                        total: places.length,
+                        name,
+                      })}
                       className={cn(
                         "group relative flex flex-col overflow-hidden rounded-2xl bg-white p-3 sm:p-4 pb-4 sm:pb-5 transition-all duration-300 select-none border",
                         isActive

@@ -2,14 +2,24 @@
   "nav": {
     "home": "Home",
     "destinations": "Destinations",
-    "packages": "Tailor-Made Tours",
+    "packages": "Packages",
     "gallery": "Gallery",
     "about": "About",
     "contact": "Contact",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "switchLanguage": "Switch language",
-    "logoAlt": "RaviGo Tours Logo"
+    "logoAlt": "RaviGo Tours Logo",
+    "brandTagline": "Sri Lanka Local Guide",
+    "mainNavAriaLabel": "Main Navigation",
+    "mobileNavAriaLabel": "Mobile Navigation",
+    "selectLanguage": "Select language",
+    "languageMenuHeading": "Language",
+    "directContact": "Direct Contact",
+    "call": "Call",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "callPhone": "Call {phone}"
   },
   "hero": {
     "headline": "Discover Sri Lanka Like Never Before",
@@ -20,13 +30,23 @@
     "imageAlt": "Breathtaking view of Sri Lanka's Sigiriya Rock Fortress at sunrise",
     "prevSlide": "Previous slide",
     "nextSlide": "Next slide",
-    "goToSlide": "Go to slide {number}"
+    "goToSlide": "Go to slide {number}",
+    "sectionAriaLabel": "Hero Showcase",
+    "slidesAriaLabel": "Hero slides",
+    "slides": {
+      "slide1Alt": "Sri Lanka breathtaking scenic viewpoint and lush tropical landscape",
+      "slide2Alt": "Historic Sri Lankan cultural wonder and heritage architecture",
+      "slide3Alt": "Serene highland tea country and misty mountain peaks",
+      "slide4Alt": "Spectacular ocean coastline and golden Sri Lankan beaches",
+      "slide5Alt": "Exotic wildlife and natural sanctuary in Sri Lanka"
+    }
   },
   "experience": {
     "years": "20+",
     "label": "Years of Experience",
     "subLabel": "Guiding international travellers across Sri Lanka",
-    "altBadge": "Over 20 years of experience badge"
+    "altBadge": "Over 20 years of experience badge",
+    "badge": "{years}+ Years of Experience"
   },
   "showcase": {
     "heading": "Island of Wonders",
@@ -66,7 +86,7 @@
     "relatedPackages": "Plan a Trip Including This Place",
     "bestSeason": "Best Season",
     "suggestedTime": "Suggested Visit",
-    "hours": "{n} hours",
+    "hours": "{n, plural, one {# hour} other {# hours}}",
     "region": "Region",
     "prevSlide": "Previous destination",
     "nextSlide": "Next destination",
@@ -141,7 +161,10 @@
       "shortDescription": "Sri Lanka's medieval capital, boasting one of Asia's finest collections of 12th-century ruins — statues, moonstone steps, and royal palaces.",
       "longDescription": "Polonnaruwa was the second capital of Sri Lanka, reaching its zenith under King Parakramabahu I in the 12th century. The well-preserved ancient city contains a fascinating collection of ruins including the Royal Palace, Audience Hall, Gal Vihara (with its magnificent rock-cut Buddha sculptures), Rankot Vihara stupa, and the famous Parakrama Samudraya reservoir. The compact, bikeable ruins make Polonnaruwa one of the most enjoyable UNESCO sites in Sri Lanka to explore.",
       "bestSeasonLabel": "January – September"
-    }
+    },
+    "badge": "Sri Lankan Wonders",
+    "cardAriaLabel": "Destination {current} of {total}: {name}",
+    "aboutDestination": "About This Destination"
   },
   "packages": {
     "heading": "Tailor-Made Tour Ideas",
@@ -167,8 +190,6 @@
     "sectionCtaSubheading": "Tell us how many days you have and what you want to see. We will craft a 100% custom itinerary with airport transfer included.",
     "sectionCtaWhatsApp": "Get a custom quote on WhatsApp",
     "sectionCtaCall": "Call us directly",
-    "waCardMsg": "Hello Ravi! I'm interested in the \"{title}\" sample journey. Could we plan a custom itinerary with airport pickup and drop?",
-    "waSectionMsg": "Hello Ravi! I would like to design a tailor-made tour in Sri Lanka with airport pickup and drop. Could you give me a free quote?",
     "cultural-triangle": {
       "title": "Cultural Triangle Inspiration",
       "tagline": "Ancient kingdoms, rock fortresses, and sacred temples crafted to your pace.",
@@ -234,7 +255,10 @@
         "Flexible duration tailored to your schedule",
         "All interests catered for"
       ]
-    }
+    },
+    "badge": "Tailor-Made Starting Points",
+    "detailMetaSuffix": "Tailor-Made Tour | RaviGo Tours",
+    "detailAirportNote": "Tailor-made private journey with airport pickup and drop included"
   },
   "gallery": {
     "heading": "Moments from Our Travellers",
@@ -267,25 +291,55 @@
       "img-007": "Travellers on a mangrove river boat safari",
       "img-008": "Traveller interacting with wildlife on tour",
       "img-009": "Travellers on a guided trail through tea country"
-    }
+    },
+    "badge": "Traveller Moments",
+    "modalAriaLabel": "Tourist photo preview",
+    "photoCount": "{current} of {total}"
   },
   "about": {
+    "badge": "Meet Your Host",
     "heading": "Your Journey, Our Heritage",
     "subheading": "Meet Ravi — and the story behind RaviGo Tours.",
-    "story": "[PLACEHOLDER: Guide biography and story — early passion for tourism, first guests, what makes this different from other operators. 2–3 paragraphs of personal, authentic storytelling.]",
-    "guidePhotoAlt": "[PLACEHOLDER: Photo of Ravi, your Sri Lanka tour guide]",
+    "story": "Hello and ayubowan! I am {founderName}, founder of RaviGo Tours. I have been privileged to welcome guests around the world to discover the heart and soul of Sri Lanka.",
+    "storyParagraph1": "Hello and ayubowan! I am {founderName}, founder of RaviGo Tours. I have been privileged to welcome guests around the world to discover the heart and soul of Sri Lanka.",
+    "storyParagraph2": "RaviGo Tours is built on genuine personal hospitality. Whether tracking wild leopards in Yala at dawn, hiking misty tea hills in Ella, or exploring ancient kingdoms like Sigiriya and Polonnaruwa, every journey is custom-crafted to your comfort, pace, and interests.",
+    "guidePhotoAlt": "Ravi, founder and expert tour guide at RaviGo Tours Sri Lanka",
+    "experienceYears": "{years}+ Years",
+    "experienceSubLabel": "Guiding Experience",
     "languagesSpoken": "Languages Spoken",
     "languages": [
       "English",
       "Sinhala",
-      "[PLACEHOLDER: add more if applicable]"
+      "German"
     ],
+    "spokenLanguages": {
+      "english": {
+        "name": "English",
+        "level": "Fluent / Professional"
+      },
+      "sinhala": {
+        "name": "Sinhala",
+        "level": "Native"
+      },
+      "german": {
+        "name": "German",
+        "level": "Fluent"
+      }
+    },
+    "features": {
+      "vehicleTitle": "Private AC Vehicle",
+      "vehicleDesc": "Fully licensed & insured",
+      "pricingTitle": "Transparent Pricing",
+      "pricingDesc": "No hidden surprises",
+      "routesTitle": "Flexible Routes",
+      "routesDesc": "Travel at your rhythm"
+    },
     "teamHeading": "Our Team",
     "credibilityHeading": "Why Choose RaviGo?",
     "credibility": {
       "yearsLabel": "Years Guiding",
       "satisfaction": "Guest Satisfaction",
-      "satisfactionNote": "[PLACEHOLDER: verified statistic only]"
+      "satisfactionNote": "Dedicated personal care from arrival to departure"
     }
   },
   "contact": {
@@ -294,7 +348,6 @@
     "phone": "Call Us",
     "email": "Email Us",
     "whatsapp": "WhatsApp Us",
-    "whatsappMessage": "Hello! I'm interested in a Sri Lanka tour with RaviGo. Can you help?",
     "address": "Our Location",
     "timezone": "Sri Lanka Standard Time",
     "timezoneNote": "UTC+5:30 — We typically reply within 24 hours.",
@@ -334,7 +387,8 @@
     "call": "Call Directly",
     "whatsapp": "Chat on WhatsApp",
     "email": "Email Us",
-    "detailedForm": "Full Contact Page"
+    "detailedForm": "Full Contact Page",
+    "badge": "Personalized Planning"
   },
   "footer": {
     "tagline": "Sri Lanka Designed Around You",
@@ -342,12 +396,56 @@
     "contactHeading": "Contact",
     "copyright": "© {year} RaviGo Tours. All rights reserved.",
     "privacy": "Privacy Notice",
-    "madeWith": "Crafted with ❤️ in Sri Lanka"
+    "madeWith": "Crafted with ❤️ in Sri Lanka",
+    "bio": "Private, authentic journeys across Sri Lanka with a trusted local guide. Ancient cities, wildlife safaris, tea hills, and pristine beaches designed around your rhythm."
   },
   "privacy": {
-    "heading": "Privacy Notice",
-    "lastUpdated": "Last updated: {date}",
-    "content": "[PLACEHOLDER: Full privacy notice — data collected, how used, retention, contact for queries. Consult a legal professional for your jurisdiction.]"
+    "title": "Privacy Policy",
+    "effectiveDateLabel": "Effective Date:",
+    "websiteLabel": "Website:",
+    "intro": "We respect your privacy. This website is designed to be purely informational, and we do not collect, store, sell, or share your personal data.",
+    "sections": {
+      "informationWeDoNotCollect": {
+        "heading": "1. Information We Do Not Collect",
+        "bullets": [
+          "We do not require account registration or user logins.",
+          "We do not collect names, phone numbers, email addresses, or physical addresses unless you voluntarily email us directly.",
+          "We do not process payments or collect billing details on this site.",
+          "We do not use advertising networks, tracking pixels, or cross-site profiling scripts."
+        ]
+      },
+      "cookiesAndTracking": {
+        "heading": "2. Cookies and Tracking Technologies",
+        "body": "This website does not use tracking cookies, marketing cookies, or third-party analytical cookies. We do not use services that profile your browsing behavior across the web."
+      },
+      "serverLogs": {
+        "heading": "3. Server Logs and Technical Data",
+        "body": "Like almost all websites, the infrastructure hosting our site ({hostName}) may temporarily log standard technical requests. This data can include your IP address, browser type, operating system, and the time of your visit.",
+        "bulletsIntro": "These logs are generated purely for:",
+        "bullets": [
+          "Maintaining server stability and uptime.",
+          "Defending against malicious traffic and automated denial-of-service (DDoS) attacks."
+        ],
+        "outro": "This data is not combined with any personal identifiers, is not used for behavioral tracking, and is routinely purged per standard server retention cycles."
+      },
+      "externalLinks": {
+        "heading": "4. External Links and Third-Party Services",
+        "body": "Our website may contain links to third-party websites or services. Once you follow a link away from our website, we have no control over and assume no responsibility for the content, privacy policies, or practices of any external sites."
+      },
+      "changes": {
+        "heading": "5. Changes to This Notice",
+        "body": "We may occasionally update this Privacy Policy to reflect changes in our hosting or site configuration. Any updates will be posted directly to this page with an updated \"Effective Date.\""
+      },
+      "contact": {
+        "heading": "6. Contact Us",
+        "body": "If you have any questions or feedback regarding this policy, please reach out:",
+        "bullets": {
+          "entity": "Name / Entity: {businessName}",
+          "emailLabel": "Email:"
+        }
+      }
+    },
+    "effectiveDatePending": "To be announced upon launch"
   },
   "notFound": {
     "heading": "Page Not Found",
@@ -365,6 +463,11 @@
     "bookNow": "Enquire Now",
     "perPerson": "per person",
     "skipToContent": "Skip to main content"
+  },
+  "whatsapp": {
+    "ariaLabel": "Chat with RaviGo Tours on WhatsApp",
+    "default": "Hello Ravi! I am interested in planning a tour in Sri Lanka with RaviGo Tours.",
+    "package": "Hello Ravi! I am interested in the {package} package with RaviGo Tours."
   },
   "meta": {
     "home": {
@@ -392,8 +495,8 @@
       "description": "Get in touch to start planning your Sri Lanka adventure. Call, WhatsApp, or email — we respond within 24 hours."
     },
     "privacy": {
-      "title": "Privacy Notice | RaviGo Tours",
-      "description": "How RaviGo Tours collects, uses, and protects your personal information."
+      "title": "Privacy Policy | RaviGo Tours Sri Lanka",
+      "description": "Privacy Policy for RaviGo Tours Sri Lanka. Our website is purely informational and we do not collect, store, sell, or share your personal data."
     }
   }
 }

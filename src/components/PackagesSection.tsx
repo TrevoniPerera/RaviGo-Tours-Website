@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { tripIdeas } from "@/data/packages";
 import config from "@/data/config";
+import { getWhatsAppHref } from "@/lib/whatsapp";
 import type { TripIdea } from "@/types";
 import {
   Calendar,
@@ -18,31 +19,33 @@ import {
 } from "lucide-react";
 
 export default function PackagesSection() {
+  const locale = useLocale();
   const t = useTranslations();
+  const whatsappHref = getWhatsAppHref(locale);
 
   return (
     <section
-      id="tailor-made"
-      className="scroll-mt-24 bg-white py-20 sm:py-28"
+      id="packages"
+      className="scroll-mt-20 bg-white py-20 sm:py-28"
       aria-labelledby="packages-title"
     >
       {/* Anchor for backward compatibility with existing links */}
-      <div id="packages" className="relative -top-24 invisible" aria-hidden="true" />
+      <div id="tailor-made" className="relative -top-20 invisible" aria-hidden="true" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="mx-auto mb-14 max-w-3xl text-center">
-          <div className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-amber-100 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-amber-900">
-            <Sparkles className="h-3.5 w-3.5 text-amber-700" />
-            <span>Tailor-Made Starting Points</span>
+        <div className="mx-auto mb-14 max-w-3xl min-w-0 text-center">
+          <div className="mb-3 inline-flex max-w-full min-w-0 items-center gap-1.5 rounded-full bg-amber-100 px-3.5 py-1 text-xs font-bold uppercase tracking-wider text-amber-900">
+            <Sparkles className="h-3.5 w-3.5 shrink-0 text-amber-700" />
+            <span className="min-w-0 break-words">{t("packages.badge")}</span>
           </div>
           <h2
             id="packages-title"
-            className="text-3xl font-extrabold tracking-tight text-stone-900 sm:text-4xl lg:text-5xl"
+            className="min-w-0 break-words text-3xl font-extrabold tracking-tight text-stone-900 sm:text-4xl lg:text-5xl"
           >
             {t("packages.heading")}
           </h2>
-          <p className="mt-4 text-base leading-relaxed text-stone-600 sm:text-lg">
+          <p className="mt-4 min-w-0 break-words text-base leading-relaxed text-stone-600 sm:text-lg">
             {t("packages.subheading")}
           </p>
 
@@ -79,10 +82,6 @@ export default function PackagesSection() {
               highlights = [];
             }
 
-            const waMsg = encodeURIComponent(
-              t("packages.waCardMsg", { title })
-            );
-
             return (
               <div
                 key={pkg.id}
@@ -114,29 +113,29 @@ export default function PackagesSection() {
                 </div>
 
                 {/* Card Body (Equal-height flex column) */}
-                <div className="flex flex-1 flex-col p-5">
+                <div className="flex flex-1 min-w-0 flex-col p-5">
                   {/* Short Flexibility Note */}
-                  <div className="flex items-center gap-1.5 text-xs font-semibold text-emerald-800 bg-emerald-50/90 rounded-lg px-2.5 py-1.5 border border-emerald-200/60">
+                  <div className="flex min-w-0 items-center gap-1.5 text-xs font-semibold text-emerald-800 bg-emerald-50/90 rounded-lg px-2.5 py-1.5 border border-emerald-200/60">
                     <Compass className="h-3.5 w-3.5 text-emerald-600 shrink-0" />
-                    <span className="truncate">{t("packages.flexibilityNote")}</span>
+                    <span className="min-w-0 break-words leading-snug">{t("packages.flexibilityNote")}</span>
                   </div>
 
                   {/* Tagline / Quote (Line clamp 2, fixed min height for alignment) */}
-                  <p className="mt-3 text-sm font-medium text-stone-600 italic line-clamp-2 min-h-[2.5rem]">
+                  <p className="mt-3 min-w-0 break-words text-sm font-medium text-stone-600 italic line-clamp-2 min-h-[2.5rem]">
                     &ldquo;{tagline}&rdquo;
                   </p>
 
                   {/* Highlights (Aligned across cards) */}
                   {highlights.length > 0 && (
-                    <div className="mt-4 space-y-2">
-                      <p className="text-xs font-bold uppercase tracking-wider text-emerald-800">
+                    <div className="mt-4 min-w-0 space-y-2">
+                      <p className="min-w-0 break-words text-xs font-bold uppercase tracking-wider text-emerald-800">
                         {t("packages.sampleHighlights")}
                       </p>
                       <ul className="space-y-1.5 text-xs text-stone-700">
                         {highlights.slice(0, 3).map((item, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
+                          <li key={idx} className="flex min-w-0 items-start gap-2">
                             <Sparkles className="h-3.5 w-3.5 text-amber-500 mt-0.5 shrink-0" />
-                            <span className="line-clamp-1">{item}</span>
+                            <span className="min-w-0 break-words line-clamp-2">{item}</span>
                           </li>
                         ))}
                       </ul>
@@ -145,21 +144,21 @@ export default function PackagesSection() {
 
                   {/* Bottom Area: Pushed to bottom with mt-auto */}
                   <div className="mt-auto pt-5 border-t border-stone-100">
-                    <p className="mb-2 text-center text-xs font-semibold text-stone-500">
+                    <p className="mb-2 min-w-0 break-words text-center text-xs font-semibold text-stone-500">
                       {t("packages.freeQuote")}
                     </p>
 
                     <div className="flex flex-col gap-2 md:flex-row">
-                      {/* WhatsApp Custom Quote Button */}
+                      {/* Enquire about this package -> WhatsApp with package slug */}
                       <a
-                        href={`https://wa.me/${config.whatsapp}?text=${waMsg}`}
+                        href={getWhatsAppHref(locale, { pkg: pkgId })}
                         target="_blank"
-                        rel="noopener noreferrer"
+                        rel="noopener noreferrer nofollow"
                         aria-label={`${t("packages.quoteWhatsApp")} - ${title}`}
-                        className="flex min-h-[44px] flex-1 items-center justify-center gap-1.5 rounded-xl bg-[#25D366] px-3 py-2 text-xs font-bold text-white shadow-sm transition hover:bg-[#20ba59] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#25D366]"
+                        className="flex min-h-[44px] min-w-0 flex-1 items-center justify-center gap-1.5 rounded-xl bg-emerald-700 px-3 py-2 text-center text-xs font-bold text-white shadow-sm transition hover:bg-emerald-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-emerald-600"
                       >
                         <MessageCircle className="h-4 w-4 shrink-0" />
-                        <span className="truncate">{t("packages.quoteWhatsApp")}</span>
+                        <span className="min-w-0 break-words leading-tight">{t("packages.quoteWhatsApp")}</span>
                       </a>
 
                       {/* Call Us Button */}
@@ -235,11 +234,9 @@ export default function PackagesSection() {
           </p>
           <div className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
-              href={`https://wa.me/${config.whatsapp}?text=${encodeURIComponent(
-                t("packages.waSectionMsg")
-              )}`}
+              href={whatsappHref}
               target="_blank"
-              rel="noopener noreferrer"
+              rel="noopener noreferrer nofollow"
               aria-label={t("packages.sectionCtaWhatsApp")}
               className="flex min-h-[44px] w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-6 py-3 text-sm font-bold text-white shadow-md transition hover:bg-[#20ba59] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#25D366] sm:w-auto"
             >

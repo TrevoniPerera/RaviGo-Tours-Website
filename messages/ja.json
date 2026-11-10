@@ -1,15 +1,25 @@
 {
   "nav": {
     "home": "ホーム",
-    "destinations": "観光地",
-    "packages": "オーダーメイド旅行",
+    "destinations": "目的地",
+    "packages": "ツアー",
     "gallery": "ギャラリー",
-    "about": "ガイド紹介",
+    "about": "私たちについて",
     "contact": "お問い合わせ",
     "openMenu": "メニューを開く",
     "closeMenu": "メニューを閉じる",
     "switchLanguage": "言語を切り替える",
-    "logoAlt": "RaviGo Tours ロゴ"
+    "logoAlt": "RaviGo Tours ロゴ",
+    "brandTagline": "スリランカ現地専属ガイド",
+    "mainNavAriaLabel": "メインナビゲーション",
+    "mobileNavAriaLabel": "モバイルナビゲーション",
+    "selectLanguage": "言語を選択",
+    "languageMenuHeading": "言語",
+    "directContact": "直接のお問い合わせ",
+    "call": "電話",
+    "whatsapp": "WhatsApp",
+    "email": "メール",
+    "callPhone": "{phone} に電話する"
   },
   "hero": {
     "headline": "スリランカの魅力、心に残る旅へ",
@@ -20,41 +30,51 @@
     "imageAlt": "朝日に輝くシギリヤロックの絶景",
     "prevSlide": "前のスライド",
     "nextSlide": "次のスライド",
-    "goToSlide": "スライド {number} を表示"
+    "goToSlide": "スライド {number} を表示",
+    "sectionAriaLabel": "メインスライドショー",
+    "slidesAriaLabel": "スライド一覧",
+    "slides": {
+      "slide1Alt": "スリランカの息をのむような絶景スポットと緑豊かな熱帯の風景",
+      "slide2Alt": "スリランカの歴史的な文化遺産と伝統建築",
+      "slide3Alt": "穏やかな紅茶の高原地帯と霧に包まれた山々",
+      "slide4Alt": "美しいインド洋の海岸線と黄金色に輝くスリランカのビーチ",
+      "slide5Alt": "スリランカの豊かな野生動物と自然保護区"
+    }
   },
   "experience": {
     "years": "20+",
     "label": "年のガイド実績",
     "subLabel": "世界中のお客様をスリランカ全土へご案内",
-    "altBadge": "ガイド歴20年以上のバッジ"
+    "altBadge": "ガイド歴20年以上のバッジ",
+    "badge": "{years}年以上のガイド実績"
   },
   "showcase": {
-    "heading": "Island of Wonders",
-    "subheading": "From misty tea hills to golden beaches, from ancient temples to wild leopards — every corner of Sri Lanka tells a story.",
+    "heading": "魅惑と神秘の島",
+    "subheading": "霧けぶる茶畑から黄金色のビーチ、古代寺院から野生のヒョウまで、スリランカのあらゆる場所に物語があります。",
     "images": {
       "beaches": {
-        "alt": "Pristine palm-lined beach on Sri Lanka's south coast at sunset",
-        "caption": "South Coast Beaches"
+        "alt": "夕暮れ時のスリランカ南海岸のヤシの木が並ぶ美しいビーチ",
+        "caption": "南海岸のビーチ"
       },
       "teaHills": {
-        "alt": "Lush green tea plantations rolling across the Hill Country of Sri Lanka",
-        "caption": "Tea Country Hills"
+        "alt": "スリランカ高原地帯に広がる緑豊かな茶畑",
+        "caption": "紅茶の高原地帯"
       },
       "wildlife": {
-        "alt": "A leopard resting in Yala National Park, Sri Lanka",
-        "caption": "Yala Wildlife Safari"
+        "alt": "スリランカのヤーラ国立公園で休むヒョウ",
+        "caption": "ヤーラ野生動物サファリ"
       },
       "temples": {
-        "alt": "The ornate Temple of the Tooth illuminated at dusk in Kandy, Sri Lanka",
-        "caption": "Sacred Temples"
+        "alt": "夕暮れにライトアップされたキャンディの仏歯寺",
+        "caption": "神聖な寺院群"
       },
       "trains": {
-        "alt": "The iconic blue train crossing Nine Arches Bridge near Ella, Sri Lanka",
-        "caption": "Scenic Train Journeys"
+        "alt": "エッラ近郊のナイン・アーチ・ブリッジを渡る青い高原列車",
+        "caption": "絶景の高原列車"
       },
       "food": {
-        "alt": "A colourful spread of traditional Sri Lankan rice and curry dishes",
-        "caption": "Sri Lankan Cuisine"
+        "alt": "彩り豊かな伝統的スリランカ・ライス＆カレーの食卓",
+        "caption": "スリランカの伝統料理"
       }
     }
   },
@@ -66,85 +86,87 @@
     "relatedPackages": "この場所を含むツアーを計画する",
     "bestSeason": "ベストシーズン",
     "suggestedTime": "推奨所要時間",
-    "hours": "{n}時間",
+    "hours": "{n, plural, other {#時間}}",
     "region": "エリア",
     "prevSlide": "前の目的地",
     "nextSlide": "次の目的地",
     "slideIndicator": "{current} / {total}",
     "featured": "注目スポット",
     "sigiriya": {
-      "name": "Sigiriya",
-      "region": "Cultural Triangle",
-      "shortDescription": "Climb the legendary Lion Rock fortress rising 200 m above the jungle — a UNESCO World Heritage Site and Sri Lanka's most iconic landmark.",
-      "longDescription": "Sigiriya, known as the 'Eighth Wonder of the World', is a spectacular ancient rock fortress and palace ruin built in the 5th century AD. The site rises dramatically from the surrounding flat plains and features ancient frescoes, the famous Mirror Wall, and elaborate water gardens at the base. Climbing to the summit rewards visitors with panoramic views across the jungle canopy and reveals the story of King Kashyapa who ruled here for 18 years.",
-      "bestSeasonLabel": "January – March, July – September"
+      "name": "シーギリヤ・ロック",
+      "region": "文化三角地帯",
+      "shortDescription": "ジャングルの上に高さ200mそびえ立つ伝説の岩山要塞。ユネスコ世界遺産に登録されたスリランカ象徴の絶景スポット。",
+      "longDescription": "「世界第8の不思議」とも称されるシーギリヤは、5世紀にカッサパ王によって築かれた壮大な古代の岩山王宮跡です。優美な壁画「シーギリヤ・レディ」や鏡の回廊、麓に広がる精巧な水の庭園が見どころで、頂上からは360度に広がるジャングルの大パノラマを一望できます。",
+      "bestSeasonLabel": "1月〜3月、7月〜9月"
     },
     "temple-of-the-tooth": {
-      "name": "Temple of the Tooth",
-      "region": "Cultural Triangle",
-      "shortDescription": "Sri Lanka's most revered Buddhist shrine, home to the sacred tooth relic of the Buddha, set beside the serene Kandy Lake.",
-      "longDescription": "The Sri Dalada Maligawa (Temple of the Sacred Tooth Relic) in Kandy is one of the most sacred places in the Buddhist world. The temple houses the relic of the tooth of the Buddha, which has been an object of veneration since the 4th century AD. The golden-roofed complex is the cultural heart of Kandy and hosts the spectacular Esala Perahera festival each August. The surrounding Kandy city with its botanical gardens and lake adds to the magical atmosphere.",
-      "bestSeasonLabel": "January – March, July – September"
+      "name": "キャンディの仏歯寺",
+      "region": "文化三角地帯",
+      "shortDescription": "穏やかなキャンディ湖畔に佇むスリランカ最古参の仏教聖地。ブッダの聖なる歯の遺骨（仏歯）が祀られています。",
+      "longDescription": "キャンディにあるスリ・ダラーダー・マーリガーワ寺院（仏歯寺）は、4世紀から受け継がれるブッダの仏歯を祀る、仏教徒にとって最も神聖な寺院のひとつです。黄金の屋根が輝く寺院は古都キャンディの文化の中心であり、毎年8月には華麗なエサラ・ペラヘラ祭が開催されます。",
+      "bestSeasonLabel": "1月〜3月、7月〜9月"
     },
     "galle-fort": {
-      "name": "Galle Fort",
-      "region": "South Coast",
-      "shortDescription": "A perfectly preserved Dutch colonial fortified city on the southern tip of Sri Lanka — narrow streets, boutique cafes, and ocean views from the ramparts.",
-      "longDescription": "Galle Fort is a UNESCO World Heritage Site built by the Portuguese in the 16th century and extensively fortified by the Dutch during the 17th century. The fort is a remarkable example of an urban ensemble illustrating the interaction of European architecture and South Asian traditions. Walking the ancient ramparts at sunset, exploring the lighthouse, colourful churches, mosques, and boutique shops within the fort walls is a uniquely atmospheric experience.",
-      "bestSeasonLabel": "November – April"
+      "name": "ゴール旧市街と要塞",
+      "region": "南海岸",
+      "shortDescription": "スリランカ南端に残るオランダ植民地時代の美しい城塞都市。石畳の路地、おしゃれなカフェ、城壁から望むインド洋の夕日が魅力です。",
+      "longDescription": "ユネスコ世界遺産のゴール要塞は、16世紀にポルトガル人が築き、17世紀にオランダ人によって強固に拡張された歴史ある城塞都市です。夕暮れ時に城壁を散策し、白亜の灯台やコロニアル建築のブティック、カフェを巡る時間は格別です。",
+      "bestSeasonLabel": "11月〜4月"
     },
     "ella-nine-arches": {
-      "name": "Ella & Nine Arches Bridge",
-      "region": "Hill Country",
-      "shortDescription": "A charming highland village perched at 1,000 m with the iconic Nine Arches Bridge, Little Adam's Peak hike, and the world's most scenic train ride.",
-      "longDescription": "Ella is a small town in the Badulla District, nestled among rolling tea estates and misty mountains. The famous Nine Arches Bridge is a colonial-era marvel of stone and brick with no metal used in its construction. Visitors come to watch the blue train glide over the bridge at sunset — one of Sri Lanka's most photographed moments. The surrounding area offers hikes to Little Adam's Peak, Ella Rock, and Ravana Falls.",
-      "bestSeasonLabel": "January – March, July – September"
+      "name": "エッラ＆ナイン・アーチ・ブリッジ",
+      "region": "紅茶の高原地帯",
+      "shortDescription": "標高1,000mの爽やかな高原の村。名物ナイン・アーチ・ブリッジ、リトル・アダムスピークのハイキング、世界屈指の絶景列車が楽しめます。",
+      "longDescription": "緑豊かな茶畑と霧の山々に囲まれたエッラは、自然愛好家に人気の高原リゾートです。鉄を一切使わず石とレンガのみで造られたナイン・アーチ・ブリッジ（9連アーチ橋）を青い高原列車が渡る瞬間は、スリランカを代表するフォトスポットです。",
+      "bestSeasonLabel": "1月〜3月、7月〜9月"
     },
     "yala-national-park": {
-      "name": "Yala National Park",
-      "region": "Wildlife",
-      "shortDescription": "The highest density of leopards in the world, alongside elephants, sloth bears, and hundreds of bird species in a dramatic landscape of jungle and lagoon.",
-      "longDescription": "Yala National Park is Sri Lanka's most visited and second largest national park, covering 979 square kilometres of forest, grassland, and lagoon. It is famous for having one of the world's highest densities of leopards, making leopard sightings relatively common. The park is also home to elephants, water buffalo, sloth bears, mugger crocodiles, and an extraordinary diversity of bird life. Dawn and dusk jeep safaris are the best way to explore this extraordinary wilderness.",
-      "bestSeasonLabel": "February – July (dry season)"
+      "name": "ヤーラ国立公園",
+      "region": "野生動物・サファリ",
+      "shortDescription": "世界有数のヒョウの生息密度を誇る国立公園。野生のゾウ、ナマケグマ、数多くの野鳥が暮らす大自然の宝庫です。",
+      "longDescription": "スリランカで最も人気のあるヤーラ国立公園は、森林、草原、ラグーンが広がる979平方キロメートルの野生動物保護区です。スリランカヒョウとの遭遇率が高いことで知られ、アジアゾウ、水牛、ナマケグマ、ワニ、多彩な野鳥を早朝や夕方のジープサファリで観察できます。",
+      "bestSeasonLabel": "2月〜7月（乾季）"
     },
     "nuwara-eliya": {
-      "name": "Nuwara Eliya",
-      "region": "Hill Country",
-      "shortDescription": "Sri Lanka's 'Little England' at 1,868 m — rolling tea estates, colonial Tudor architecture, cool mountain air, and the famous Victoria Park.",
-      "longDescription": "Nuwara Eliya, meaning 'City of Light', sits at the highest elevation in Sri Lanka and feels remarkably different from the tropical coast. British colonists built a hill station here in the 19th century, complete with red postboxes, Tudor-style hotels, a golf course, and manicured gardens. Today it is the heart of Sri Lanka's finest tea country. Gregory Lake, Hakgala Botanical Gardens, and the surrounding tea factory tours make it a fascinating stop on the Hill Country circuit.",
-      "bestSeasonLabel": "January – March, July – September"
+      "name": "ヌワラエリヤ",
+      "region": "紅茶の高原地帯",
+      "shortDescription": "標高1,868mに位置するスリランカの「リトル・イングランド」。一面茶畑の丘陵、英国風の街並み、涼しい高原の空気が魅力です。",
+      "longDescription": "「光の街」を意味するヌワラエリヤは、19世紀にイギリス人によって開かれた涼しい高原避暑地です。チューダー様式のホテルや赤い郵便ポスト、美しい庭園が残り、世界的に有名なセイロンティーの中心地として歴史ある紅茶工場の見学や試飲が楽しめます。",
+      "bestSeasonLabel": "1月〜3月、7月〜9月"
     },
     "mirissa": {
-      "name": "Mirissa",
-      "region": "South Coast",
-      "shortDescription": "A crescent bay of golden sand, coconut palms, and turquoise water — plus the best blue whale and dolphin watching in all of Asia.",
-      "longDescription": "Mirissa is a small fishing town on Sri Lanka's southern tip, known for its perfect crescent-shaped beach and world-class whale watching. Blue whales — the largest animals on Earth — pass close to shore from November to April, and Mirissa is considered one of the best places in the world to see them. The beach itself is ideal for swimming and snorkelling, and the sunset view from Parrot Rock is one of the most beautiful on the island.",
-      "bestSeasonLabel": "November – April"
+      "name": "ミリッサ",
+      "region": "南海岸",
+      "shortDescription": "黄金色の砂浜とヤシの木、ターコイズブルーの海が広がる三日月形の湾。アジア屈指のシロナガスクジラ＆イルカウォッチングの拠点です。",
+      "longDescription": "スリランカ南端の小さな港町ミリッサは、美しいビーチと世界トップクラスのホエールウォッチングで知られています。11月から4月にかけて地球最大の動物シロナガスクジラが沖合を回遊し、海水浴やシュノーケリング、パロット・ロックからの夕日も絶景です。",
+      "bestSeasonLabel": "11月〜4月"
     },
     "dambulla-cave-temple": {
-      "name": "Dambulla Cave Temple",
-      "region": "Cultural Triangle",
-      "shortDescription": "Sri Lanka's largest and best-preserved cave temple complex with 153 Buddha statues and ancient murals covering 2,100 sq m of ceiling.",
-      "longDescription": "The Dambulla Cave Temple is a UNESCO World Heritage Site and the largest and best-preserved cave temple complex in Sri Lanka. The five caves contain 153 Buddha statues, three statues of Sri Lankan kings, and four statues of gods and goddesses. The murals covering the ceilings and walls span 2,100 square metres and depict scenes from the life of the Buddha and legends from Sri Lankan history. The site has been a sacred place of pilgrimage for over 22 centuries.",
-      "bestSeasonLabel": "January – September"
+      "name": "ダンブッラ石窟寺院",
+      "region": "文化三角地帯",
+      "shortDescription": "スリランカ最大かつ最も保存状態の良い石窟寺院。153体の仏像と、2,100平方メートルにおよぶ極彩色の天井壁画は圧巻です。",
+      "longDescription": "ユネスコ世界遺産のダンブッラ石窟寺院は、2,200年以上にわたり信仰を集める聖地です。巨大な岩山の5つの石窟に153体の仏像や歴代王の像が安置され、壁と天井を埋め尽くす古代壁画がブッダの生涯とスリランカの歴史を今に伝えています。",
+      "bestSeasonLabel": "1月〜9月"
     },
     "anuradhapura": {
-      "name": "Anuradhapura",
-      "region": "Ancient Cities",
-      "shortDescription": "Sri Lanka's first capital and one of the longest continuously inhabited cities in the world, home to towering ancient stupas and the sacred Bodhi tree.",
-      "longDescription": "Anuradhapura was the first capital of Sri Lanka and remained the political and religious capital for over 1,300 years. It is one of the eight UNESCO World Heritage Sites in Sri Lanka and contains some of the most impressive ancient monuments in Asia. The city is centred around the Sri Maha Bodhi — a sacred fig tree grown from a cutting of the original Bodhi tree under which the Buddha attained enlightenment, making it the oldest documented tree in human history. Towering dagobas (stupas) rise above the jungle canopy.",
-      "bestSeasonLabel": "January – September"
+      "name": "アヌラーダプラ",
+      "region": "古代都市",
+      "shortDescription": "スリランカ最初の古都。天を突く巨大な古代ストゥーパ（仏塔）と、人類史上最古の記録を持つ聖なる菩提樹が今も息づいています。",
+      "longDescription": "1,300年以上にわたり王都として栄えたアヌラーダプラは、スリランカを代表するユネスコ世界遺産です。ブッダが悟りを開いた菩提樹の分け木から育った「スリー・マハー菩提樹」を中心に、壮大な仏塔や古代僧院の遺跡が緑豊かな大地に点在しています。",
+      "bestSeasonLabel": "1月〜9月"
     },
     "polonnaruwa": {
-      "name": "Polonnaruwa",
-      "region": "Ancient Cities",
-      "shortDescription": "Sri Lanka's medieval capital, boasting one of Asia's finest collections of 12th-century ruins — statues, moonstone steps, and royal palaces.",
-      "longDescription": "Polonnaruwa was the second capital of Sri Lanka, reaching its zenith under King Parakramabahu I in the 12th century. The well-preserved ancient city contains a fascinating collection of ruins including the Royal Palace, Audience Hall, Gal Vihara (with its magnificent rock-cut Buddha sculptures), Rankot Vihara stupa, and the famous Parakrama Samudraya reservoir. The compact, bikeable ruins make Polonnaruwa one of the most enjoyable UNESCO sites in Sri Lanka to explore.",
-      "bestSeasonLabel": "January – September"
-    }
+      "name": "ポロンナルワ",
+      "region": "古代都市",
+      "shortDescription": "12世紀の栄華を今に伝えるスリランカ第2の古都。精巧な石불群、ムーンストーンの階段、王宮跡など見どころが集まっています。",
+      "longDescription": "パラークラマバーフ1世の治世に最盛期を迎えた中世の王都ポロンナルワ。王宮跡や、一枚岩から彫り出されたガル・ヴィハーラの美しい4体の仏像、巨大な人工湖パラークラマ・サムドラなど、保存状態の良い遺跡群を効率よく巡ることができます。",
+      "bestSeasonLabel": "1月〜9月"
+    },
+    "badge": "スリランカの絶景と神秘",
+    "cardAriaLabel": "観光地 {total}件中 {current}件目: {name}",
+    "aboutDestination": "この観光地について"
   },
   "packages": {
-    "needsNativeReview": true,
     "heading": "オーダーメイド旅行プランのアイデア",
     "subheading": "すべての旅はお客様専用のオーダーメイド。日程やご希望をお聞かせいただければ、ご都合に合わせて柔軟に日程を作成します。",
     "flexibleDates": "出発日自由",
@@ -168,8 +190,6 @@
     "sectionCtaSubheading": "滞在日数と行きたい場所をお知らせください。空港送迎付きの100%完全オーダーメイド日程をご提案します。",
     "sectionCtaWhatsApp": "WhatsAppで旅を相談する",
     "sectionCtaCall": "直接電話で相談する",
-    "waCardMsg": "ラヴィさん、こんにちは！「{title}」のモデルコースに興味があります。空港送迎付きのオーダーメイド日程を相談できますか？",
-    "waSectionMsg": "ラヴィさん、こんにちは！空港送迎付きのスリランカのオーダーメイドツアーを計画したいです。無料で見積もりをお願いできますか？",
     "cultural-triangle": {
       "title": "文化三角地帯モデルコース",
       "tagline": "古代都市、岩の要塞、神聖な仏教寺院をご自身のペースで巡る旅。",
@@ -235,7 +255,10 @@
         "休暇日数に合わせた柔軟なスケジュール設定",
         "自然・文化・グルメ・アーユルヴェーダなど自由に組み合わせ"
       ]
-    }
+    },
+    "badge": "オーダーメイド旅のモデルプラン",
+    "detailMetaSuffix": "オーダーメイドツアー | RaviGo Tours",
+    "detailAirportNote": "空港送迎（往復）付きのプライベート・オーダーメイドツアー"
   },
   "gallery": {
     "heading": "旅の思い出ギャラリー",
@@ -268,19 +291,49 @@
       "img-007": "マングローブのリバーボートサファリを楽しむ旅行者",
       "img-008": "ツアー中に野生動物と触れ合う旅行者",
       "img-009": "紅茶畑のガイド付きトレイルを探索する旅行者"
-    }
+    },
+    "badge": "旅の思い出",
+    "modalAriaLabel": "旅行者の写真プレビュー",
+    "photoCount": "{current} / {total}"
   },
   "about": {
+    "badge": "専属ガイドのご紹介",
     "heading": "あなた専属の現地ガイド",
     "subheading": "代表兼ガイド ラヴィとRaviGo Toursについて",
-    "story": "2005年より、日本をはじめ世界各国からの旅行者の皆様を安全かつ快適にスリランカ各地へご案内してまいりました。個人旅行ならではの柔軟なスケジュールと、温かいおもてなしをお約束いたします。",
-    "guidePhotoAlt": "専属ガイド ラヴィの写真",
+    "story": "こんにちは、そしてアーユボーワン（スリランカの伝統的な歓迎の挨拶）！RaviGo Tours創設者の{founderName}です。世界中からのお客様をお迎えし、スリランカの心と魅力をご案内できることを光栄に思っています。",
+    "storyParagraph1": "こんにちは、そしてアーユボーワン（スリランカの伝統的な挨拶で「長寿と健康を祈ります」の意味）！RaviGo Tours創設者の{founderName}です。世界中から訪れるお客様をお迎えし、スリランカの心と魂をご案内できることを誇りに思っています。",
+    "storyParagraph2": "RaviGo Toursは、心からの温かいおもてなしを大切にしています。夜明けのヤーラで野生のヒョウを追跡したり、エッラの霧深い茶畑を歩いたり、シーギリヤやポロンナルワなどの古代王朝跡を探訪したりと、すべての旅をお客様の快適さ、ペース、ご興味に合わせてオーダーメイドでお作りします。",
+    "guidePhotoAlt": "RaviGo Tours スリランカの創設者兼専属ツアーガイド、ラヴィの写真",
+    "experienceYears": "{years}年以上",
+    "experienceSubLabel": "ガイド経験",
     "languagesSpoken": "対応言語",
     "languages": [
       "英語",
       "シンハラ語",
-      "日本語（日常会話・歓迎）"
+      "ドイツ語"
     ],
+    "spokenLanguages": {
+      "english": {
+        "name": "英語",
+        "level": "流暢 / ビジネスレベル"
+      },
+      "sinhala": {
+        "name": "シンハラ語",
+        "level": "母国語"
+      },
+      "german": {
+        "name": "ドイツ語",
+        "level": "流暢"
+      }
+    },
+    "features": {
+      "vehicleTitle": "専用エアコン完備車両",
+      "vehicleDesc": "政府公認・保険完備",
+      "pricingTitle": "明確で安心な料金体系",
+      "pricingDesc": "追加費用の心配なし",
+      "routesTitle": "自由自在なルート設計",
+      "routesDesc": "ご自身のペースで快適な旅を"
+    },
     "teamHeading": "運営体制",
     "credibilityHeading": "RaviGo Toursが選ばれる理由",
     "credibility": {
@@ -290,42 +343,41 @@
     }
   },
   "contact": {
-    "heading": "Get in Touch",
-    "subheading": "Ready to start planning? We'll get back to you within 24 hours.",
-    "phone": "Call Us",
-    "email": "Email Us",
-    "whatsapp": "WhatsApp Us",
-    "whatsappMessage": "Hello! I'm interested in a Sri Lanka tour with RaviGo. Can you help?",
-    "address": "Our Location",
-    "timezone": "Sri Lanka Standard Time",
-    "timezoneNote": "UTC+5:30 — We typically reply within 24 hours.",
-    "hours": "Opening Hours",
-    "hoursValue": "[PLACEHOLDER: e.g. Monday – Saturday, 8:00 AM – 7:00 PM SLST]",
-    "formHeading": "Send an Enquiry",
+    "heading": "お問い合わせ",
+    "subheading": "旅のご相談はこちらから。通常24時間以内にご返信いたします。",
+    "phone": "お電話",
+    "email": "メール",
+    "whatsapp": "WhatsAppで連絡",
+    "address": "所在地",
+    "timezone": "スリランカ標準時",
+    "timezoneNote": "UTC+5:30 — 通常24時間以内に返信いたします。",
+    "hours": "営業時間",
+    "hoursValue": "月曜〜土曜 8:00〜19:00（スリランカ時間）",
+    "formHeading": "お問い合わせフォーム",
     "form": {
-      "name": "Your Name",
-      "namePlaceholder": "Jane Smith",
-      "email": "Your Email",
-      "emailPlaceholder": "jane@example.com",
-      "package": "Preferred Package",
-      "packagePlaceholder": "Select a package (optional)",
-      "dates": "Preferred Travel Dates",
-      "datesPlaceholder": "e.g. March 10 – March 20, 2025",
-      "groupSize": "Group Size",
+      "name": "お名前",
+      "namePlaceholder": "山田 花子",
+      "email": "メールアドレス",
+      "emailPlaceholder": "hanako@example.com",
+      "package": "ご希望のプラン",
+      "packagePlaceholder": "プランを選択（任意）",
+      "dates": "ご希望の旅行日程",
+      "datesPlaceholder": "例：3月10日〜3月20日",
+      "groupSize": "ご人数",
       "groupSizePlaceholder": "2",
-      "message": "Your Message",
-      "messagePlaceholder": "Tell us about your dream trip — interests, budget, special requests...",
-      "submit": "Send Enquiry",
-      "submitting": "Sending...",
-      "successHeading": "Message Received!",
-      "successMessage": "Thank you for reaching out. We'll be in touch within 24 hours.",
-      "errorHeading": "Something Went Wrong",
-      "errorMessage": "Please try again or contact us directly on WhatsApp.",
+      "message": "メッセージ",
+      "messagePlaceholder": "理想の旅についてお聞かせください（興味のある場所、ご予算、特別なご要望など）...",
+      "submit": "お問い合わせを送信",
+      "submitting": "送信中...",
+      "successHeading": "メッセージを受け付けました",
+      "successMessage": "お問い合わせありがとうございます。24時間以内にご返信いたします。",
+      "errorHeading": "エラーが発生しました",
+      "errorMessage": "もう一度お試しいただくか、WhatsAppより直接ご連絡ください。",
       "validation": {
-        "nameRequired": "Please enter your name.",
-        "emailInvalid": "Please enter a valid email address.",
-        "messageRequired": "Please describe what you're looking for.",
-        "messageMinLength": "Message must be at least 20 characters."
+        "nameRequired": "お名前を入力してください。",
+        "emailInvalid": "有効なメールアドレスを入力してください。",
+        "messageRequired": "お問い合わせ内容を入力してください。",
+        "messageMinLength": "メッセージは20文字以上で入力してください。"
       }
     }
   },
@@ -335,7 +387,8 @@
     "call": "直接お電話",
     "whatsapp": "WhatsAppでチャット",
     "email": "メールで問い合わせ",
-    "detailedForm": "お問い合わせフォーム"
+    "detailedForm": "お問い合わせフォーム",
+    "badge": "オーダーメイドの旅行計画"
   },
   "footer": {
     "tagline": "あなただけの特別なスリランカ旅行をデザイン",
@@ -343,17 +396,61 @@
     "contactHeading": "連絡先",
     "copyright": "© {year} RaviGo Tours. All rights reserved.",
     "privacy": "プライバシーポリシー",
-    "madeWith": "スリランカより心を込めて制作"
+    "madeWith": "スリランカより心を込めて制作",
+    "bio": "信頼できる現地専属ガイドと巡る、本格プライベートなスリランカの旅。古代都市、野生動物サファリ、紅茶の高原、美しいビーチをお客様のペースに合わせてご案内します。"
   },
   "privacy": {
-    "heading": "Privacy Notice",
-    "lastUpdated": "Last updated: {date}",
-    "content": "[PLACEHOLDER: Full privacy notice — data collected, how used, retention, contact for queries. Consult a legal professional for your jurisdiction.]"
+    "title": "プライバシーポリシー",
+    "effectiveDateLabel": "発効日:",
+    "websiteLabel": "ウェブサイト:",
+    "intro": "当サイトはお客様のプライバシーを尊重します。本ウェブサイトは純粋に情報提供のみを目的として設計されており、お客様の個人データを収集、保存、販売、または共有することはありません。",
+    "sections": {
+      "informationWeDoNotCollect": {
+        "heading": "1. 収集しない情報",
+        "bullets": [
+          "アカウント登録やユーザーログインは必要ありません。",
+          "お客様が自発的に直接メールを送信されない限り、氏名、電話番号、メールアドレス、または住所を収集することはありません。",
+          "当サイト上で決済処理や請求情報の収集は行いません。",
+          "広告ネットワーク、トラッキングピクセル、またはサイト間プロファイリングスクリプトは使用しません。"
+        ]
+      },
+      "cookiesAndTracking": {
+        "heading": "2. Cookieおよびトラッキング技術",
+        "body": "本ウェブサイトでは、トラッキングCookie、マーケティングCookie、または第三者の分析用Cookieを使用していません。ウェブ上の閲覧行動をプロファイリングするサービスも使用していません。"
+      },
+      "serverLogs": {
+        "heading": "3. サーバーログおよび技術データ",
+        "body": "他のほとんどのウェブサイトと同様に、当サイトをホスティングしているインフラストラクチャ（{hostName}）は、標準的な技術リクエストを一時的に記録する場合があります。このデータには、IPアドレス、ブラウザの種類、オペレーティングシステム、およびアクセス日時が含まれることがあります。",
+        "bulletsIntro": "これらのログは以下の目的でのみ生成されます：",
+        "bullets": [
+          "サーバーの安定性と稼働時間の維持。",
+          "悪意のあるトラフィックや自動化されたサービス拒否（DDoS）攻撃からの防御。"
+        ],
+        "outro": "このデータは個人識別情報と結び付けられることはなく、行動追跡にも使用されず、標準的なサーバー保持サイクルに従って定期的に消去されます。"
+      },
+      "externalLinks": {
+        "heading": "4. 外部リンクおよび第三者サービス",
+        "body": "当ウェブサイトには、第三者のウェブサイトやサービスへのリンクが含まれている場合があります。当ウェブサイトから外部リンクへ移動された場合、移動先の外部サイトのコンテンツ、プライバシーポリシー、または運用に関して、当方は一切の管理権を持たず、責任を負いません。"
+      },
+      "changes": {
+        "heading": "5. 本ポリシーの変更",
+        "body": "ホスティングやサイト構成の変更を反映するため、本プライバシーポリシーを随時更新する場合があります。更新があった場合は、「発効日」を更新した上で本ページに直接掲載いたします。"
+      },
+      "contact": {
+        "heading": "6. お問い合わせ",
+        "body": "本ポリシーに関するご質問やご意見がございましたら、以下までご連絡ください：",
+        "bullets": {
+          "entity": "名称 / 運営主体: {businessName}",
+          "emailLabel": "メール:"
+        }
+      }
+    },
+    "effectiveDatePending": "サイト公開時に設定予定"
   },
   "notFound": {
-    "heading": "Page Not Found",
-    "message": "The page you're looking for doesn't exist or may have moved.",
-    "cta": "Back to Home"
+    "heading": "ページが見つかりません",
+    "message": "お探しのページは存在しないか、移動した可能性があります。",
+    "cta": "ホームへ戻る"
   },
   "common": {
     "loading": "読み込み中...",
@@ -367,35 +464,39 @@
     "perPerson": "お一人様あたり",
     "skipToContent": "メインコンテンツへスキップ"
   },
+  "whatsapp": {
+    "ariaLabel": "WhatsAppでRaviGo Toursに相談する",
+    "default": "こんにちは、ラヴィさん！RaviGo Toursでのスリランカ旅行のプランニングについて相談したいです。",
+    "package": "こんにちは、ラヴィさん！RaviGo Toursの「{package}」プランについて詳しく知りたいです。"
+  },
   "meta": {
     "home": {
-      "title": "RaviGo Tours | Sri Lanka Tour Guide — 20+ Years of Experience",
-      "description": "Explore Sri Lanka with RaviGo Tours — authentic, private tours led by an experienced local guide. Cultural Triangle, safari, hill country, beaches and more."
+      "title": "RaviGo Tours | スリランカ現地プライベートガイド — 20年以上の実績",
+      "description": "経験豊富な現地ガイドと巡るRaviGo Toursのプライベートツアー。文化三角地帯、野生動物サファリ、紅茶の高原、南海岸ビーチまでオーダーメイドでご案内。"
     },
     "destinations": {
-      "title": "Top Destinations in Sri Lanka | RaviGo Tours",
-      "description": "Discover Sri Lanka's 10 most iconic destinations — from Sigiriya to Yala, Galle Fort to Ella — with expert local guidance."
+      "title": "スリランカの人気観光地10選 | RaviGo Tours",
+      "description": "シーギリヤ、ヤーラ国立公園、ゴール要塞、エッラなど、スリランカを代表する10の必見スポットを専属ガイドがご案内します。"
     },
     "packages": {
-      "title": "Sri Lanka Tour Packages | RaviGo Tours",
-      "description": "Choose from cultural, safari, hill country, coastal and custom tour packages. Private tours tailored to your schedule and interests."
+      "title": "スリランカ・オーダーメイドツアープラン | RaviGo Tours",
+      "description": "世界遺産、サファリ、高原列車、ビーチリゾートまで、ご自身のスケジュールと興味に合わせた専用車プライベートツアー。"
     },
     "gallery": {
-      "title": "Tourist Gallery | RaviGo Tours Sri Lanka",
-      "description": "Browse photos from real travellers who have explored Sri Lanka with RaviGo Tours."
+      "title": "お客様の写真ギャラリー | RaviGo Tours Sri Lanka",
+      "description": "RaviGo Toursでスリランカを旅されたお客様からの思い出の写真をご紹介します。"
     },
     "about": {
-      "title": "About RaviGo Tours | Your Sri Lanka Tour Guide",
-      "description": "Meet your guide — over 20 years of experience leading international tourists through Sri Lanka's history, nature, and culture."
+      "title": "RaviGo Toursについて | スリランカ専属ツアーガイド",
+      "description": "ガイド歴20年以上。スリランカの歴史・自然・文化を世界中の旅行者へご案内してきた代表ガイドをご紹介します。"
     },
     "contact": {
-      "title": "Contact RaviGo Tours | Plan Your Sri Lanka Trip",
-      "description": "Get in touch to start planning your Sri Lanka adventure. Call, WhatsApp, or email — we respond within 24 hours."
+      "title": "お問い合わせ | RaviGo Tours スリランカ旅行相談",
+      "description": "スリランカ旅行のご相談・お見積もりはお電話、WhatsApp、メールにて承ります。24時間以内にご返信いたします。"
     },
     "privacy": {
-      "title": "Privacy Notice | RaviGo Tours",
-      "description": "How RaviGo Tours collects, uses, and protects your personal information."
+      "title": "プライバシーポリシー | RaviGo Tours Sri Lanka",
+      "description": "RaviGo Tours Sri Lankaのプライバシーポリシー。当ウェブサイトは情報提供のみを目的としており、個人データの収集、保存、販売、共有は行いません。"
     }
-  },
-  "meta_review": "日本語ドラフト — ネイティブレビューが必要です (needs native review)"
+  }
 }

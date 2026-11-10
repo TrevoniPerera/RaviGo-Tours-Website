@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run i18n:check && next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "i18n:check": "node scripts/i18n-check.mjs",
+    "i18n:scan": "node scripts/i18n-jsx-scan.mjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.9.1",

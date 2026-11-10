@@ -2,18 +2,19 @@
 
 import { useState, useEffect, useCallback, useSyncExternalStore } from "react";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
-import config from "@/data/config";
+import { useLocale, useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
+import { getWhatsAppHref } from "@/lib/whatsapp";
 import ExperienceBadge from "./ExperienceBadge";
 import { MessageCircle, Compass, ChevronLeft, ChevronRight } from "lucide-react";
 
 const HERO_IMAGES = [
-  { src: "/images/hero/hero-01.jpeg", alt: "Sri Lanka breathtaking scenic viewpoint and lush tropical landscape" },
-  { src: "/images/hero/hero-02.jpeg", alt: "Historic Sri Lankan cultural wonder and heritage architecture" },
-  { src: "/images/hero/hero-03.jpeg", alt: "Serene highland tea country and misty mountain peaks" },
-  { src: "/images/hero/hero-04.jpeg", alt: "Spectacular ocean coastline and golden Sri Lankan beaches" },
-  { src: "/images/hero/hero-05.jpeg", alt: "Exotic wildlife and natural sanctuary in Sri Lanka" },
-];
+  { src: "/images/hero/hero-01.jpeg", altKey: "hero.slides.slide1Alt" },
+  { src: "/images/hero/hero-02.jpeg", altKey: "hero.slides.slide2Alt" },
+  { src: "/images/hero/hero-03.jpeg", altKey: "hero.slides.slide3Alt" },
+  { src: "/images/hero/hero-04.jpeg", altKey: "hero.slides.slide4Alt" },
+  { src: "/images/hero/hero-05.jpeg", altKey: "hero.slides.slide5Alt" },
+] as const;
 
 function subscribeReducedMotion(callback: () => void) {
   if (typeof window === "undefined") return () => {};
@@ -32,6 +33,7 @@ function getReducedMotionServerSnapshot() {
 }
 
 export default function HeroSlideshow() {
+  const locale = useLocale();
   const t = useTranslations();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -61,17 +63,15 @@ export default function HeroSlideshow() {
     return () => clearInterval(timer);
   }, [isReducedMotion, isPaused, nextSlide]);
 
-  const whatsappMessage = encodeURIComponent(
-    "Hello Ravi! I saw your website and would like to ask about a Sri Lanka tour."
-  );
+  const whatsappHref = getWhatsAppHref(locale);
 
   return (
     <section
       id="home"
-      className="relative flex min-h-[92dvh] w-full items-center justify-center overflow-hidden bg-stone-950 text-white scroll-mt-24"
+      className="relative flex min-h-[92dvh] w-full items-center justify-center overflow-hidden bg-stone-950 text-white scroll-mt-20"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
-      aria-label="Hero Showcase"
+      aria-label={t("hero.sectionAriaLabel")}
     >
       {/* Background Slides */}
       <div className="absolute inset-0 z-0">
@@ -85,7 +85,7 @@ export default function HeroSlideshow() {
           >
             <Image
               src={img.src}
-              alt={img.alt}
+              alt={t(img.altKey)}
               fill
               priority={idx === 0}
               loading={idx === 0 ? "eager" : "lazy"}
@@ -121,19 +121,20 @@ export default function HeroSlideshow() {
         {/* Call to Actions */}
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-5">
           {/* View Packages CTA */}
-          <a
-            href="#packages"
+          <Link
+            href="/#packages"
             className="flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full bg-amber-400 px-8 py-3.5 text-base font-bold text-stone-950 shadow-lg shadow-amber-400/20 transition-all hover:bg-amber-300 hover:scale-[1.02] active:scale-[0.98] sm:w-auto focus-visible:outline focus-visible:outline-2 focus-visible:outline-amber-300"
           >
             <Compass className="h-5 w-5 text-stone-950" />
             <span>{t("hero.ctaPrimary")}</span>
-          </a>
+          </Link>
 
           {/* WhatsApp CTA */}
           <a
-            href={`https://wa.me/${config.whatsapp}?text=${whatsappMessage}`}
+            href={whatsappHref}
             target="_blank"
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
+            aria-label={t("whatsapp.ariaLabel")}
             className="flex min-h-[48px] w-full items-center justify-center gap-2 rounded-full border border-white/40 bg-white/10 px-8 py-3.5 text-base font-bold text-white backdrop-blur-md shadow-lg transition-all hover:border-white hover:bg-white/20 hover:scale-[1.02] active:scale-[0.98] sm:w-auto focus-visible:outline focus-visible:outline-2 focus-visible:outline-white"
           >
             <MessageCircle className="h-5 w-5 text-emerald-400" />
@@ -156,7 +157,7 @@ export default function HeroSlideshow() {
           </button>
 
           {/* Pagination Dots */}
-          <div className="flex items-center" role="tablist" aria-label="Hero slides">
+          <div className="flex items-center" role="tablist" aria-label={t("hero.slidesAriaLabel")}>
             {HERO_IMAGES.map((_, i) => {
               const isActive = i === currentIndex;
               return (

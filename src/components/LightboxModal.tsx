@@ -60,7 +60,7 @@ export default function LightboxModal({
     <div
       role="dialog"
       aria-modal="true"
-      aria-label="Tourist photo preview"
+      aria-label={t("modalAriaLabel")}
       className="fixed inset-0 z-50 flex items-center justify-center bg-stone-950/90 p-4 backdrop-blur-md"
     >
       {/* Click outside to close */}
@@ -122,7 +122,7 @@ export default function LightboxModal({
         <div className="w-full bg-stone-900/90 px-6 py-4 text-center">
           <p className="text-sm font-semibold text-white sm:text-base">{caption}</p>
           <p className="mt-1 text-xs text-stone-400">
-            {currentIndex + 1} of {items.length}
+            {t("photoCount", { current: currentIndex + 1, total: items.length })}
           </p>
         </div>
       </div>
